@@ -13,14 +13,14 @@
 ### 										   P3.0             P3.1
 ### 										   P4.1             P4.2  
 
-### OLED(本程序使用LCD)   	D0    	     D1    	   RES    	 DC
-###                      												   												   P4.3           P4.0        P3.7          P8.2  
+### OLED(本程序使用LCD)        D0    	    D1    	   RES    	 DC
+###                      												   											   P4.3          P4.0        P3.7          P8.2  
 
-### 						    UCA1                 TX   		 RX
-###                      					     												    P4.4          P4.5  
+### 						    UCA1         TX   		  RX
+###                      					     											   P4.4          P4.5  
 
-### LCD                  SCL      	 SDI        	CS    	    RST      	 DC
-###                                                   					  P3.2     	 P2.2     	 P2.7         P2.4 	      P2.0  
+### LCD       								 SCL      	 SDI        	CS    	    RST      	 DC
+###                                                   					                           P3.2     	 P2.2     	 P2.7         P2.4 	      P2.0  
 
 ## 引脚可根据需求设置
 * LMT70数据的采集主要在 LMT70.c 与 LMT70.h 中 
