@@ -1,0 +1,731 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V6.30.1.934/W32 for MSP430          12/Oct/2020  03:29:56
+// Copyright 1996-2015 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_flash.c
+//    Command line  =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_flash.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\List\ -o
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\Obj\ --no_cse
+//        --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config "D:\Program Files
+//        (x86)\IAR Systems\Embedded Workbench 7.2\430\lib\dlib\dl430xllff.h"
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\inc\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_config\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_User\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\delay\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\18b20\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\KEY\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LED\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\12864\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\oled\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\mpu6050\inc\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\mpu6050\src\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nokia5110\inc\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nokia5110\src\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LQ_1.8_TFT\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LCD_API\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\2.2TFT\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nrf24l01\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\inc\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\src\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\User\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\User\USER\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\UCOSII\CONFIG\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\App\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\CONFIHG\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\PORT\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\UCOSII\CORE\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\FatFs\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\FatFs\option\ -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --code_model=large
+//    List file     =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\List\msp430f5529_flash.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME msp430f5529_flash
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "1"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?cstart_init_copy_ramfunc
+        EXTERN ?ShiftLeft32_9
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC Flash_Erase_Addr
+        PUBLIC Flash_Erase_Segment
+        PUBLIC Flash_Write_Byte
+        PUBLIC Flash_Write_DWold
+        PUBLIC Flash_Write_Word
+        PUBLIC Flash_Write_buf
+        PUBWEAK _A_FCTL1_L
+        PUBWEAK _A_FCTL3_L
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN assert_failed
+
+// G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_flash.c
+//    1 #include "msp430f5529_flash.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,0140H
+// union <unnamed> __data16 _A_FCTL1_L
+_A_FCTL1_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0144H
+// union <unnamed> __data16 _A_FCTL3_L
+_A_FCTL3_L:
+        DS8 2
+//    2 #include "msp430f5529_system.h"
+//    3 
+//    4 //注意：使用flash时应使用靠后的地址，否则可能会破坏程序
+//    5 /*******************************************************************************
+//    6 *  函数名称：擦除flash中的某一段
+//    7 *  功能说明：段应该是在（MIN_SEGMENT - MAX_SEGMENT），为保护程序，最好取最后几个段，注意不要擦除中断向量表
+//    8 *  参数说明：必须一次擦除512字节，Flash容量（128KB）对应segmentNo数量（128*1024/512=256），使用时建议取靠后面的段位
+//    9 *  函数返回：无
+//   10 *  使用示例：Flash_Erase_Segment(MAX_SEGMENT);                  //擦除第MAX_SEGMENT段
+//   11 ********************************************************************************/
+
+        RSEG CODE_I:DATA:REORDER:NOROOT(1)
+//   12 __ramfunc void Flash_Erase_Segment(uint16_t segmentNo)
+Flash_Erase_Segment:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function Flash_Erase_Segment
+        REQUIRE ?cstart_init_copy_ramfunc
+//   13 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOV.W   R12, R10
+//   14   ASSERT(segmentNo >= MIN_SEGMENT && segmentNo <= MAX_SEGMENT,"Flash_Erase_Segment","segmentNo参数超出范围！");  //断言检测段范围是否在FLASH区间
+        CMP.W   #0x22, R10
+        JNC     ??Flash_Erase_Segment_1
+        CMP.W   #0x122, R10
+        JNC     ??Flash_Erase_Segment_2
+??Flash_Erase_Segment_1:
+        MOVA    #`?<Constant "segmentNo\\262\\316\\312\\375\\263\\254\\`, R15
+        MOVA    #`?<Constant "Flash_Erase_Segment">`, R14
+        MOV.W   #0xe, R13
+        MOVA    #`?<Constant "G:\\\\\\261\\310\\310\\374\\\\2020\\265\\347`, R12
+          CFI FunCall assert_failed
+        CALLA   #assert_failed
+//   15   
+//   16   uint16_t * Addr = (uint16_t *)((uint32_t)segmentNo*512);   //计算地址
+??Flash_Erase_Segment_2:
+        MOV.W   R10, R12
+        MOV.W   #0x0, R13
+          CFI FunCall ?ShiftLeft32_9
+        CALLA   #?ShiftLeft32_9
+        PUSHM.W #0x2, R13
+          CFI CFA SP+12
+        POPM.A  #0x1, R15
+          CFI CFA SP+8
+//   17   
+//   18   FCTL3 = FWKEY;                              // 清除锁定
+        MOV.W   #0xa500, &0x144
+//   19   FCTL1 = FWKEY+ERASE;                        // 擦除一段
+        MOV.W   #0xa502, &0x140
+//   20   *Addr = 0;                                  //对擦除的地址范围内任意做一次空写入，用以启动擦除操作
+        MOV.W   #0x0, 0(R15)
+//   21   while (FCTL3 & BUSY);                       // 等待允许操作
+??Flash_Erase_Segment_0:
+        BIT.W   #0x1, &0x144
+        JC      ??Flash_Erase_Segment_0
+//   22   FCTL1 = FWKEY;                              //清除擦除位  
+        MOV.W   #0xa500, &0x140
+//   23   FCTL3 = FWKEY+LOCK;                         //对FLASH加锁，可读，不可写，不可擦除
+        MOV.W   #0xa510, &0x144
+//   24 }
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+        REQUIRE _A_FCTL3_L
+        REQUIRE _A_FCTL1_L
+//   25 /*******************************************************************************
+//   26 *  函数名称：擦除flash中的某一固定位置
+//   27 *  功能说明：
+//   28 *  参数说明：必须一次擦除512字节
+//   29 *  函数返回：无
+//   30 *  使用示例：Flash_Erase_Addr(0x1800);
+//   31 ********************************************************************************/
+
+        RSEG CODE_I:DATA:REORDER:NOROOT(1)
+//   32 __ramfunc void Flash_Erase_Addr   (uint32_t addr)
+Flash_Erase_Addr:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function Flash_Erase_Addr
+          CFI NoCalls
+        REQUIRE ?cstart_init_copy_ramfunc
+//   33 {
+//   34   uint16_t * Addr = (uint16_t *)addr;
+        PUSHM.W #0x2, R13
+          CFI CFA SP+8
+        POPM.A  #0x1, R15
+          CFI CFA SP+4
+//   35   FCTL3 = FWKEY;                              // 清除锁定
+        MOV.W   #0xa500, &0x144
+//   36   FCTL1 = FWKEY+ERASE;                        // 擦除一段
+        MOV.W   #0xa502, &0x140
+//   37   *Addr = 0;                                  //对擦除的地址范围内任意做一次空写入，用以启动擦除操作
+        MOV.W   #0x0, 0(R15)
+//   38   while (FCTL3 & BUSY);                       // 等待允许操作
+??Flash_Erase_Addr_0:
+        BIT.W   #0x1, &0x144
+        JC      ??Flash_Erase_Addr_0
+//   39   FCTL1 = FWKEY;                              //清除擦除位  
+        MOV.W   #0xa500, &0x140
+//   40   FCTL3 = FWKEY+LOCK;                         //对FLASH加锁，可读，不可写，不可擦除
+        MOV.W   #0xa510, &0x144
+//   41 }
+        RETA
+          CFI EndBlock cfiBlock1
+        REQUIRE _A_FCTL3_L
+        REQUIRE _A_FCTL1_L
+//   42 /*******************************************************************************
+//   43 *  函数名称：
+//   44 *  功能说明：写入一个字节数据到Flash
+//   45 *  参数说明：uint16 segmentNo ：段位 uint16_t offset ：偏移量，uint16 data ：要写入的数据
+//   46 *  函数返回：无
+//   47 *  使用示例：Flash_Write(200,0,0x10);    //在第200个段位，偏移0个字节，写入数据0x10
+//   48 ********************************************************************************/
+
+        RSEG CODE_I:DATA:REORDER:NOROOT(1)
+//   49 __ramfunc void Flash_Write_Byte(uint16_t segmentNo,uint16_t offset,uint8_t data)
+Flash_Write_Byte:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function Flash_Write_Byte
+        REQUIRE ?cstart_init_copy_ramfunc
+//   50 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.W   R12, R10
+        MOV.W   R13, R8
+        MOV.B   R14, R11
+//   51   ASSERT(segmentNo >= MIN_SEGMENT && segmentNo <= MAX_SEGMENT,"Flash_Write_Byte","segmentNo参数超出范围！");  //断言检测段范围是否在FLASH区间
+        CMP.W   #0x22, R10
+        JNC     ??Flash_Write_Byte_1
+        CMP.W   #0x122, R10
+        JNC     ??Flash_Write_Byte_2
+??Flash_Write_Byte_1:
+        MOVA    #`?<Constant "segmentNo\\262\\316\\312\\375\\263\\254\\`, R15
+        MOVA    #`?<Constant "Flash_Write_Byte">`, R14
+        MOV.W   #0x33, R13
+        MOVA    #`?<Constant "G:\\\\\\261\\310\\310\\374\\\\2020\\265\\347`, R12
+          CFI FunCall assert_failed
+        CALLA   #assert_failed
+//   52   
+//   53   uint8_t * Addr = (uint8_t *)((uint32_t)segmentNo*512 + offset);        //计算地址
+??Flash_Write_Byte_2:
+        MOV.W   R10, R12
+        MOV.W   #0x0, R13
+          CFI FunCall ?ShiftLeft32_9
+        CALLA   #?ShiftLeft32_9
+        MOV.W   R8, R14
+        MOV.W   #0x0, R15
+        ADD.W   R14, R12
+        ADDC.W  R15, R13
+        PUSHM.W #0x2, R13
+          CFI CFA SP+24
+        POPM.A  #0x1, R15
+          CFI CFA SP+20
+//   54   
+//   55   FCTL3 = FWKEY;                            //清除锁定 
+        MOV.W   #0xa500, &0x144
+//   56   FCTL1 = FWKEY+WRT;                        //置位编程位
+        MOV.W   #0xa540, &0x140
+//   57   *Addr = data;                             //写入一个字
+        MOV.B   R11, 0(R15)
+//   58   while (FCTL3 & BUSY);                     //等待操作完成
+??Flash_Write_Byte_0:
+        BIT.W   #0x1, &0x144
+        JC      ??Flash_Write_Byte_0
+//   59   FCTL1 = FWKEY;                            //清除写入位
+        MOV.W   #0xa500, &0x140
+//   60   FCTL3 = FWKEY+LOCK;                       //对FLASH加锁，可读，不可写，不可擦除，保护数据
+        MOV.W   #0xa510, &0x144
+//   61 }
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock2
+        REQUIRE _A_FCTL3_L
+        REQUIRE _A_FCTL1_L
+//   62 /*******************************************************************************
+//   63 *  函数名称：
+//   64 *  功能说明：写入一个字数据到Flash
+//   65 *  参数说明：uint16 segmentNo ：段位 uint16_t offset ：偏移量，uint16 data ：要写入的数据
+//   66 *  函数返回：无
+//   67 *  使用示例：Flash_Write(200,0,0xf010);    //在第200个段位，偏移0个字节，写入数据0xf010
+//   68 ********************************************************************************/
+
+        RSEG CODE_I:DATA:REORDER:NOROOT(1)
+//   69 __ramfunc void Flash_Write_Word(uint16_t segmentNo,uint16_t offset,uint16_t data)
+Flash_Write_Word:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function Flash_Write_Word
+        REQUIRE ?cstart_init_copy_ramfunc
+//   70 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.W   R12, R10
+        MOV.W   R13, R8
+        MOV.W   R14, R11
+//   71   ASSERT(segmentNo >= MIN_SEGMENT && segmentNo <= MAX_SEGMENT,"Flash_Write_Word","segmentNo参数超出范围！");  //断言检测段范围是否在FLASH区间
+        CMP.W   #0x22, R10
+        JNC     ??Flash_Write_Word_1
+        CMP.W   #0x122, R10
+        JNC     ??Flash_Write_Word_2
+??Flash_Write_Word_1:
+        MOVA    #`?<Constant "segmentNo\\262\\316\\312\\375\\263\\254\\`, R15
+        MOVA    #`?<Constant "Flash_Write_Word">`, R14
+        MOV.W   #0x47, R13
+        MOVA    #`?<Constant "G:\\\\\\261\\310\\310\\374\\\\2020\\265\\347`, R12
+          CFI FunCall assert_failed
+        CALLA   #assert_failed
+//   72   
+//   73   uint16_t * Addr=(uint16_t *)((uint32_t)segmentNo*512 + offset);        //计算地址
+??Flash_Write_Word_2:
+        MOV.W   R10, R12
+        MOV.W   #0x0, R13
+          CFI FunCall ?ShiftLeft32_9
+        CALLA   #?ShiftLeft32_9
+        MOV.W   R8, R14
+        MOV.W   #0x0, R15
+        ADD.W   R14, R12
+        ADDC.W  R15, R13
+        PUSHM.W #0x2, R13
+          CFI CFA SP+24
+        POPM.A  #0x1, R15
+          CFI CFA SP+20
+//   74   
+//   75   FCTL3 = FWKEY;                            //清除锁定 
+        MOV.W   #0xa500, &0x144
+//   76   FCTL1 = FWKEY+BLKWRT;                     //置位编程位
+        MOV.W   #0xa580, &0x140
+//   77   *Addr = data;                             //写入一个字
+        MOV.W   R11, 0(R15)
+//   78   while (FCTL3 & BUSY);                     //等待操作完成
+??Flash_Write_Word_0:
+        BIT.W   #0x1, &0x144
+        JC      ??Flash_Write_Word_0
+//   79   FCTL1 = FWKEY;                            //清除写入位
+        MOV.W   #0xa500, &0x140
+//   80   FCTL3 = FWKEY+LOCK;                       //对FLASH加锁，可读，不可写，不可擦除，保护数据
+        MOV.W   #0xa510, &0x144
+//   81 }
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+        REQUIRE _A_FCTL3_L
+        REQUIRE _A_FCTL1_L
+//   82 /*******************************************************************************
+//   83 *  函数名称：
+//   84 *  功能说明：写入四个字节数据到Flash
+//   85 *  参数说明：uint16 segmentNo ：段位 uint16_t offset ：偏移量，int32 data ：要写入的数据
+//   86 *  函数返回：无
+//   87 *  使用示例：Flash_Write(200,0,0xf0e0d010);    //在第200个段位，偏移0个字节，写入数据0xf0e0d010
+//   88 ********************************************************************************/
+
+        RSEG CODE_I:DATA:REORDER:NOROOT(1)
+//   89 __ramfunc void Flash_Write_DWold(uint16_t segmentNo,uint16_t offset,uint32_t data)
+Flash_Write_DWold:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function Flash_Write_DWold
+        REQUIRE ?cstart_init_copy_ramfunc
+//   90 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOV.W   R12, R8
+        MOV.W   R13, R6
+        MOV.W   R14, R10
+        MOV.W   R15, R11
+//   91   ASSERT(segmentNo >= MIN_SEGMENT && segmentNo <= MAX_SEGMENT,"Flash_Write_DWold","segmentNo参数超出范围！");  //断言检测段范围是否在FLASH区间
+        CMP.W   #0x22, R8
+        JNC     ??Flash_Write_DWold_1
+        CMP.W   #0x122, R8
+        JNC     ??Flash_Write_DWold_2
+??Flash_Write_DWold_1:
+        MOVA    #`?<Constant "segmentNo\\262\\316\\312\\375\\263\\254\\`, R15
+        MOVA    #`?<Constant "Flash_Write_DWold">`, R14
+        MOV.W   #0x5b, R13
+        MOVA    #`?<Constant "G:\\\\\\261\\310\\310\\374\\\\2020\\265\\347`, R12
+          CFI FunCall assert_failed
+        CALLA   #assert_failed
+//   92   
+//   93   uint32_t * Addr = (uint32_t *)((uint32_t)segmentNo*512 + offset);        //计算地址
+??Flash_Write_DWold_2:
+        MOV.W   R8, R12
+        MOV.W   #0x0, R13
+          CFI FunCall ?ShiftLeft32_9
+        CALLA   #?ShiftLeft32_9
+        MOV.W   R6, R14
+        MOV.W   #0x0, R15
+        ADD.W   R14, R12
+        ADDC.W  R15, R13
+        PUSHM.W #0x2, R13
+          CFI CFA SP+32
+        POPM.A  #0x1, R15
+          CFI CFA SP+28
+//   94   
+//   95   FCTL3 = FWKEY;                            //清除锁定 
+        MOV.W   #0xa500, &0x144
+//   96   FCTL1 = FWKEY+BLKWRT;                     //置位编程位
+        MOV.W   #0xa580, &0x140
+//   97   *Addr = data;                             //写入一个字
+        MOV.W   R10, 0(R15)
+        MOV.W   R11, 0x2(R15)
+//   98   while (FCTL3 & BUSY);                     //等待操作完成
+??Flash_Write_DWold_0:
+        BIT.W   #0x1, &0x144
+        JC      ??Flash_Write_DWold_0
+//   99   FCTL1 = FWKEY;                            //清除写入位
+        MOV.W   #0xa500, &0x140
+//  100   FCTL3 = FWKEY+LOCK;                       //对FLASH加锁，可读，不可写，不可擦除，保护数据
+        MOV.W   #0xa510, &0x144
+//  101 }
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock4
+        REQUIRE _A_FCTL3_L
+        REQUIRE _A_FCTL1_L
+//  102 /*******************************************************************************
+//  103 *  函数名称：Flash_Write_buf(uint16_t segmentNo,uint16_t offset,uint16_t cnt,uint8_t buf[])
+//  104 *  功能说明：写入多个字节数据到Flash
+//  105 *  参数说明：uint16 segmentNo ：段位 uint16_t offset ：起始数据偏移量，uint16 cnt ：写入数据数量，uint8 buf[]要写入的数据
+//  106 *  函数返回：无
+//  107 *  使用示例：uint8 data[10];Flash_Write_buf(200,0,10,data);            //从第200个段位，偏移地址为0开始，连续写入10个字节
+//  108 ********************************************************************************/
+
+        RSEG CODE_I:DATA:REORDER:NOROOT(1)
+//  109 __ramfunc void Flash_Write_buf(uint16_t segmentNo,uint16_t offset,uint16_t cnt,uint8_t buf[])
+Flash_Write_buf:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function Flash_Write_buf
+        REQUIRE ?cstart_init_copy_ramfunc
+//  110 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOV.W   R12, R10
+        MOV.W   R13, R6
+        MOV.W   R14, R11
+        MOVA    R15, R8
+//  111   ASSERT(segmentNo >= MIN_SEGMENT && segmentNo <= MAX_SEGMENT,"Flash_Write_buf","segmentNo参数超出范围！");  //断言检测段范围是否在FLASH区间
+        CMP.W   #0x22, R10
+        JNC     ??Flash_Write_buf_2
+        CMP.W   #0x122, R10
+        JNC     ??Flash_Write_buf_3
+??Flash_Write_buf_2:
+        MOVA    #`?<Constant "segmentNo\\262\\316\\312\\375\\263\\254\\`, R15
+        MOVA    #`?<Constant "Flash_Write_buf">`, R14
+        MOV.W   #0x6f, R13
+        MOVA    #`?<Constant "G:\\\\\\261\\310\\310\\374\\\\2020\\265\\347`, R12
+          CFI FunCall assert_failed
+        CALLA   #assert_failed
+//  112    
+//  113   uint8_t * Addr = (uint8_t *)((uint32_t)segmentNo*512 + offset);        //计算地址
+??Flash_Write_buf_3:
+        MOV.W   R10, R12
+        MOV.W   #0x0, R13
+          CFI FunCall ?ShiftLeft32_9
+        CALLA   #?ShiftLeft32_9
+        MOV.W   R6, R14
+        MOV.W   #0x0, R15
+        ADD.W   R14, R12
+        ADDC.W  R15, R13
+        PUSHM.W #0x2, R13
+          CFI CFA SP+32
+        POPM.A  #0x1, R14
+          CFI CFA SP+28
+//  114    
+//  115   FCTL3 = FWKEY;                            //清除锁定 
+        MOV.W   #0xa500, &0x144
+//  116   FCTL1 = FWKEY + WRT ;                     //置位编程位
+        MOV.W   #0xa540, &0x140
+//  117   while(cnt--)                              
+??Flash_Write_buf_1:
+        MOV.W   R11, R15
+        MOV.W   R15, R11
+        ADD.W   #0xffff, R11
+        CMP.W   #0x0, R15
+        JEQ     ??Flash_Write_buf_4
+//  118   {
+//  119     while (FCTL3 & BUSY);                   //等待允许操作
+??Flash_Write_buf_0:
+        BIT.W   #0x1, &0x144
+        JC      ??Flash_Write_buf_0
+//  120     *Addr++ = *buf++;                       //写入数据时启动时序发生器
+        MOV.B   @R8, 0(R14)
+        ADDA    #0x1, R8
+        ADDA    #0x1, R14
+        JMP     ??Flash_Write_buf_1
+//  121   }
+//  122   FCTL1 = FWKEY;                            //清除写入位
+??Flash_Write_buf_4:
+        MOV.W   #0xa500, &0x140
+//  123   FCTL3 = FWKEY+LOCK;                       //对FLASH加锁，可读，不可写，不可擦除，保护数据
+        MOV.W   #0xa510, &0x144
+//  124 }
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock5
+        REQUIRE _A_FCTL3_L
+        REQUIRE _A_FCTL1_L
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "G:\\\\\\261\\310\\310\\374\\\\2020\\265\\347`:
+        DC8 47H, 3AH, 5CH, 0B1H, 0C8H, 0C8H, 0FCH, 5CH
+        DC8 32H, 30H, 32H, 30H, 0B5H, 0E7H, 0C8H, 0FCH
+        DC8 5CH, 0B4H, 0FAH, 0C2H, 0EBH, 5CH, 4DH, 53H
+        DC8 50H, 34H, 33H, 30H, 5CH, 0B2H, 0E2H, 0CAH
+        DC8 0D4H, 0B9H, 0A6H, 0C4H, 0DCH, 5CH, 0B9H, 0A4H
+        DC8 0B3H, 0CCH, 0C4H, 0A3H, 0B0H, 0E5H, 5CH, 44H
+        DC8 72H, 69H, 76H, 65H, 72H, 73H, 5CH, 73H
+        DC8 72H, 63H, 5CH, 6DH, 73H, 70H, 34H, 33H
+        DC8 30H, 66H, 35H, 35H, 32H, 39H, 5FH, 66H
+        DC8 6CH, 61H, 73H, 68H, 2EH, 63H, 0
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "Flash_Erase_Segment">`:
+        DC8 "Flash_Erase_Segment"
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "segmentNo\\262\\316\\312\\375\\263\\254\\`:
+        DC8 "segmentNo\262\316\312\375\263\254\263\366\267\266\316\247\243\241"
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "Flash_Write_Byte">`:
+        DC8 "Flash_Write_Byte"
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "Flash_Write_Word">`:
+        DC8 "Flash_Write_Word"
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "Flash_Write_DWold">`:
+        DC8 "Flash_Write_DWold"
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "Flash_Write_buf">`:
+        DC8 "Flash_Write_buf"
+
+        END
+// 
+// 546 bytes in segment CODE_I
+//   4 bytes in segment DATA16_AN
+// 191 bytes in segment DATA20_C
+// 
+// 191 bytes of CONST memory
+// 546 bytes of DATA  memory (+ 4 bytes shared)
+//
+//Errors: none
+//Warnings: 25

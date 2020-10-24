@@ -1,0 +1,1459 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V6.30.1.934/W32 for MSP430          12/Oct/2020  03:29:55
+// Copyright 1996-2015 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_clock.c
+//    Command line  =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_clock.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\List\ -o
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\Obj\ --no_cse
+//        --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config "D:\Program Files
+//        (x86)\IAR Systems\Embedded Workbench 7.2\430\lib\dlib\dl430xllff.h"
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\inc\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_config\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_User\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\delay\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\18b20\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\KEY\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LED\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\12864\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\oled\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\mpu6050\inc\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\mpu6050\src\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nokia5110\inc\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nokia5110\src\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LQ_1.8_TFT\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LCD_API\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\2.2TFT\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nrf24l01\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\inc\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\src\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\User\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\User\USER\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\UCOSII\CONFIG\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\App\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\CONFIHG\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\PORT\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\UCOSII\CORE\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\FatFs\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\FatFs\option\ -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --code_model=large
+//    List file     =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\List\msp430f5529_clock.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME msp430f5529_clock
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "1"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?ShiftRight32u
+        EXTERN ?DivMod32u
+        EXTERN ?DivMod16u
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC CLOCK_ACLK_Config
+        PUBLIC CLOCK_DCO_PLLConfig
+        PUBLIC CLOCK_MCLK_Config
+        PUBLIC CLOCK_SMCLK_Config
+        PUBLIC UCS
+        PUBWEAK _A_PMMCTL0_L
+        PUBWEAK _A_PMMIFG_L
+        PUBWEAK _A_SFRIFG1_L
+        PUBWEAK _A_SVSMHCTL_L
+        PUBWEAK _A_SVSMLCTL_L
+        PUBLIC g_sClock
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN _Cast32uto32f
+        EXTERN _Div32f
+        EXTERN _CmpLt32f
+        EXTERN _Add32f
+        EXTERN _Cast32fto32u
+        EXTERN assert_failed
+        EXTERN GPIO_MultiBits_Init
+
+// G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_clock.c
+//    1 #include "msp430f5529_clock.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,0120H
+// union <unnamed> __data16 _A_PMMCTL0_L
+_A_PMMCTL0_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0124H
+// union <unnamed> __data16 _A_SVSMHCTL_L
+_A_SVSMHCTL_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0126H
+// union <unnamed> __data16 _A_SVSMLCTL_L
+_A_SVSMLCTL_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,012cH
+// union <unnamed> __data16 _A_PMMIFG_L
+_A_PMMIFG_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0102H
+// union <unnamed> __data16 _A_SFRIFG1_L
+_A_SFRIFG1_L:
+        DS8 2
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "G:\\\\\\261\\310\\310\\374\\\\2020\\265\\347`:
+        DC8 47H, 3AH, 5CH, 0B1H, 0C8H, 0C8H, 0FCH, 5CH
+        DC8 32H, 30H, 32H, 30H, 0B5H, 0E7H, 0C8H, 0FCH
+        DC8 5CH, 0B4H, 0FAH, 0C2H, 0EBH, 5CH, 4DH, 53H
+        DC8 50H, 34H, 33H, 30H, 5CH, 0B2H, 0E2H, 0CAH
+        DC8 0D4H, 0B9H, 0A6H, 0C4H, 0DCH, 5CH, 0B9H, 0A4H
+        DC8 0B3H, 0CCH, 0C4H, 0A3H, 0B0H, 0E5H, 5CH, 44H
+        DC8 72H, 69H, 76H, 65H, 72H, 73H, 5CH, 73H
+        DC8 72H, 63H, 5CH, 6DH, 73H, 70H, 34H, 33H
+        DC8 30H, 66H, 35H, 35H, 32H, 39H, 5FH, 63H
+        DC8 6CH, 6FH, 63H, 6BH, 2EH, 63H, 0
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "CLOCK_DCO_PLLConfig">`:
+        DC8 "CLOCK_DCO_PLLConfig"
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "FLLN_VALUE\\262\\273\\324\\312\\320\\355`:
+        DC8 46H, 4CH, 4CH, 4EH, 5FH, 56H, 41H, 4CH
+        DC8 55H, 45H, 0B2H, 0BBH, 0D4H, 0CAH, 0D0H, 0EDH
+        DC8 0B3H, 0ACH, 0B9H, 0FDH, 31H, 30H, 32H, 33H
+        DC8 0A3H, 0ACH, 0C7H, 0EBH, 0BDH, 0ABH, 44H, 43H
+        DC8 4FH, 0C6H, 0B5H, 0C2H, 0CAH, 0C9H, 0E8H, 0B5H
+        DC8 0CDH, 0BBH, 0F2H, 0D5H, 0DFH, 0B8H, 0FCH, 0BBH
+        DC8 0BBH, 0CEH, 0AAH, 0B8H, 0FCH, 0B8H, 0DFH, 0C6H
+        DC8 0B5H, 0C2H, 0CAH, 0B5H, 0C4H, 0B2H, 0CEH, 0BFH
+        DC8 0BCH, 0CAH, 0B1H, 0D6H, 0D3H, 0D4H, 0B4H, 0A3H
+        DC8 0A1H, 0
+//    2 
+//    3 #ifndef EXTAL_IN_XT1_HZ
+//    4 #error 没有宏定义"XT1_nHZ",请在clock.h里宏定义，如#define EXTAL_IN_XT1_HZ  32768HZ
+//    5 #endif  
+//    6 #ifndef EXTAL_IN_XT2_HZ
+//    7 #error 没有宏定义"XT2_nHZ",请在clock.h里宏定义，如#define EXTAL_IN_XT2_HZ  4000000HZ
+//    8 #endif
+//    9 
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//   10 const UCS_MemMapPtr UCS = UCS_BASE_PTR;
+UCS:
+        DC32 160H
+
+        RSEG DATA20_N:DATA:SORT:NOROOT(1)
+//   11 __no_init CLOCK g_sClock;                                        //全局变量，时钟频率
+g_sClock:
+        DS8 40
+//   12 static void SetVcoreUp (uint8_t level);                          //设置内核电压
+//   13 /*******************************************************************************
+//   14 *  函数名称：XT1_Config(STATUS status)
+//   15 *  功能说明：设置是否使能XT1
+//   16 *  参数说明：STATUS status：是否使能XT1
+//   17 *  函数返回：无
+//   18 *  使用示例：XT1_Config(ENABLE);   //使能XT1
+//   19 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   20 static inline void XT1_Config(STATUS status)
+XT1_Config:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function XT1_Config
+//   21 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOV.B   R12, R10
+//   22   if(status != DISABLE)
+        CMP.B   #0x0, R10
+        JEQ     ??XT1_Config_1
+//   23   {
+//   24     if(UCS->XT1_OFF == BIT_SET)
+        MOVA    &UCS, R15
+        BIT.B   #0x1, 0xc(R15)
+        JNC     ??XT1_Config_2
+//   25     {
+//   26       GPIO_MultiBits_Init(P5,(GPIO_Pin_4|GPIO_Pin_5),GPI|SEL);   //选用 XT1 第二功能
+        MOV.W   #0x101, R14
+        MOV.W   #0x30, R13
+        MOV.B   #0x4, R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//   27       UCS->XT1_OFF = RESET ;                          // 开启 XT1                       
+        MOVA    &UCS, R15
+        BIC.B   #0x1, 0xc(R15)
+//   28       do
+//   29       {
+//   30         UCS->XT1_LFOFFG = RESET;                     // 清除XT1,CLOCK_DCO 失效标志                     
+??XT1_Config_0:
+        MOVA    &UCS, R15
+        BIC.B   #0x2, 0xe(R15)
+//   31         SFRIFG1 &= ~OFIFG;                           // 
+        BIC.W   #0x2, &0x102
+//   32       }while (UCS->XT1_LFOFFG == BIT_SET);               //
+        MOVA    &UCS, R15
+        MOV.B   0xe(R15), R14
+        RRUX.B  R14
+        BIT.B   #0x1, R14
+        JNE     ??XT1_Config_0
+        JMP     ??XT1_Config_2
+//   33     }
+//   34   }
+//   35   else
+//   36   {
+//   37     UCS->XT1_OFF = BIT_SET ;                          // 关闭 XT1                       
+??XT1_Config_1:
+        MOVA    &UCS, R15
+        BIS.B   #0x1, 0xc(R15)
+//   38   }
+//   39 }
+??XT1_Config_2:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+        REQUIRE _A_SFRIFG1_L
+//   40 /*******************************************************************************
+//   41 *  函数名称：XT2_Config(STATUS status)
+//   42 *  功能说明：设置是否使能XT2
+//   43 *  参数说明：STATUS status：是否使能XT2
+//   44 *  函数返回：无
+//   45 *  使用示例：XT2_Config(TRUE);   //使能XT2
+//   46 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   47 static inline void XT2_Config(STATUS status)
+XT2_Config:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function XT2_Config
+//   48 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOV.B   R12, R10
+//   49   if(status != DISABLE)
+        CMP.B   #0x0, R10
+        JEQ     ??XT2_Config_1
+//   50   {
+//   51     if(UCS->XT2_OFF == BIT_SET)
+        MOVA    &UCS, R15
+        BIT.B   #0x1, 0xd(R15)
+        JNC     ??XT2_Config_2
+//   52     {
+//   53       GPIO_MultiBits_Init(P5,(GPIO_Pin_2|GPIO_Pin_3),GPI|SEL);      //选用 CLOCK_XT2 第二功能
+        MOV.W   #0x101, R14
+        MOV.W   #0xc, R13
+        MOV.B   #0x4, R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//   54       UCS->XT2_OFF = RESET;                         //开启 CLOCK_XT2                      
+        MOVA    &UCS, R15
+        BIC.B   #0x1, 0xd(R15)
+//   55       do
+//   56       {
+//   57         UCS->XT2_OFFG = RESET;
+??XT2_Config_0:
+        MOVA    &UCS, R15
+        BIC.B   #0x8, 0xe(R15)
+//   58         SFRIFG1 &= ~OFIFG;                       
+        BIC.W   #0x2, &0x102
+//   59       }while (UCS->XT2_OFFG == BIT_SET);
+        MOVA    &UCS, R15
+        MOV.B   0xe(R15), R14
+        RPT     #0x3
+        RRUX.B  R14
+        BIT.B   #0x1, R14
+        JNE     ??XT2_Config_0
+        JMP     ??XT2_Config_2
+//   60     }
+//   61   }
+//   62   else
+//   63   {
+//   64     UCS->XT2_OFF = BIT_SET ;                          // 关闭XT2                       
+??XT2_Config_1:
+        MOVA    &UCS, R15
+        BIS.B   #0x1, 0xd(R15)
+//   65   }
+//   66 }
+??XT2_Config_2:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+        REQUIRE _A_SFRIFG1_L
+//   67 /*******************************************************************************
+//   68 *  函数名称：CLOCK_DCO_PLLConfig     (FLLREF_Source refsource, FLLREF_DIVx refdiv, uint32_t DCO_FLL_Fre)
+//   69 *  功能说明：设置DCO频率，单位（HZ）
+//   70 *  参数说明：FLLREF_Source refsource :参考时钟源
+//   71              FLLREF_DIVx refdiv      :参考时钟源分频系数
+//   72              uint32_t DCO_FLL_Fre      :DCO设置频率
+//   73 *  函数返回：无
+//   74 *  使用示例：CLOCK_DCO_PLLConfig     (FLLREF_REFO, FLLREF_DIV_1, 16MHZ);  //设置DCO倍频环以REFO的一分频作为参考时钟源，倍频到16MHZ
+//   75 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   76 void CLOCK_DCO_PLLConfig     (FLLREF_Source refsource, FLLREF_DIVx refdiv, uint32_t DCO_FLL_Fre)
+CLOCK_DCO_PLLConfig:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function CLOCK_DCO_PLLConfig
+//   77 {
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+        MOV.B   R12, R4
+        MOV.B   R13, R5
+        MOV.W   R14, R10
+        MOV.W   R15, R11
+//   78   static const uint16_t ref_div_value[6]={1,2,4,8,12,16};
+//   79   /*根据频率提高内核电压*/
+//   80   //SetVcoreUp ( (DCO_FLL_Fre < 12MHz) ? 0 : ((DCO_FLL_Fre < 16MHz) ? 1 : ((DCO_FLL_Fre < 20MHz) ? 2 :3))); //设置内核电压
+//   81   if(DCO_FLL_Fre < 12MHz)
+        CMP.W   #0xb7, R11
+        JNC     ??CLOCK_DCO_PLLConfig_1
+        JNE     ??CLOCK_DCO_PLLConfig_2
+        CMP.W   #0x1b00, R10
+        JC      ??CLOCK_DCO_PLLConfig_2
+//   82     SetVcoreUp (0x00);                      //设置内核电压
+??CLOCK_DCO_PLLConfig_1:
+        MOV.B   #0x0, R12
+          CFI FunCall SetVcoreUp
+        CALLA   #SetVcoreUp
+        JMP     ??CLOCK_DCO_PLLConfig_3
+//   83   else if(DCO_FLL_Fre < 16MHz)
+??CLOCK_DCO_PLLConfig_2:
+        CMP.W   #0xf4, R11
+        JNC     ??CLOCK_DCO_PLLConfig_4
+        JNE     ??CLOCK_DCO_PLLConfig_5
+        CMP.W   #0x2400, R10
+        JC      ??CLOCK_DCO_PLLConfig_5
+//   84     SetVcoreUp (0x01);       
+??CLOCK_DCO_PLLConfig_4:
+        MOV.B   #0x1, R12
+          CFI FunCall SetVcoreUp
+        CALLA   #SetVcoreUp
+        JMP     ??CLOCK_DCO_PLLConfig_3
+//   85   else if(DCO_FLL_Fre < 20MHz)
+??CLOCK_DCO_PLLConfig_5:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   #0x9680, R14
+        MOV.W   #0x4b98, R15
+          CFI FunCall _CmpLt32f
+        CALLA   #_CmpLt32f
+        CMP.W   #0x0, R12
+        JEQ     ??CLOCK_DCO_PLLConfig_6
+//   86     SetVcoreUp (0x02);       
+        MOV.B   #0x2, R12
+          CFI FunCall SetVcoreUp
+        CALLA   #SetVcoreUp
+        JMP     ??CLOCK_DCO_PLLConfig_3
+//   87   else
+//   88     SetVcoreUp (0x03);       
+??CLOCK_DCO_PLLConfig_6:
+        MOV.B   #0x3, R12
+          CFI FunCall SetVcoreUp
+        CALLA   #SetVcoreUp
+//   89   
+//   90   __bis_SR_register(SCG0);                                              // 禁止倍频环FLL,
+??CLOCK_DCO_PLLConfig_3:
+        BIS.W   #0x40, SR
+//   91   UCS->CTL0 = 0x0000;                                                   // 清零 DCOx, MODx
+        MOVA    &UCS, R15
+        MOV.W   #0x0, 0(R15)
+//   92   
+//   93   if (DCO_FLL_Fre < 0.63MHz)         //           fsystem < 0.63MHz
+        CMP.W   #0x9, R11
+        JNC     ??CLOCK_DCO_PLLConfig_7
+        JNE     ??CLOCK_DCO_PLLConfig_8
+        CMP.W   #0x9cf0, R10
+        JC      ??CLOCK_DCO_PLLConfig_8
+//   94 	UCS->DCORSEL = 0;
+??CLOCK_DCO_PLLConfig_7:
+        MOVA    &UCS, R15
+        AND.B   #0x8f, 0x2(R15)
+        JMP     ??CLOCK_DCO_PLLConfig_9
+//   95   else if (DCO_FLL_Fre < 1.25MHz)    // 0.63MHz < fsystem < 1.25MHz
+??CLOCK_DCO_PLLConfig_8:
+        CMP.W   #0x13, R11
+        JNC     ??CLOCK_DCO_PLLConfig_10
+        JNE     ??CLOCK_DCO_PLLConfig_11
+        CMP.W   #0x12d0, R10
+        JC      ??CLOCK_DCO_PLLConfig_11
+//   96 	UCS->DCORSEL = 1;
+??CLOCK_DCO_PLLConfig_10:
+        MOVA    &UCS, R15
+        MOV.B   0x2(R15), R14
+        AND.B   #0x8f, R14
+        BIS.B   #0x10, R14
+        MOVA    &UCS, R15
+        MOV.B   R14, 0x2(R15)
+        JMP     ??CLOCK_DCO_PLLConfig_9
+//   97   else if (DCO_FLL_Fre < 2.5MHz)     // 1.25MHz < fsystem <  2.5MHz
+??CLOCK_DCO_PLLConfig_11:
+        CMP.W   #0x26, R11
+        JNC     ??CLOCK_DCO_PLLConfig_12
+        JNE     ??CLOCK_DCO_PLLConfig_13
+        CMP.W   #0x25a0, R10
+        JC      ??CLOCK_DCO_PLLConfig_13
+//   98 	UCS->DCORSEL = 2;
+??CLOCK_DCO_PLLConfig_12:
+        MOVA    &UCS, R15
+        MOV.B   0x2(R15), R14
+        AND.B   #0x8f, R14
+        BIS.B   #0x20, R14
+        MOVA    &UCS, R15
+        MOV.B   R14, 0x2(R15)
+        JMP     ??CLOCK_DCO_PLLConfig_9
+//   99   else if (DCO_FLL_Fre <   5MHz)     // 2.5MHz  < fsystem <    5MHz
+??CLOCK_DCO_PLLConfig_13:
+        CMP.W   #0x4c, R11
+        JNC     ??CLOCK_DCO_PLLConfig_14
+        JNE     ??CLOCK_DCO_PLLConfig_15
+        CMP.W   #0x4b40, R10
+        JC      ??CLOCK_DCO_PLLConfig_15
+//  100 	UCS->DCORSEL = 3;
+??CLOCK_DCO_PLLConfig_14:
+        MOVA    &UCS, R15
+        MOV.B   0x2(R15), R14
+        AND.B   #0x8f, R14
+        BIS.B   #0x30, R14
+        MOVA    &UCS, R15
+        MOV.B   R14, 0x2(R15)
+        JMP     ??CLOCK_DCO_PLLConfig_9
+//  101   else if (DCO_FLL_Fre <  10MHz)     // 5MHz    < fsystem <   10MHz
+??CLOCK_DCO_PLLConfig_15:
+        CMP.W   #0x98, R11
+        JNC     ??CLOCK_DCO_PLLConfig_16
+        JNE     ??CLOCK_DCO_PLLConfig_17
+        CMP.W   #0x9680, R10
+        JC      ??CLOCK_DCO_PLLConfig_17
+//  102 	UCS->DCORSEL = 4;
+??CLOCK_DCO_PLLConfig_16:
+        MOVA    &UCS, R15
+        MOV.B   0x2(R15), R14
+        AND.B   #0x8f, R14
+        BIS.B   #0x40, R14
+        MOVA    &UCS, R15
+        MOV.B   R14, 0x2(R15)
+        JMP     ??CLOCK_DCO_PLLConfig_9
+//  103   else if (DCO_FLL_Fre <  20MHz)     // 10MHz   < fsystem <   20MHz
+??CLOCK_DCO_PLLConfig_17:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   #0x9680, R14
+        MOV.W   #0x4b98, R15
+          CFI FunCall _CmpLt32f
+        CALLA   #_CmpLt32f
+        CMP.W   #0x0, R12
+        JEQ     ??CLOCK_DCO_PLLConfig_18
+//  104 	UCS->DCORSEL = 5;
+        MOVA    &UCS, R15
+        MOV.B   0x2(R15), R14
+        AND.B   #0x8f, R14
+        BIS.B   #0x50, R14
+        MOVA    &UCS, R15
+        MOV.B   R14, 0x2(R15)
+        JMP     ??CLOCK_DCO_PLLConfig_9
+//  105   else if (DCO_FLL_Fre <  40MHz)     // 20MHz   < fsystem <   40MHz
+??CLOCK_DCO_PLLConfig_18:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   #0x9680, R14
+        MOV.W   #0x4c18, R15
+          CFI FunCall _CmpLt32f
+        CALLA   #_CmpLt32f
+        CMP.W   #0x0, R12
+        JEQ     ??CLOCK_DCO_PLLConfig_19
+//  106 	UCS->DCORSEL = 6;
+        MOVA    &UCS, R15
+        MOV.B   0x2(R15), R14
+        AND.B   #0x8f, R14
+        BIS.B   #0x60, R14
+        MOVA    &UCS, R15
+        MOV.B   R14, 0x2(R15)
+        JMP     ??CLOCK_DCO_PLLConfig_9
+//  107   else
+//  108 	UCS->DCORSEL = 7;
+??CLOCK_DCO_PLLConfig_19:
+        MOVA    &UCS, R15
+        BIS.B   #0x70, 0x2(R15)
+//  109   
+//  110   UCS->FLLREFDIV = refdiv;
+??CLOCK_DCO_PLLConfig_9:
+        MOV.B   R5, R14
+        AND.B   #0x7, R14
+        MOVA    &UCS, R15
+        MOV.B   0x6(R15), R15
+        AND.B   #0xf8, R15
+        BIS.B   R14, R15
+        MOVA    &UCS, R7
+        MOV.B   R15, 0x6(R7)
+//  111   UCS->SELREF = refsource;
+        MOV.B   R4, R14
+        RPT     #0x4
+        RLAX.B  R14
+        AND.B   #0x70, R14
+        MOVA    &UCS, R15
+        MOV.B   0x6(R15), R15
+        AND.B   #0x8f, R15
+        BIS.B   R14, R15
+        MOVA    &UCS, R7
+        MOV.B   R15, 0x6(R7)
+//  112   
+//  113   float Fref_value;
+//  114   if(refsource == FLLREF_XT2)
+        CMP.B   #0x5, R4
+        JNE     ??CLOCK_DCO_PLLConfig_20
+//  115   {
+//  116     XT2_Config(TRUE);
+        MOV.B   #0x1, R12
+          CFI FunCall XT2_Config
+        CALLA   #XT2_Config
+//  117     Fref_value = (float)((uint32_t)EXTAL_IN_XT2_HZ/ref_div_value[refdiv]);  
+        MOV.W   #0x900, R12
+        MOV.W   #0x3d, R13
+        MOV.B   R5, R15
+        ADDA    R15, R15
+        MOVX.W  ??ref_div_value(R15), R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        JMP     ??CLOCK_DCO_PLLConfig_21
+//  118   }
+//  119   else if(refsource == FLLREF_XT1)
+??CLOCK_DCO_PLLConfig_20:
+        CMP.B   #0x0, R4
+        JNE     ??CLOCK_DCO_PLLConfig_22
+//  120   {
+//  121     XT1_Config(TRUE);
+        MOV.B   #0x1, R12
+          CFI FunCall XT1_Config
+        CALLA   #XT1_Config
+//  122     Fref_value = (float)(EXTAL_IN_XT1_HZ/ref_div_value[refdiv]);
+        MOV.W   #0x8000, R12
+        MOV.B   R5, R15
+        ADDA    R15, R15
+        MOVX.W  ??ref_div_value(R15), R14
+          CFI FunCall ?DivMod16u
+        CALLA   #?DivMod16u
+        MOV.W   #0x0, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+        JMP     ??CLOCK_DCO_PLLConfig_21
+//  123   }
+//  124   else if(refsource == FLLREF_REFO)
+??CLOCK_DCO_PLLConfig_22:
+        CMP.B   #0x2, R4
+        JNE     ??CLOCK_DCO_PLLConfig_21
+//  125   {
+//  126     Fref_value = (float)(REFOCLK_FREQUENCY/ref_div_value[refdiv]);
+        MOV.W   #0x8000, R12
+        MOV.B   R5, R15
+        ADDA    R15, R15
+        MOVX.W  ??ref_div_value(R15), R14
+          CFI FunCall ?DivMod16u
+        CALLA   #?DivMod16u
+        MOV.W   #0x0, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//  127   }
+//  128   uint16_t FLLN_VALUE = (uint16_t)((DCO_FLL_Fre/Fref_value+0.5f)-1u);
+??CLOCK_DCO_PLLConfig_21:
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   #0x0, R14
+        MOV.W   #0x3f00, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   #0x0, R14
+        MOV.W   #0xbf80, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+          CFI FunCall _Cast32fto32u
+        CALLA   #_Cast32fto32u
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//  129   ASSERT(FLLN_VALUE < 1024,"CLOCK_DCO_PLLConfig","FLLN_VALUE不允许超过1023，请将DCO频率设低或者更换为更高频率的参考时钟源！");         //不允许超过1023，请将DCO频率设低或者更换为更高频率的参考时钟源
+        CMP.W   #0x400, R6
+        JNC     ??CLOCK_DCO_PLLConfig_23
+        MOVA    #`?<Constant "FLLN_VALUE\\262\\273\\324\\312\\320\\355`, R15
+        MOVA    #`?<Constant "CLOCK_DCO_PLLConfig">`, R14
+        MOV.W   #0x81, R13
+        MOVA    #`?<Constant "G:\\\\\\261\\310\\310\\374\\\\2020\\265\\347`, R12
+          CFI FunCall assert_failed
+        CALLA   #assert_failed
+//  130   
+//  131   g_sClock.DCO_FLL_Frequency = DCO_FLL_Fre;
+??CLOCK_DCO_PLLConfig_23:
+        MOVX.W  R10, &g_sClock + 36
+        MOVX.W  R11, &g_sClock + 38
+//  132   
+//  133   UCS->FLLN = FLLN_VALUE;        //
+        MOV.W   R6, R15
+        AND.W   #0x3ff, R15
+        MOVA    &UCS, R7
+        MOV.W   0x4(R7), R7
+        AND.W   #0xfc00, R7
+        BIS.W   R15, R7
+        MOVA    &UCS, R15
+        MOV.W   R7, 0x4(R15)
+//  134   UCS->FLLD = 0;     //设置DCO分频  
+        MOVA    &UCS, R15
+        AND.W   #0x8fff, 0x4(R15)
+//  135   
+//  136   __bic_SR_register(SCG0);                  // 使能FLL
+        BIC.W   #0x40, SR
+//  137   do
+//  138   {
+//  139     UCS->DCO_FFG = RESET; // 清除,CLOCK_DCO 失效标志                                        
+??CLOCK_DCO_PLLConfig_0:
+        MOVA    &UCS, R15
+        BIC.B   #0x1, 0xe(R15)
+//  140     SFRIFG1 &= ~OFIFG;                                             // 清除时钟失效标志
+        BIC.W   #0x2, &0x102
+//  141   }while (UCS->DCO_FFG == BIT_SET);                                           // 检查DCO失效标志
+        MOVA    &UCS, R15
+        BIT.B   #0x1, 0xe(R15)
+        JC      ??CLOCK_DCO_PLLConfig_0
+//  142  
+//  143   //将使用DCO作为时钟源的时钟频率值修改
+//  144   if(UCS->SELM == CLOCK_DCO || UCS->SELM == CLOCK_DCO_DIV) 
+        MOVA    &UCS, R15
+        MOV.B   0x8(R15), R14
+        AND.B   #0x7, R14
+        CMP.B   #0x3, R14
+        JEQ     ??CLOCK_DCO_PLLConfig_24
+        MOVA    &UCS, R15
+        MOV.B   0x8(R15), R14
+        AND.B   #0x7, R14
+        CMP.B   #0x4, R14
+        JNE     ??CLOCK_DCO_PLLConfig_25
+//  145   {
+//  146     CLOCK_DIVx div = (CLOCK_DIVx)UCS->DIVM;
+??CLOCK_DCO_PLLConfig_24:
+        MOVA    &UCS, R15
+        MOV.B   0xa(R15), R7
+        AND.B   #0x7, R7
+//  147     CLOCK_MCLK_Config ((CLOCK_Source)UCS->SELM, div);
+        MOV.B   R7, R13
+        MOVA    &UCS, R15
+        MOV.B   0x8(R15), R12
+        AND.B   #0x7, R12
+          CFI FunCall CLOCK_MCLK_Config
+        CALLA   #CLOCK_MCLK_Config
+//  148   }
+//  149   
+//  150   if(UCS->SELS == CLOCK_DCO || UCS->SELS == CLOCK_DCO_DIV)
+??CLOCK_DCO_PLLConfig_25:
+        MOVA    &UCS, R15
+        MOV.B   0x8(R15), R14
+        RPT     #0x4
+        RRUX.B  R14
+        AND.B   #0x7, R14
+        CMP.B   #0x3, R14
+        JEQ     ??CLOCK_DCO_PLLConfig_26
+        MOVA    &UCS, R15
+        MOV.B   0x8(R15), R14
+        RPT     #0x4
+        RRUX.B  R14
+        AND.B   #0x7, R14
+        CMP.B   #0x4, R14
+        JNE     ??CLOCK_DCO_PLLConfig_27
+//  151   {
+//  152     CLOCK_DIVx div = (CLOCK_DIVx)UCS->DIVS;
+??CLOCK_DCO_PLLConfig_26:
+        MOVA    &UCS, R15
+        MOV.B   0xa(R15), R7
+        RPT     #0x4
+        RRUX.B  R7
+        AND.B   #0x7, R7
+//  153     CLOCK_SMCLK_Config((CLOCK_Source)UCS->SELS, div);
+        MOV.B   R7, R13
+        MOVA    &UCS, R15
+        MOV.B   0x8(R15), R12
+        RPT     #0x4
+        RRUX.B  R12
+        AND.B   #0x7, R12
+          CFI FunCall CLOCK_SMCLK_Config
+        CALLA   #CLOCK_SMCLK_Config
+//  154   }
+//  155   
+//  156   if(UCS->SELA == CLOCK_DCO || UCS->SELA == CLOCK_DCO_DIV)
+??CLOCK_DCO_PLLConfig_27:
+        MOVA    &UCS, R15
+        MOV.B   0x9(R15), R14
+        AND.B   #0x7, R14
+        CMP.B   #0x3, R14
+        JEQ     ??CLOCK_DCO_PLLConfig_28
+        MOVA    &UCS, R15
+        MOV.B   0x9(R15), R14
+        AND.B   #0x7, R14
+        CMP.B   #0x4, R14
+        JNE     ??CLOCK_DCO_PLLConfig_29
+//  157   {
+//  158     CLOCK_DIVx div = (CLOCK_DIVx)UCS->DIVA;
+??CLOCK_DCO_PLLConfig_28:
+        MOVA    &UCS, R15
+        MOV.B   0xb(R15), R7
+        AND.B   #0x7, R7
+//  159     CLOCK_ACLK_Config ((CLOCK_Source)UCS->SELS, div);
+        MOV.B   R7, R13
+        MOVA    &UCS, R15
+        MOV.B   0x8(R15), R12
+        RPT     #0x4
+        RRUX.B  R12
+        AND.B   #0x7, R12
+          CFI FunCall CLOCK_ACLK_Config
+        CALLA   #CLOCK_ACLK_Config
+//  160   }
+//  161 }
+??CLOCK_DCO_PLLConfig_29:
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock2
+        REQUIRE _A_SFRIFG1_L
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+??ref_div_value:
+        DC16 1, 2, 4, 8, 12, 16
+//  162 /*************************************************************************
+//  163 *  函数名称：CLOCK_MCLK_Config  (CLOCK_Source mclk , CLOCK_DIVx mclk_div)
+//  164 *  功能说明：设置主时钟源及分频
+//  165 *  参数说明：CLOCK_Source mclk   :主时钟时钟源
+//  166              CLOCK_DIVx mclk_div :主时钟分频系数
+//  167 *  函数返回：无
+//  168 *  使用示例：CLOCK_MCLK_Config  (CLOCK_DCO , DIV_1);   //主时钟使用DCO作为时钟源，分频系数为1（不分频）
+//  169 *************************************************************************/  
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  170 void CLOCK_MCLK_Config  (CLOCK_Source mclk , CLOCK_DIVx mclk_div)
+CLOCK_MCLK_Config:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function CLOCK_MCLK_Config
+//  171 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.B   R12, R10
+        MOV.B   R13, R11
+//  172   if(mclk == CLOCK_XT2)
+        CMP.B   #0x5, R10
+        JNE     ??CLOCK_MCLK_Config_2
+//  173   {
+//  174     XT2_Config(TRUE);
+        MOV.B   #0x1, R12
+          CFI FunCall XT2_Config
+        CALLA   #XT2_Config
+        JMP     ??CLOCK_MCLK_Config_3
+//  175   }
+//  176   else if(mclk == CLOCK_XT1)
+??CLOCK_MCLK_Config_2:
+        CMP.B   #0x0, R10
+        JNE     ??CLOCK_MCLK_Config_3
+//  177   {
+//  178     XT1_Config(TRUE);
+        MOV.B   #0x1, R12
+          CFI FunCall XT1_Config
+        CALLA   #XT1_Config
+//  179   }
+//  180   
+//  181   UCS->SELM = mclk;                         //选择DCO作为时钟源
+??CLOCK_MCLK_Config_3:
+        MOV.B   R10, R14
+        AND.B   #0x7, R14
+        MOVA    &UCS, R15
+        MOV.B   0x8(R15), R15
+        AND.B   #0xf8, R15
+        BIS.B   R14, R15
+        MOVA    &UCS, R14
+        MOV.B   R15, 0x8(R14)
+//  182   UCS->DIVM = mclk_div;
+        MOV.B   R11, R14
+        AND.B   #0x7, R14
+        MOVA    &UCS, R15
+        MOV.B   0xa(R15), R15
+        AND.B   #0xf8, R15
+        BIS.B   R14, R15
+        MOVA    &UCS, R14
+        MOV.B   R15, 0xa(R14)
+//  183   
+//  184   switch(mclk)
+        MOV.B   R10, R14
+        SUB.B   #0x0, R14
+        JEQ     ??CLOCK_MCLK_Config_4
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_MCLK_Config_5
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_MCLK_Config_6
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_MCLK_Config_7
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_MCLK_Config_8
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_MCLK_Config_9
+        JMP     ??CLOCK_MCLK_Config_1
+//  185   {
+//  186   case CLOCK_XT1    :g_sClock.MCLK.nHZ = EXTAL_IN_XT1_HZ;break;
+??CLOCK_MCLK_Config_4:
+        MOVX.W  #0x8000, &g_sClock
+        MOVX.W  #0x0, &g_sClock + 2
+        JMP     ??CLOCK_MCLK_Config_10
+//  187   case CLOCK_VLO    :g_sClock.MCLK.nHZ = VLOCLK_FREQUENCY;break;
+??CLOCK_MCLK_Config_5:
+        MOVX.W  #0x2710, &g_sClock
+        MOVX.W  #0x0, &g_sClock + 2
+        JMP     ??CLOCK_MCLK_Config_10
+//  188   case CLOCK_REFO   :g_sClock.MCLK.nHZ = REFOCLK_FREQUENCY;break;       
+??CLOCK_MCLK_Config_6:
+        MOVX.W  #0x8000, &g_sClock
+        MOVX.W  #0x0, &g_sClock + 2
+        JMP     ??CLOCK_MCLK_Config_10
+//  189   case CLOCK_DCO    :g_sClock.MCLK.nHZ = g_sClock.DCO_FLL_Frequency;break;    
+??CLOCK_MCLK_Config_7:
+        MOVX.W  &g_sClock + 36, &g_sClock
+        MOVX.W  &g_sClock + 38, &g_sClock + 2
+        JMP     ??CLOCK_MCLK_Config_10
+//  190   case CLOCK_DCO_DIV:g_sClock.MCLK.nHZ = g_sClock.DCO_FLL_Frequency;break;
+??CLOCK_MCLK_Config_8:
+        MOVX.W  &g_sClock + 36, &g_sClock
+        MOVX.W  &g_sClock + 38, &g_sClock + 2
+        JMP     ??CLOCK_MCLK_Config_10
+//  191   case CLOCK_XT2    :g_sClock.MCLK.nHZ = EXTAL_IN_XT2_HZ;break;
+??CLOCK_MCLK_Config_9:
+        MOVX.W  #0x900, &g_sClock
+        MOVX.W  #0x3d, &g_sClock + 2
+//  192   default :return;
+//  193   }
+//  194   g_sClock.MCLK.nHZ  >>= mclk_div;
+??CLOCK_MCLK_Config_10:
+        MOVX.W  &g_sClock, R12
+        MOVX.W  &g_sClock + 2, R13
+        MOV.B   R11, R14
+          CFI FunCall ?ShiftRight32u
+        CALLA   #?ShiftRight32u
+        MOVX.W  R12, &g_sClock
+        MOVX.W  R13, &g_sClock + 2
+//  195   g_sClock.MCLK.nKHZ = g_sClock.MCLK.nHZ/1000u;
+        MOVX.W  &g_sClock, R12
+        MOVX.W  &g_sClock + 2, R13
+        MOV.W   #0x3e8, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        MOVX.W  R12, &g_sClock + 4
+        MOVX.W  R13, &g_sClock + 6
+//  196   g_sClock.MCLK.fMHZ = g_sClock.MCLK.nHZ/1000000.0;
+        MOVX.W  &g_sClock, R12
+        MOVX.W  &g_sClock + 2, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   #0x2400, R14
+        MOV.W   #0x4974, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOVX.W  R12, &g_sClock + 8
+        MOVX.W  R13, &g_sClock + 10
+//  197 }
+??CLOCK_MCLK_Config_1:
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+//  198 /*************************************************************************
+//  199 *  函数名称：CLOCK_SMCLK_Config (CLOCK_Source smclk, CLOCK_DIVx smclk_div)
+//  200 *  功能说明：设置系统时钟源及分频
+//  201 *  参数说明：CLOCK_Source smclk   :系统时钟时钟源
+//  202              CLOCK_DIVx smclk_div :系统时钟分频系数
+//  203 *  函数返回：无
+//  204 *  使用示例：CLOCK_SMCLK_Config  (CLOCK_DCO , DIV_2);   //系统时钟使用DCO作为时钟源，分频系数为2（二分频）
+//  205 *************************************************************************/  
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  206 void CLOCK_SMCLK_Config (CLOCK_Source smclk, CLOCK_DIVx smclk_div)
+CLOCK_SMCLK_Config:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function CLOCK_SMCLK_Config
+//  207 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.B   R12, R10
+        MOV.B   R13, R11
+//  208   if(smclk == CLOCK_XT2)
+        CMP.B   #0x5, R10
+        JNE     ??CLOCK_SMCLK_Config_2
+//  209   {
+//  210     XT2_Config(TRUE);
+        MOV.B   #0x1, R12
+          CFI FunCall XT2_Config
+        CALLA   #XT2_Config
+        JMP     ??CLOCK_SMCLK_Config_3
+//  211   }
+//  212   else if(smclk == CLOCK_XT1)
+??CLOCK_SMCLK_Config_2:
+        CMP.B   #0x0, R10
+        JNE     ??CLOCK_SMCLK_Config_3
+//  213   {
+//  214     XT1_Config(TRUE);
+        MOV.B   #0x1, R12
+          CFI FunCall XT1_Config
+        CALLA   #XT1_Config
+//  215   }
+//  216   
+//  217   UCS->SELS = smclk;//选择smclk时钟源
+??CLOCK_SMCLK_Config_3:
+        MOV.B   R10, R14
+        RPT     #0x4
+        RLAX.B  R14
+        AND.B   #0x70, R14
+        MOVA    &UCS, R15
+        MOV.B   0x8(R15), R15
+        AND.B   #0x8f, R15
+        BIS.B   R14, R15
+        MOVA    &UCS, R14
+        MOV.B   R15, 0x8(R14)
+//  218   UCS->DIVS = smclk_div;
+        MOV.B   R11, R14
+        RPT     #0x4
+        RLAX.B  R14
+        AND.B   #0x70, R14
+        MOVA    &UCS, R15
+        MOV.B   0xa(R15), R15
+        AND.B   #0x8f, R15
+        BIS.B   R14, R15
+        MOVA    &UCS, R14
+        MOV.B   R15, 0xa(R14)
+//  219   
+//  220   switch(smclk)
+        MOV.B   R10, R14
+        SUB.B   #0x0, R14
+        JEQ     ??CLOCK_SMCLK_Config_4
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_SMCLK_Config_5
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_SMCLK_Config_6
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_SMCLK_Config_7
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_SMCLK_Config_8
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_SMCLK_Config_9
+        JMP     ??CLOCK_SMCLK_Config_1
+//  221   {
+//  222   case CLOCK_XT1    :g_sClock.SMCLK.nHZ = EXTAL_IN_XT1_HZ;break;
+??CLOCK_SMCLK_Config_4:
+        MOVX.W  #0x8000, &g_sClock + 12
+        MOVX.W  #0x0, &g_sClock + 14
+        JMP     ??CLOCK_SMCLK_Config_10
+//  223   case CLOCK_VLO    :g_sClock.SMCLK.nHZ = VLOCLK_FREQUENCY;break;
+??CLOCK_SMCLK_Config_5:
+        MOVX.W  #0x2710, &g_sClock + 12
+        MOVX.W  #0x0, &g_sClock + 14
+        JMP     ??CLOCK_SMCLK_Config_10
+//  224   case CLOCK_REFO   :g_sClock.SMCLK.nHZ = REFOCLK_FREQUENCY;break;       
+??CLOCK_SMCLK_Config_6:
+        MOVX.W  #0x8000, &g_sClock + 12
+        MOVX.W  #0x0, &g_sClock + 14
+        JMP     ??CLOCK_SMCLK_Config_10
+//  225   case CLOCK_DCO    :g_sClock.SMCLK.nHZ = g_sClock.DCO_FLL_Frequency;break; 
+??CLOCK_SMCLK_Config_7:
+        MOVX.W  &g_sClock + 36, &g_sClock + 12
+        MOVX.W  &g_sClock + 38, &g_sClock + 14
+        JMP     ??CLOCK_SMCLK_Config_10
+//  226   case CLOCK_DCO_DIV:g_sClock.SMCLK.nHZ = g_sClock.DCO_FLL_Frequency;break;
+??CLOCK_SMCLK_Config_8:
+        MOVX.W  &g_sClock + 36, &g_sClock + 12
+        MOVX.W  &g_sClock + 38, &g_sClock + 14
+        JMP     ??CLOCK_SMCLK_Config_10
+//  227   case CLOCK_XT2    :g_sClock.SMCLK.nHZ = EXTAL_IN_XT2_HZ;break;
+??CLOCK_SMCLK_Config_9:
+        MOVX.W  #0x900, &g_sClock + 12
+        MOVX.W  #0x3d, &g_sClock + 14
+//  228   default :return;
+//  229   }
+//  230   g_sClock.SMCLK.nHZ >>= smclk_div;
+??CLOCK_SMCLK_Config_10:
+        MOVX.W  &g_sClock + 12, R12
+        MOVX.W  &g_sClock + 14, R13
+        MOV.B   R11, R14
+          CFI FunCall ?ShiftRight32u
+        CALLA   #?ShiftRight32u
+        MOVX.W  R12, &g_sClock + 12
+        MOVX.W  R13, &g_sClock + 14
+//  231   g_sClock.SMCLK.nKHZ = g_sClock.SMCLK.nHZ/1000u;;
+        MOVX.W  &g_sClock + 12, R12
+        MOVX.W  &g_sClock + 14, R13
+        MOV.W   #0x3e8, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        MOVX.W  R12, &g_sClock + 16
+        MOVX.W  R13, &g_sClock + 18
+//  232   g_sClock.SMCLK.fMHZ = g_sClock.SMCLK.nHZ/1000000.0;
+        MOVX.W  &g_sClock + 12, R12
+        MOVX.W  &g_sClock + 14, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   #0x2400, R14
+        MOV.W   #0x4974, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOVX.W  R12, &g_sClock + 20
+        MOVX.W  R13, &g_sClock + 22
+//  233 }
+??CLOCK_SMCLK_Config_1:
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock4
+//  234 /*************************************************************************
+//  235 *  函数名称：CLOCK_ACLK_Config  (CLOCK_Source aclk , CLOCK_DIVx aclk_div)
+//  236 *  功能说明：设置辅助时钟源及分频
+//  237 *  参数说明：CLOCK_Source aclk   :辅助时钟时钟源
+//  238              CLOCK_DIVx aclk_div :辅助时钟分频系数
+//  239 *  函数返回：无
+//  240 *  使用示例：CLOCK_ACLK_Config  (XT! , DIV_4);   //辅助时钟使用XT1作为时钟源，分频系数为4（四分频）
+//  241 *************************************************************************/  
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  242 void CLOCK_ACLK_Config  (CLOCK_Source aclk , CLOCK_DIVx aclk_div)
+CLOCK_ACLK_Config:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function CLOCK_ACLK_Config
+//  243 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.B   R12, R10
+        MOV.B   R13, R11
+//  244    if(aclk == CLOCK_XT2)
+        CMP.B   #0x5, R10
+        JNE     ??CLOCK_ACLK_Config_2
+//  245   {
+//  246     XT2_Config(TRUE);
+        MOV.B   #0x1, R12
+          CFI FunCall XT2_Config
+        CALLA   #XT2_Config
+        JMP     ??CLOCK_ACLK_Config_3
+//  247   }
+//  248   else if(aclk == CLOCK_XT1)
+??CLOCK_ACLK_Config_2:
+        CMP.B   #0x0, R10
+        JNE     ??CLOCK_ACLK_Config_3
+//  249   {
+//  250     XT1_Config(TRUE);
+        MOV.B   #0x1, R12
+          CFI FunCall XT1_Config
+        CALLA   #XT1_Config
+//  251   }
+//  252   
+//  253   UCS->SELA = aclk;//选择时钟源                   
+??CLOCK_ACLK_Config_3:
+        MOV.B   R10, R14
+        AND.B   #0x7, R14
+        MOVA    &UCS, R15
+        MOV.B   0x9(R15), R15
+        AND.B   #0xf8, R15
+        BIS.B   R14, R15
+        MOVA    &UCS, R14
+        MOV.B   R15, 0x9(R14)
+//  254   UCS->DIVA = aclk_div; //设置分频系数为0
+        MOV.B   R11, R14
+        AND.B   #0x7, R14
+        MOVA    &UCS, R15
+        MOV.B   0xb(R15), R15
+        AND.B   #0xf8, R15
+        BIS.B   R14, R15
+        MOVA    &UCS, R14
+        MOV.B   R15, 0xb(R14)
+//  255   
+//  256   switch(aclk)
+        MOV.B   R10, R14
+        SUB.B   #0x0, R14
+        JEQ     ??CLOCK_ACLK_Config_4
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_ACLK_Config_5
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_ACLK_Config_6
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_ACLK_Config_7
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_ACLK_Config_8
+        SUB.B   #0x1, R14
+        JEQ     ??CLOCK_ACLK_Config_9
+        JMP     ??CLOCK_ACLK_Config_1
+//  257   {
+//  258   case CLOCK_XT1    :g_sClock.ACLK.nHZ = EXTAL_IN_XT1_HZ;break;
+??CLOCK_ACLK_Config_4:
+        MOVX.W  #0x8000, &g_sClock + 24
+        MOVX.W  #0x0, &g_sClock + 26
+        JMP     ??CLOCK_ACLK_Config_10
+//  259   case CLOCK_VLO    :g_sClock.ACLK.nHZ = VLOCLK_FREQUENCY;break;
+??CLOCK_ACLK_Config_5:
+        MOVX.W  #0x2710, &g_sClock + 24
+        MOVX.W  #0x0, &g_sClock + 26
+        JMP     ??CLOCK_ACLK_Config_10
+//  260   case CLOCK_REFO   :g_sClock.ACLK.nHZ = REFOCLK_FREQUENCY;break;       
+??CLOCK_ACLK_Config_6:
+        MOVX.W  #0x8000, &g_sClock + 24
+        MOVX.W  #0x0, &g_sClock + 26
+        JMP     ??CLOCK_ACLK_Config_10
+//  261   case CLOCK_DCO    :g_sClock.ACLK.nHZ = g_sClock.DCO_FLL_Frequency;break;   
+??CLOCK_ACLK_Config_7:
+        MOVX.W  &g_sClock + 36, &g_sClock + 24
+        MOVX.W  &g_sClock + 38, &g_sClock + 26
+        JMP     ??CLOCK_ACLK_Config_10
+//  262   case CLOCK_DCO_DIV:g_sClock.ACLK.nHZ = g_sClock.DCO_FLL_Frequency;break;
+??CLOCK_ACLK_Config_8:
+        MOVX.W  &g_sClock + 36, &g_sClock + 24
+        MOVX.W  &g_sClock + 38, &g_sClock + 26
+        JMP     ??CLOCK_ACLK_Config_10
+//  263   case CLOCK_XT2    :g_sClock.ACLK.nHZ = EXTAL_IN_XT2_HZ;break;
+??CLOCK_ACLK_Config_9:
+        MOVX.W  #0x900, &g_sClock + 24
+        MOVX.W  #0x3d, &g_sClock + 26
+//  264   default :return;
+//  265   }
+//  266   g_sClock.ACLK.nHZ >>= aclk_div;
+??CLOCK_ACLK_Config_10:
+        MOVX.W  &g_sClock + 24, R12
+        MOVX.W  &g_sClock + 26, R13
+        MOV.B   R11, R14
+          CFI FunCall ?ShiftRight32u
+        CALLA   #?ShiftRight32u
+        MOVX.W  R12, &g_sClock + 24
+        MOVX.W  R13, &g_sClock + 26
+//  267   g_sClock.ACLK.nKHZ = g_sClock.ACLK.nHZ/1000u;;
+        MOVX.W  &g_sClock + 24, R12
+        MOVX.W  &g_sClock + 26, R13
+        MOV.W   #0x3e8, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        MOVX.W  R12, &g_sClock + 28
+        MOVX.W  R13, &g_sClock + 30
+//  268   g_sClock.ACLK.fMHZ = g_sClock.ACLK.nHZ/1000000.0;
+        MOVX.W  &g_sClock + 24, R12
+        MOVX.W  &g_sClock + 26, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   #0x2400, R14
+        MOV.W   #0x4974, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOVX.W  R12, &g_sClock + 32
+        MOVX.W  R13, &g_sClock + 34
+//  269 }
+??CLOCK_ACLK_Config_1:
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock5
+//  270 /*******************************************************************************
+//  271 函数功能：设置内核电压值（与频率设置有关）
+//  272 函数参数：u8 level ：电压阶梯 小于3
+//  273 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  274 void SetVcoreUp (uint8_t level)
+SetVcoreUp:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function SetVcoreUp
+          CFI NoCalls
+//  275 {
+//  276 #if 1  //仿真时修改为0，否则会卡在死循环里
+//  277   // Open PMM registers for write
+//  278   PMMCTL0_H = PMMPW_H;              
+        MOV.B   #0xa5, &0x121
+//  279   // Set SVS/SVM high side new level
+//  280   SVSMHCTL = SVSHE + SVSHRVL0 * level + SVMHE + SVSMHRRL0 * level;
+        MOV.B   R12, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        MOV.B   R12, R12
+        ADD.W   R12, R15
+        ADD.W   #0x4400, R15
+        MOV.W   R15, &0x124
+//  281   // Set SVM low side to new level
+//  282   SVSMLCTL = SVSLE + SVMLE + SVSMLRRL0 * level;
+        MOV.B   R12, R15
+        ADD.W   #0x4400, R15
+        MOV.W   R15, &0x126
+//  283   // Wait till SVM is settled
+//  284   uint16_t i=50000; 
+        MOV.W   #0xc350, R14
+//  285   while (((PMMIFG & SVSMLDLYIFG) == 0)&&((i--)>0));
+??SetVcoreUp_0:
+        BIT.W   #0x1, &0x12c
+        JC      ??SetVcoreUp_2
+        MOV.W   R14, R15
+        MOV.W   R15, R14
+        ADD.W   #0xffff, R14
+        CMP.W   #0x0, R15
+        JNE     ??SetVcoreUp_0
+//  286   // Clear already set flags
+//  287   PMMIFG &= ~(SVMLVLRIFG + SVMLIFG);
+??SetVcoreUp_2:
+        AND.W   #0xfff9, &0x12c
+//  288   // Set VCore to new level
+//  289   PMMCTL0_L = PMMCOREV0 * level;
+        MOV.B   R12, &0x120
+//  290   // Wait till new level reached
+//  291   i =50000;
+        MOV.W   #0xc350, R14
+//  292   if ((PMMIFG & SVMLIFG))
+        BIT.W   #0x2, &0x12c
+        JNC     ??SetVcoreUp_3
+//  293     while(((PMMIFG & SVMLVLRIFG) == 0)&&((i--)>0));
+??SetVcoreUp_1:
+        BIT.W   #0x4, &0x12c
+        JC      ??SetVcoreUp_3
+        MOV.W   R14, R15
+        MOV.W   R15, R14
+        ADD.W   #0xffff, R14
+        CMP.W   #0x0, R15
+        JNE     ??SetVcoreUp_1
+//  294   /*
+//  295   if ((PMMIFG & SVMLIFG))
+//  296     while ((PMMIFG & SVMLVLRIFG) == 0);
+//  297   */
+//  298   // Set SVS/SVM low side to new level
+//  299   SVSMLCTL = SVSLE + SVSLRVL0 * level + SVMLE + SVSMLRRL0 * level;
+??SetVcoreUp_3:
+        MOV.B   R12, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        MOV.B   R12, R12
+        ADD.W   R12, R15
+        ADD.W   #0x4400, R15
+        MOV.W   R15, &0x126
+//  300   // Lock PMM registers for write access
+//  301   PMMCTL0_H = 0x00;
+        MOV.B   #0x0, &0x121
+//  302 #endif
+//  303 }
+        RETA
+          CFI EndBlock cfiBlock6
+        REQUIRE _A_PMMCTL0_L
+        REQUIRE _A_SVSMHCTL_L
+        REQUIRE _A_SVSMLCTL_L
+        REQUIRE _A_PMMIFG_L
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// 
+// 2 198 bytes in segment CODE
+//    10 bytes in segment DATA16_AN
+//   189 bytes in segment DATA20_C
+//    40 bytes in segment DATA20_N
+// 
+// 2 198 bytes of CODE  memory
+//   189 bytes of CONST memory
+//    40 bytes of DATA  memory (+ 10 bytes shared)
+//
+//Errors: none
+//Warnings: none

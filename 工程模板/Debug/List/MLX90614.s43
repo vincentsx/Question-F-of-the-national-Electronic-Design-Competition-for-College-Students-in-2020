@@ -1,0 +1,762 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V6.30.1.934/W32 for MSP430          08/Oct/2020  14:52:33
+// Copyright 1996-2015 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\MLX90614.C
+//    Command line  =  
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\MLX90614.C
+//        -D DEBUG -D RAM_VECTOR -lA
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Debug\List\
+//        -o
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Debug\Obj\
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config "D:\Program Files
+//        (x86)\IAR Systems\Embedded Workbench 7.2\430\lib\dlib\dl430xllff.h"
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\inc\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\src\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\src\USB\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\src\USB\USB_config\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\src\USB\USB_User\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\delay\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\18b20\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\KEY\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\LED\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\12864\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\oled\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\mpu6050\inc\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\mpu6050\src\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\nokia5110\inc\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\nokia5110\src\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\LQ_1.8_TFT\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\LCD_API\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\2.2TFT\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\nrf24l01\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\System\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\System\inc\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\System\src\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\UCOSII\CONFIG\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\uCOSII\App\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\uCOSII\CONFIHG\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\uCOSII\PORT\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\UCOSII\CORE\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\FatFs\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\FatFs\option\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --code_model=large
+//    List file     =  
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Debug\List\MLX90614.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME MLX90614
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?CopyMemoryBytes
+        EXTERN ?DivMod8u
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC MLX90614_Get_Temperature
+        PUBLIC Read_MLX90614_Data
+        PUBLIC gh_crc8
+        PUBLIC maopao1
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN _Cast32uto32f
+        EXTERN _Mul32f
+        EXTERN _Add32f
+        EXTERN _Div32f
+        EXTERN _CmpLt32f
+        EXTERN _Cast32fto32s
+        EXTERN _Cast32sto32f
+        EXTERN IIC_start
+        EXTERN send_ch
+        EXTERN read_ch1
+        EXTERN read_ch
+        EXTERN IIC_stop
+
+// G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\MLX90614.C
+//    1 #include "MLX90614.h"
+//    2 
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//    3  unsigned char gh_crc8( unsigned char * p_buffer, unsigned short buf_size )
+gh_crc8:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function gh_crc8
+//    4 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOVA    R12, R10
+        MOV.W   R13, R11
+//    5     unsigned char crc = 0,i;
+        MOV.B   #0x0, R8
+//    6     if(buf_size <= 0)
+        CMP.W   #0x0, R11
+        JNE     ??gh_crc8_1
+//    7     {
+//    8         return crc;
+        MOV.B   R8, R12
+        JMP     ??gh_crc8_2
+//    9     }
+//   10     while( buf_size-- )
+??gh_crc8_1:
+        MOV.W   R11, R15
+        MOV.W   R15, R11
+        ADD.W   #0xffff, R11
+        CMP.W   #0x0, R15
+        JEQ     ??gh_crc8_3
+//   11     {
+//   12         for (  i = 0x80; i != 0; i /= 2 )
+        MOV.B   #0x80, R14
+??gh_crc8_0:
+        CMP.B   #0x0, R14
+        JEQ     ??gh_crc8_4
+//   13         {
+//   14             if ( (crc & 0x80) != 0)
+        CMP.B   #0x0, R8
+        JGE     ??gh_crc8_5
+//   15             {
+//   16                 crc *= 2;
+        RLA.B   R8
+//   17                 crc ^= 0x07; // 多项式：X8 + X2 + X + 1
+        XOR.B   #0x7, R8
+        JMP     ??gh_crc8_6
+//   18             }
+//   19             else
+//   20             {
+//   21                 crc *= 2;
+??gh_crc8_5:
+        RLA.B   R8
+//   22             }
+//   23 			if ( (*p_buffer & i) != 0 )
+??gh_crc8_6:
+        MOV.B   @R10, R15
+        BIT.B   R14, R15
+        JEQ     ??gh_crc8_7
+//   24             {
+//   25                 crc ^= 0x07;
+        XOR.B   #0x7, R8
+//   26             }
+//   27         }
+??gh_crc8_7:
+        MOV.B   R14, R12
+        MOV.B   #0x2, R14
+          CFI FunCall ?DivMod8u
+        CALLA   #?DivMod8u
+        MOV.B   R12, R14
+        JMP     ??gh_crc8_0
+//   28         p_buffer++;
+??gh_crc8_4:
+        ADDA    #0x1, R10
+        JMP     ??gh_crc8_1
+//   29     }
+//   30     return crc;
+??gh_crc8_3:
+        MOV.B   R8, R12
+??gh_crc8_2:
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+//   31 }
+//   32 
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   33 unsigned short Read_MLX90614_Data(unsigned char adress,unsigned char  commond)
+Read_MLX90614_Data:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function Read_MLX90614_Data
+//   34 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        SUB.W   #0x6, SP
+          CFI CFA SP+34
+        MOV.B   R12, R11
+        MOV.B   R13, R10
+//   35 	unsigned char low;
+//   36 	unsigned char high;
+//   37 	unsigned char PEC=0;
+        MOV.B   #0x0, R9
+//   38 	unsigned short data;
+//   39 	unsigned char xu[6] = {0,0x8b,0xb9,0x01,0x07,0x00};
+        MOV.W   SP, R12
+        MOV.W   #`?<Constant {0, 139, 185, 1, 7, 0}>`, R14
+        MOV.W   #0x6, R13
+          CFI FunCall ?CopyMemoryBytes
+        CALLA   #?CopyMemoryBytes
+//   40 	do
+//   41 	{
+//   42 	IIC_start();
+??Read_MLX90614_Data_0:
+          CFI FunCall IIC_start
+        CALLA   #IIC_start
+//   43 	send_ch((adress<<1)|0);
+        MOV.B   R11, R12
+        RLA.B   R12
+          CFI FunCall send_ch
+        CALLA   #send_ch
+//   44 	send_ch(commond);
+        MOV.B   R10, R12
+          CFI FunCall send_ch
+        CALLA   #send_ch
+//   45 	IIC_start();
+          CFI FunCall IIC_start
+        CALLA   #IIC_start
+//   46         send_ch((adress<<1)|1);
+        MOV.B   R11, R12
+        RLA.B   R12
+        BIS.B   #0x1, R12
+          CFI FunCall send_ch
+        CALLA   #send_ch
+//   47     
+//   48 	low = read_ch1();
+          CFI FunCall read_ch1
+        CALLA   #read_ch1
+        MOV.B   R12, R8
+//   49 	high = read_ch1();
+          CFI FunCall read_ch1
+        CALLA   #read_ch1
+        MOV.B   R12, R6
+//   50 	PEC = read_ch();
+          CFI FunCall read_ch
+        CALLA   #read_ch
+        MOV.B   R12, R9
+//   51 	IIC_stop();
+          CFI FunCall IIC_stop
+        CALLA   #IIC_stop
+//   52 	data = (high<<8) | low;
+        MOV.B   R8, R8
+        MOV.B   R6, R15
+        AND.W   #0xff, R15
+        SWPB    R15
+        BIS.W   R8, R15
+        MOV.W   R15, R7
+//   53 		
+//   54 	xu[0] = 	adress;
+        MOV.B   R11, 0(SP)
+//   55 	xu[1] = 	commond;
+        MOV.B   R10, 0x1(SP)
+//   56 	xu[2] = 	adress+1;		
+        MOV.B   R11, R14
+        ADD.B   #0x1, R14
+        MOV.B   R14, 0x2(SP)
+//   57 	xu[3] = 	low;	
+        MOV.B   R8, 0x3(SP)
+//   58 	xu[4] = 	high;		
+        MOV.B   R6, 0x4(SP)
+//   59 		
+//   60 	}while(PEC != gh_crc8(xu,5) );
+        MOV.W   #0x5, R13
+        MOV.W   SP, R12
+          CFI FunCall gh_crc8
+        CALLA   #gh_crc8
+        CMP.B   R12, R9
+        JNE     ??Read_MLX90614_Data_0
+//   61 	
+//   62 	return data;
+        MOV.W   R7, R12
+        ADD.W   #0x6, SP
+          CFI CFA SP+28
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+//   63 }
+//   64 
+//   65 
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   66 void maopao1(float a[],int n)//冒泡排序
+maopao1:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function maopao1
+//   67 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        MOVA    R12, R11
+        MOV.W   R13, R9
+//   68     int i,j;
+//   69     int temp;
+//   70     for(i=0;i<n-1;i++)//n-1
+        MOV.W   #0x0, R8
+??maopao1_1:
+        MOV.W   R9, R15
+        ADD.W   #0xffff, R15
+        CMP.W   R15, R8
+        JGE     ??maopao1_2
+//   71     {
+//   72         for(j=0;j<n-i-1;j++)//n-i-1
+        MOV.W   #0x0, R10
+??maopao1_0:
+        MOV.W   R9, R15
+        SUB.W   R8, R15
+        ADD.W   #0xffff, R15
+        CMP.W   R15, R10
+        JGE     ??maopao1_3
+//   73         {
+//   74             if(a[j]>a[j+1])//大于就交换
+        MOV.W   R10, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        ADDA    R11, R15
+        MOV.W   @R15, R14
+        MOV.W   0x2(R15), R15
+        MOV.W   R10, R13
+        ADD.W   #0x1, R13
+        RLAM.A  #0x4, R13
+        RRAM.A  #0x4, R13
+        RLAM.A  #0x2, R13
+        ADDA    R11, R13
+        MOV.W   @R13, R12
+        MOV.W   0x2(R13), R13
+          CFI FunCall _CmpLt32f
+        CALLA   #_CmpLt32f
+        CMP.W   #0x0, R12
+        JEQ     ??maopao1_4
+//   75             {
+//   76                 temp = a[j];
+        MOV.W   R10, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        ADDA    R11, R15
+        MOV.W   @R15, R12
+        MOV.W   0x2(R15), R13
+          CFI FunCall _Cast32fto32s
+        CALLA   #_Cast32fto32s
+        MOV.W   R12, R6
+//   77                 a[j] = a[j+1];
+        MOV.W   R10, R15
+        ADD.W   #0x1, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        ADDA    R11, R15
+        MOV.W   R10, R14
+        RLAM.A  #0x4, R14
+        RRAM.A  #0x4, R14
+        RLAM.A  #0x2, R14
+        ADDA    R11, R14
+        MOV.W   @R15, 0(R14)
+        MOV.W   0x2(R15), 0x2(R14)
+//   78                 a[j+1] = temp;
+        MOV.W   R6, R12
+        MOV.W   R12, R13
+        XOR.W   #0xffff, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R10, R15
+        ADD.W   #0x1, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        ADDA    R11, R15
+        MOV.W   R12, 0(R15)
+        MOV.W   R13, 0x2(R15)
+//   79             }
+//   80 
+//   81         }
+??maopao1_4:
+        ADD.W   #0x1, R10
+        JMP     ??maopao1_0
+//   82     }
+??maopao1_3:
+        ADD.W   #0x1, R8
+        JMP     ??maopao1_1
+//   83 }
+??maopao1_2:
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock2
+//   84 
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   85 float MLX90614_Get_Temperature()
+MLX90614_Get_Temperature:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function MLX90614_Get_Temperature
+//   86 {
+        PUSHM.A #0x7, R10
+          CFI R4L Frame(CFA, -32)
+          CFI R4H Frame(CFA, -30)
+          CFI R5L Frame(CFA, -28)
+          CFI R5H Frame(CFA, -26)
+          CFI R6L Frame(CFA, -24)
+          CFI R6H Frame(CFA, -22)
+          CFI R7L Frame(CFA, -20)
+          CFI R7H Frame(CFA, -18)
+          CFI R8L Frame(CFA, -16)
+          CFI R8H Frame(CFA, -14)
+          CFI R9L Frame(CFA, -12)
+          CFI R9H Frame(CFA, -10)
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+32
+        SUB.W   #0x28, SP
+          CFI CFA SP+72
+//   87 
+//   88 	float temp;
+//   89 	int i = 0;
+        MOV.W   #0x0, R10
+//   90 	float data_adc1[MLX90614_COLLECT_COUNT];         //ADC要用的，采集到的原值
+//   91 	float data_sum1 = 0;
+        MOV.W   #0x0, R8
+        MOV.W   #0x0, R9
+//   92 	
+//   93 	float av_value = 0;
+        MOV.W   #0x0, R6
+        MOV.W   #0x0, R7
+//   94 	for(i = 0;i < MLX90614_COLLECT_COUNT;i++)	//采集数据LMT70_COLLECT_COUNT次
+        MOV.W   #0x0, R10
+??MLX90614_Get_Temperature_0:
+        CMP.W   #0xa, R10
+        JGE     ??MLX90614_Get_Temperature_3
+//   95 	{
+//   96 		temp = (Read_MLX90614_Data(MLX90614_ADRESS,RAM_READ_TEMPERATURE)*0.02f-273.15f);
+        MOV.B   #0x7, R13
+        MOV.B   #0x0, R12
+          CFI FunCall Read_MLX90614_Data
+        CALLA   #Read_MLX90614_Data
+        MOV.W   #0x0, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   #0xd70a, R14
+        MOV.W   #0x3ca3, R15
+          CFI FunCall _Mul32f
+        CALLA   #_Mul32f
+        MOV.W   #0x9333, R14
+        MOV.W   #0xc388, R15
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+//   97 		data_adc1[i] = temp;
+        MOV.W   R10, R15
+        RLAM.W  #0x2, R15
+        ADD.W   SP, R15
+        MOV.W   R4, 0(R15)
+        MOV.W   R5, 0x2(R15)
+//   98 	
+//   99 	
+//  100 	}
+        ADD.W   #0x1, R10
+        JMP     ??MLX90614_Get_Temperature_0
+//  101 	
+//  102 	maopao1(data_adc1,MLX90614_COLLECT_COUNT);
+??MLX90614_Get_Temperature_3:
+        MOV.W   #0xa, R13
+        MOV.W   SP, R12
+          CFI FunCall maopao1
+        CALLA   #maopao1
+//  103 	for(i=0;i<MLX90614_COLLECT_COUNT-1;i++) //去除最大最小值
+        MOV.W   #0x0, R10
+??MLX90614_Get_Temperature_1:
+        CMP.W   #0x9, R10
+        JGE     ??MLX90614_Get_Temperature_4
+//  104 	{
+//  105 		data_adc1[i] = data_adc1[i+1];
+        MOV.W   SP, R14
+        MOV.W   R10, R15
+        RLAM.W  #0x2, R15
+        ADD.W   R15, R14
+        MOV.W   R10, R15
+        RLAM.W  #0x2, R15
+        ADD.W   SP, R15
+        MOV.W   0x4(R14), 0(R15)
+        MOV.W   0x6(R14), 0x2(R15)
+//  106 	}	 
+        ADD.W   #0x1, R10
+        JMP     ??MLX90614_Get_Temperature_1
+//  107 
+//  108 	data_sum1 = 0;
+??MLX90614_Get_Temperature_4:
+        MOV.W   #0x0, R8
+        MOV.W   #0x0, R9
+//  109 	for(i = 0;i < (MLX90614_COLLECT_COUNT-2);i++)	//均值滤波
+        MOV.W   #0x0, R10
+??MLX90614_Get_Temperature_2:
+        CMP.W   #0x8, R10
+        JGE     ??MLX90614_Get_Temperature_5
+//  110 	{
+//  111 		data_sum1 = data_sum1 + data_adc1[i];
+        MOV.W   R10, R15
+        RLAM.W  #0x2, R15
+        ADD.W   SP, R15
+        MOV.W   @R15, R14
+        MOV.W   0x2(R15), R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Add32f
+        CALLA   #_Add32f
+        MOV.W   R12, R8
+        MOV.W   R13, R9
+//  112  
+//  113 	}
+        ADD.W   #0x1, R10
+        JMP     ??MLX90614_Get_Temperature_2
+//  114 	av_value = data_sum1 / (MLX90614_COLLECT_COUNT-2);
+??MLX90614_Get_Temperature_5:
+        MOV.W   #0x0, R14
+        MOV.W   #0x4100, R15
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, R6
+        MOV.W   R13, R7
+//  115 	
+//  116 	return av_value;
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+        ADD.W   #0x28, SP
+          CFI CFA SP+32
+        POPM.A  #0x7, R10
+          CFI R10H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+//  117 }
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        RSEG DATA16_C:CONST:SORT:NOROOT(0)
+`?<Constant {0, 139, 185, 1, 7, 0}>`:
+        DC8 0, 139, 185, 1, 7, 0
+
+        END
+// 
+// 596 bytes in segment CODE
+//   6 bytes in segment DATA16_C
+// 
+// 596 bytes of CODE  memory
+//   6 bytes of CONST memory
+//
+//Errors: none
+//Warnings: 1

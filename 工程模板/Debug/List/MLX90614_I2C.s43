@@ -1,0 +1,1030 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V6.30.1.934/W32 for MSP430          08/Oct/2020  15:44:43
+// Copyright 1996-2015 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\MLX90614_I2C.C
+//    Command line  =  
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\MLX90614_I2C.C
+//        -D DEBUG -D RAM_VECTOR -lA
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Debug\List\
+//        -o
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Debug\Obj\
+//        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config "D:\Program Files
+//        (x86)\IAR Systems\Embedded Workbench 7.2\430\lib\dlib\dl430xllff.h"
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\inc\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\src\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\src\USB\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\src\USB\USB_config\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\src\USB\USB_User\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\delay\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\18b20\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\KEY\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\LED\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\12864\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\oled\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\mpu6050\inc\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\mpu6050\src\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\nokia5110\inc\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\nokia5110\src\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\LQ_1.8_TFT\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\LCD_API\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\2.2TFT\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\HardWare\nrf24l01\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\System\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\System\inc\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\System\src\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\UCOSII\CONFIG\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\uCOSII\App\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\uCOSII\CONFIHG\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\uCOSII\PORT\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\UCOSII\CORE\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\FatFs\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Lib\FatFs\option\
+//        -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --code_model=large
+//    List file     =  
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\Debug\List\MLX90614_I2C.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME MLX90614_I2C
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "1"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?cstart_init_zero20
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC I2C_SendACK
+        PUBLIC IIC_ad_main
+        PUBLIC IIC_ad_sub
+        PUBLIC IIC_buf
+        PUBLIC IIC_init
+        PUBLIC IIC_num
+        PUBLIC IIC_start
+        PUBLIC IIC_stop
+        PUBWEAK _A_PADIR_L
+        PUBWEAK _A_PAOUT_L
+        PUBLIC read_ch
+        PUBLIC read_ch1
+        PUBLIC send_ch
+        PUBLIC simiic_delay
+        PUBLIC simiic_read_reg
+        PUBLIC simiic_write_reg
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN GPIO_ResetBits
+        EXTERN GPIO_SetBits
+        EXTERN GPIO_ReadBit
+        EXTERN GPIO_MultiBits_Init
+
+// G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\MLX90614_I2C.C
+//    1 #include "MLX90614_I2C.h"
+//    2 #include "msp430f5529_gpio.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,0202H
+// union <unnamed> __data16 _A_PAOUT_L
+_A_PAOUT_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,0204H
+// union <unnamed> __data16 _A_PADIR_L
+_A_PADIR_L:
+        DS8 2
+//    3 #include "delay.h"
+//    4 
+//    5 
+//    6 /******************************************
+//    7 *            SCL引脚     P8.1
+//    8 *            SDA引脚     P1.4
+//    9 ******************************************/
+//   10 
+//   11 #define SDA             GPIO_ReadBit(MLX_SDA_PORT, MLX_SDA_PIN)             //IO口输入电平获取
+//   12 #define SDA0()          GPIO_ResetBits(MLX_SDA_PORT, MLX_SDA_PIN)           //IO口输出低电平
+//   13 #define SDA1()          GPIO_SetBits(MLX_SDA_PORT, MLX_SDA_PIN)	            //IO口输出高电平  
+//   14 #define SCL0()          GPIO_ResetBits(MLX_SCL_PORT, MLX_SCL_PIN)           //IO口输出低电平
+//   15 #define SCL1()          GPIO_SetBits(MLX_SCL_PORT, MLX_SCL_PIN)	            //IO口输出高电平
+//   16 #define DIR_OUT1()      PIN_OUT(MLX_SDA_PORT,MLX_SDA_PIN)   //输出方向
+//   17 #define DIR_IN1()       PIN_DIR(MLX_SDA_PORT,MLX_SDA_PIN)   //输入方向
+//   18 
+//   19 //内部数据定义
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+//   20 uint8_t IIC_ad_main; //器件从地址	    
+IIC_ad_main:
+        DS8 1
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+//   21 uint8_t IIC_ad_sub;  //器件子地址	   
+IIC_ad_sub:
+        DS8 1
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(1)
+        REQUIRE ?cstart_init_zero20
+//   22 uint8_t *IIC_buf;    //发送|接收数据缓冲区	    
+IIC_buf:
+        DS8 4
+
+        RSEG DATA20_Z:DATA:SORT:NOROOT(0)
+        REQUIRE ?cstart_init_zero20
+//   23 uint8_t IIC_num;     //发送|接收数据个数	     
+IIC_num:
+        DS8 1
+//   24 
+//   25 #define ack 1      //主应答
+//   26 #define no_ack 0   //从应答
+//   27 
+//   28 //-------------------------------------------------------------------------------------------------------------------
+//   29 //  @brief      模拟IIC端口初始化
+//   30 //  @param      NULL
+//   31 //  @return     void	
+//   32 //  @since      v1.0
+//   33 //  Sample usage:				
+//   34 //-------------------------------------------------------------------------------------------------------------------
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   35 void IIC_init(void)
+IIC_init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function IIC_init
+//   36 {
+//   37       GPIO_MultiBits_Init(MLX_SCL_PORT, MLX_SCL_PIN, GPO|PULL_UP);
+        MOV.W   #0x22, R14
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//   38       GPIO_MultiBits_Init(MLX_SDA_PORT, MLX_SDA_PIN, GPO|PULL_UP);
+        MOV.W   #0x22, R14
+        MOV.W   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//   39       GPIO_SetBits(MLX_SDA_PORT, MLX_SDA_PIN);               //IO口输出高电平
+        MOV.W   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//   40       GPIO_SetBits(MLX_SCL_PORT, MLX_SCL_PIN);               //IO口输出高电平
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_SetBits
+        BRA     #GPIO_SetBits
+          CFI EndBlock cfiBlock0
+//   41 }
+//   42 
+//   43 //-------------------------------------------------------------------------------------------------------------------
+//   44 //  @brief      模拟IIC延时
+//   45 //  @return     void						
+//   46 //  @since      v1.0
+//   47 //  Sample usage:				如果IIC通讯失败可以尝试增加j的值
+//   48 //-------------------------------------------------------------------------------------------------------------------
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   49 void simiic_delay(void)
+simiic_delay:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function simiic_delay
+          CFI NoCalls
+//   50 {
+//   51 	//64为100K的速率(bus频率为100M)
+//   52 	//特别提示OV7725的通信速率不能太高，最好50K左右，j设置为120通信速率为60K，60K的时候可以正常通信
+//   53 	//其他IIC器件一般可以400K的通信速率
+//   54 	DELAY_US(1);
+        ////////////// Start of 25 cycles delay.
+        JMP     ??simiic_delay_1
+??simiic_delay_1:
+        MOV.W   #0x6, R15
+??simiic_delay_0:
+        ADD.W   #0xffff, R15
+        JC      ??simiic_delay_0
+        ////////////// End of delay code.
+//   55 }
+        RETA
+          CFI EndBlock cfiBlock1
+//   56 
+//   57 
+//   58 //内部使用，用户无需调用
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   59 void IIC_start(void)
+IIC_start:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function IIC_start
+//   60 {
+//   61 	SDA1();
+        MOV.W   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//   62 	SCL1();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//   63 	simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//   64 	SDA0();
+        MOV.W   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//   65 	simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//   66 	SCL0();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        BRA     #GPIO_ResetBits
+          CFI EndBlock cfiBlock2
+//   67 }
+//   68 
+//   69 //内部使用，用户无需调用
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   70 void IIC_stop(void)
+IIC_stop:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function IIC_stop
+//   71 {
+//   72 	SDA0();
+        MOV.W   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//   73 	SCL0();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//   74 	simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//   75 	SCL1();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//   76 	simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//   77 	SDA1();
+        MOV.W   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//   78 	simiic_delay();
+          CFI FunCall simiic_delay
+        BRA     #simiic_delay
+          CFI EndBlock cfiBlock3
+//   79 }
+//   80 
+//   81 //主应答(包含ack:SDA=0和no_ack:SDA=0)
+//   82 //内部使用，用户无需调用
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   83 void I2C_SendACK(unsigned char ack_dat)
+I2C_SendACK:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function I2C_SendACK
+//   84 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+        MOV.B   R12, R10
+//   85     SCL0();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//   86     simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//   87     if(ack_dat)
+        CMP.B   #0x0, R10
+        JEQ     ??I2C_SendACK_0
+//   88     {
+//   89       SDA0();
+        MOV.W   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+        JMP     ??I2C_SendACK_1
+//   90     }
+//   91     else
+//   92     {
+//   93       SDA1();
+??I2C_SendACK_0:
+        MOV.W   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//   94     }
+//   95     SCL1();
+??I2C_SendACK_1:
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//   96     simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//   97     SCL0();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//   98     simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//   99 }
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock4
+//  100 
+//  101 
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  102 static int SCCB_WaitAck(void)
+SCCB_WaitAck:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function SCCB_WaitAck
+//  103 {
+//  104     SCL0();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//  105 	DIR_IN1();
+        MOV.B   &0x204, R14
+        RPT     #0x4
+        RRUX.B  R14
+        AND.B   #0x1, R14
+//  106 	simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  107 	
+//  108 	SCL1();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//  109     simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  110 	
+//  111     if(SDA)           //应答为高电平，异常，通信失败
+        MOV.B   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_ReadBit
+        CALLA   #GPIO_ReadBit
+        CMP.B   #0x0, R12
+        JEQ     ??SCCB_WaitAck_0
+//  112     {
+//  113         DIR_OUT1();
+        MOV.B   &0x202, R14
+        RPT     #0x4
+        RRUX.B  R14
+        AND.B   #0x1, R14
+//  114         SCL0();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//  115         return 0;
+        MOV.W   #0x0, R12
+        RETA
+//  116     }
+//  117     DIR_OUT1();
+??SCCB_WaitAck_0:
+        MOV.B   &0x202, R14
+        RPT     #0x4
+        RRUX.B  R14
+        AND.B   #0x1, R14
+//  118     SCL0();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//  119 	simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  120     return 1;
+        MOV.W   #0x1, R12
+        RETA
+          CFI EndBlock cfiBlock5
+        REQUIRE _A_PADIR_L
+        REQUIRE _A_PAOUT_L
+//  121 }
+//  122 
+//  123 //字节发送程序
+//  124 //发送c(可以是数据也可是地址)，送完后接收从应答
+//  125 //不考虑从应答位
+//  126 //内部使用，用户无需调用
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  127 void send_ch(unsigned char c)
+send_ch:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function send_ch
+//  128 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.B   R12, R10
+//  129     uint8_t i = 8;
+        MOV.B   #0x8, R11
+//  130     while(i--)
+??send_ch_0:
+        MOV.B   R11, R14
+        MOV.B   R14, R11
+        ADD.B   #0xff, R11
+        CMP.B   #0x0, R14
+        JEQ     ??send_ch_1
+//  131     {
+//  132         if(c & 0x80)	
+        CMP.B   #0x0, R10
+        JGE     ??send_ch_2
+//  133         {
+//  134           SDA1();//SDA 输出数据
+        MOV.W   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+        JMP     ??send_ch_3
+//  135         }
+//  136         else
+//  137         {
+//  138           SDA0();
+??send_ch_2:
+        MOV.W   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//  139         }
+//  140         c <<= 1;
+??send_ch_3:
+        RLA.B   R10
+//  141         simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  142         SCL1();                //SCL 拉高，采集信号
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//  143         simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  144         SCL0();                //SCL 时钟线拉低
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+        JMP     ??send_ch_0
+//  145     }
+//  146 	SCCB_WaitAck();
+??send_ch_1:
+          CFI FunCall SCCB_WaitAck
+        CALLA   #SCCB_WaitAck
+//  147 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock6
+//  148 
+//  149 //字节接收程序
+//  150 //接收器件传来的数据，此程序应配合|主应答函数|IIC_ack_main()使用
+//  151 //内部使用，用户无需调用
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  152 unsigned char read_ch(void)
+read_ch:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function read_ch
+//  153 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+//  154     uint8_t i;
+//  155     unsigned char c;
+//  156     c=0;
+        MOV.B   #0x0, R11
+//  157     SCL0();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//  158     simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  159     SDA1();             //置数据线为输入方式
+        MOV.W   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//  160     DIR_IN1();
+        MOV.B   &0x204, R14
+        RPT     #0x4
+        RRUX.B  R14
+        AND.B   #0x1, R14
+//  161     for(i=0;i<8;i++)
+        MOV.B   #0x0, R10
+??read_ch_0:
+        CMP.B   #0x8, R10
+        JC      ??read_ch_1
+//  162     {
+//  163         simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  164         SCL0();         //置时钟线为低，准备接收数据位
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//  165         simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  166         SCL1();         //置时钟线为高，使数据线上数据有效
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//  167         simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  168         c<<=1;
+        RLA.B   R11
+//  169         if(SDA) c+=1;   //读数据位，将接收的数据存c
+        MOV.B   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_ReadBit
+        CALLA   #GPIO_ReadBit
+        CMP.B   #0x0, R12
+        JEQ     ??read_ch_2
+        ADD.B   #0x1, R11
+//  170     }
+??read_ch_2:
+        ADD.B   #0x1, R10
+        JMP     ??read_ch_0
+//  171     DIR_OUT1();
+??read_ch_1:
+        MOV.B   &0x202, R14
+        RPT     #0x4
+        RRUX.B  R14
+        AND.B   #0x1, R14
+//  172     SCL0();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//  173     simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  174     I2C_SendACK(no_ack);
+        MOV.B   #0x0, R12
+          CFI FunCall I2C_SendACK
+        CALLA   #I2C_SendACK
+//  175     return c;
+        MOV.B   R11, R12
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock7
+        REQUIRE _A_PADIR_L
+        REQUIRE _A_PAOUT_L
+//  176 }
+//  177 
+//  178 //-------------------------------------------------------------------------------------------------------------------
+//  179 //  @brief      模拟IIC写数据到设备寄存器函数
+//  180 //  @param      dev_add			设备地址(低七位地址)
+//  181 //  @param      reg				寄存器地址
+//  182 //  @param      dat				写入的数据
+//  183 //  @return     void						
+//  184 //  @since      v1.0
+//  185 //  Sample usage:				
+//  186 //-------------------------------------------------------------------------------------------------------------------
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  187 void simiic_write_reg(unsigned char dev_add, unsigned char reg, unsigned char dat)
+simiic_write_reg:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function simiic_write_reg
+//  188 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.B   R12, R8
+        MOV.B   R13, R10
+        MOV.B   R14, R11
+//  189 	IIC_start();
+          CFI FunCall IIC_start
+        CALLA   #IIC_start
+//  190         send_ch( (dev_add<<1) | 0x00);   //发送器件地址加写位
+        MOV.B   R8, R12
+        RLA.B   R12
+          CFI FunCall send_ch
+        CALLA   #send_ch
+//  191 	send_ch( reg );   				 //发送从机寄存器地址
+        MOV.B   R10, R12
+          CFI FunCall send_ch
+        CALLA   #send_ch
+//  192 	send_ch( dat );   				 //发送需要写入的数据
+        MOV.B   R11, R12
+          CFI FunCall send_ch
+        CALLA   #send_ch
+//  193 	IIC_stop();
+          CFI FunCall IIC_stop
+        CALLA   #IIC_stop
+//  194 }
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock8
+//  195 
+//  196 
+//  197 //-------------------------------------------------------------------------------------------------------------------
+//  198 //  @brief      模拟IIC从设备寄存器读取数据
+//  199 //  @param      dev_add			设备地址(低七位地址)
+//  200 //  @param      reg				寄存器地址
+//  201 //  @param      type			选择通信方式是IIC  还是 SCCB
+//  202 //  @return     uint8			返回寄存器的数据			
+//  203 //  @since      v1.0
+//  204 //  Sample usage:				
+//  205 //-------------------------------------------------------------------------------------------------------------------
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  206 unsigned char simiic_read_reg(unsigned char dev_add, unsigned char reg, IIC_type type)
+simiic_read_reg:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function simiic_read_reg
+//  207 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.B   R12, R8
+        MOV.B   R13, R10
+        MOV.B   R14, R11
+//  208 	uint8_t dat;
+//  209 	IIC_start();
+          CFI FunCall IIC_start
+        CALLA   #IIC_start
+//  210     send_ch( (dev_add<<1) | 0x00);  //发送器件地址加写位
+        MOV.B   R8, R12
+        RLA.B   R12
+          CFI FunCall send_ch
+        CALLA   #send_ch
+//  211 	send_ch( reg );   	    //发送从机寄存器地址
+        MOV.B   R10, R12
+          CFI FunCall send_ch
+        CALLA   #send_ch
+//  212 	if(type == SCCB)IIC_stop();
+        CMP.B   #0x1, R11
+        JNE     ??simiic_read_reg_0
+          CFI FunCall IIC_stop
+        CALLA   #IIC_stop
+//  213 	
+//  214 	IIC_start();
+??simiic_read_reg_0:
+          CFI FunCall IIC_start
+        CALLA   #IIC_start
+//  215 	send_ch( (dev_add<<1) | 0x01);  //发送器件地址加读位
+        MOV.B   R8, R12
+        RLA.B   R12
+        BIS.B   #0x1, R12
+          CFI FunCall send_ch
+        CALLA   #send_ch
+//  216 	dat = read_ch();   		//发送需要写入的数据
+          CFI FunCall read_ch
+        CALLA   #read_ch
+        MOV.B   R12, R9
+//  217 	IIC_stop();
+          CFI FunCall IIC_stop
+        CALLA   #IIC_stop
+//  218 	
+//  219 	return dat;
+        MOV.B   R9, R12
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock9
+//  220 }
+//  221 
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  222 unsigned char read_ch1(void)
+read_ch1:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function read_ch1
+//  223 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+//  224     uint8_t i;
+//  225     unsigned char c;
+//  226     c=0;
+        MOV.B   #0x0, R11
+//  227     SCL0();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//  228     simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  229     SDA1();
+        MOV.W   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//  230     DIR_IN1();
+        MOV.B   &0x204, R14
+        RPT     #0x4
+        RRUX.B  R14
+        AND.B   #0x1, R14
+//  231     for(i=0;i<8;i++)
+        MOV.B   #0x0, R10
+??read_ch1_0:
+        CMP.B   #0x8, R10
+        JC      ??read_ch1_1
+//  232     {
+//  233         simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  234         SCL0();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//  235         simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  236         SCL1();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_SetBits
+        CALLA   #GPIO_SetBits
+//  237         simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  238         c<<=1;
+        RLA.B   R11
+//  239         if(SDA) c+=1;
+        MOV.B   #0x4, R13
+        MOV.B   #0x0, R12
+          CFI FunCall GPIO_ReadBit
+        CALLA   #GPIO_ReadBit
+        CMP.B   #0x0, R12
+        JEQ     ??read_ch1_2
+        ADD.B   #0x1, R11
+//  240     }
+??read_ch1_2:
+        ADD.B   #0x1, R10
+        JMP     ??read_ch1_0
+//  241     DIR_OUT1();
+??read_ch1_1:
+        MOV.B   &0x202, R14
+        RPT     #0x4
+        RRUX.B  R14
+        AND.B   #0x1, R14
+//  242 	SCL0();
+        MOV.W   #0x1, R13
+        MOV.B   #0x7, R12
+          CFI FunCall GPIO_ResetBits
+        CALLA   #GPIO_ResetBits
+//  243 	simiic_delay();
+          CFI FunCall simiic_delay
+        CALLA   #simiic_delay
+//  244 	I2C_SendACK(ack);
+        MOV.B   #0x1, R12
+          CFI FunCall I2C_SendACK
+        CALLA   #I2C_SendACK
+//  245 	
+//  246     return c;
+        MOV.B   R11, R12
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock10
+        REQUIRE _A_PADIR_L
+        REQUIRE _A_PAOUT_L
+//  247 }
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// 
+// 764 bytes in segment CODE
+//   4 bytes in segment DATA16_AN
+//   7 bytes in segment DATA20_Z
+// 
+// 764 bytes of CODE memory
+//   7 bytes of DATA memory (+ 4 bytes shared)
+//
+//Errors: none
+//Warnings: 7

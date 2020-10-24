@@ -1,0 +1,1006 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V6.30.1.934/W32 for MSP430          12/Oct/2020  03:29:57
+// Copyright 1996-2015 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_watchdog.c
+//    Command line  =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_watchdog.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\List\ -o
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\Obj\ --no_cse
+//        --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config "D:\Program Files
+//        (x86)\IAR Systems\Embedded Workbench 7.2\430\lib\dlib\dl430xllff.h"
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\inc\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_config\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_User\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\delay\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\18b20\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\KEY\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LED\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\12864\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\oled\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\mpu6050\inc\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\mpu6050\src\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nokia5110\inc\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nokia5110\src\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LQ_1.8_TFT\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LCD_API\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\2.2TFT\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nrf24l01\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\inc\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\src\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\User\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\User\USER\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\UCOSII\CONFIG\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\App\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\CONFIHG\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\PORT\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\UCOSII\CORE\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\FatFs\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\FatFs\option\ -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --code_model=large
+//    List file     =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\List\msp430f5529_watchdog.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME msp430f5529_watchdog
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "1"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?DivMod32u
+        EXTERN ?Mul32
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC DisableWatchDog
+        PUBLIC SoftWare_RESET
+        PUBLIC WDTX
+        PUBLIC WatchDog_Delay_Ms
+        PUBLIC WatchDog_Feed
+        PUBLIC WatchDog_ITConfig
+        PUBLIC WatchDog_Init
+        PUBLIC WatchDog_Time_Cal
+        PUBLIC WatchDog_Timer_Init
+        PUBWEAK _A_WDTCTL_L
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN g_sClock
+        EXTERN _Cast32uto32f
+        EXTERN _Cast32sto32f
+        EXTERN _Div32f
+        EXTERN _CmpGe32f
+        EXTERN SFRX
+
+// G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_watchdog.c
+//    1 #include "msp430f5529_watchdog.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,015cH
+// union <unnamed> __data16 _A_WDTCTL_L
+_A_WDTCTL_L:
+        DS8 2
+//    2 #include "msp430f5529_clock.h"
+//    3 
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//    4 static const uint32_t WDT_Counter[]={2000000000u,128000000u,8192000u,512000u,32768u,8192u,512u,64u};
+WDT_Counter:
+        DC32 2000000000, 128000000, 8192000, 512000, 32768, 8192, 512, 64
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//    5 const WDT_MemMapPtr WDTX = WDT_BASE_PTR;
+WDTX:
+        DC32 150H
+//    6 extern const SFR_MemMapPtr SFRX;
+//    7 uint16_t WatchDog_Time_Cal(uint32_t ms);
+//    8 /*******************************************************************************
+//    9 *  函数名称：DisableWatchDog(void)
+//   10 *  功能说明：关闭看门狗
+//   11 *  参数说明：无
+//   12 *  函数返回：无
+//   13 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   14 void DisableWatchDog(void)
+DisableWatchDog:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function DisableWatchDog
+          CFI NoCalls
+//   15 {
+//   16   WDTCTL = (WDTCTL&0xFF)|(WDTPW+WDTHOLD);
+        MOV.W   &0x15c, R15
+        AND.W   #0xff, R15
+        BIS.W   #0x5a80, R15
+        MOV.W   R15, &0x15c
+//   17 } 
+        RETA
+          CFI EndBlock cfiBlock0
+        REQUIRE _A_WDTCTL_L
+//   18 /*******************************************************************************
+//   19 *  函数名称：WatchDog_Init(uint32_t ms) 
+//   20 *  功能说明：设置看门狗时间，注意定时时间只是比较接近设置时间的一个时间，并不精准,返回及时间偏
+//   21 *  参数说明：uint32_t ms          ：功能时间
+//   22 *  函数返回：//误差时间（单位：ms）
+//   23 *  使用示例： WatchDog_Init(500);   //设置看门狗时间为500ms
+//   24 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   25 void  WatchDog_Init(uint32_t ms)                                        //看门狗功能配置
+WatchDog_Init:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function WatchDog_Init
+//   26 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//   27   uint16_t WDT_Reg_Val = WatchDog_Time_Cal(ms);
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall WatchDog_Time_Cal
+        CALLA   #WatchDog_Time_Cal
+//   28   SFRX->IE.WDT = DISABLE;                      //关闭看门狗中断
+        MOVA    &SFRX, R15
+        BIC.W   #0x1, 0(R15)
+//   29   WDTCTL = WDTPW | WDTCNTCL | WDT_Reg_Val ; //配置
+        MOV.W   R12, R15
+        BIS.W   #0x5a08, R15
+        MOV.W   R15, &0x15c
+//   30 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock1
+        REQUIRE _A_WDTCTL_L
+//   31 /*******************************************************************************
+//   32 *  函数名称：WatchDog_Timer_Init(uint32_t ms) 
+//   33 *  功能说明：设置看门狗作为定时器并设置时间，注意定时时间只是比较接近设置时间的一个时间，并不精准,返回及时间偏
+//   34 *  参数说明：uint32_t ms          ：功能时间
+//   35 *  函数返回：//误差时间（单位：ms）
+//   36 *  使用示例： WatchDog_Timer_Init(500);   //设置看门狗定时时间为500ms
+//   37 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   38 void  WatchDog_Timer_Init(uint32_t ms)                                  //看门狗定时器功能初始化
+WatchDog_Timer_Init:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function WatchDog_Timer_Init
+//   39 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//   40   uint16_t WDT_Reg_Val = WatchDog_Time_Cal(ms);
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall WatchDog_Time_Cal
+        CALLA   #WatchDog_Time_Cal
+//   41   SFRX->IE.WDT = DISABLE;                      //关闭看门狗中断
+        MOVA    &SFRX, R15
+        BIC.W   #0x1, 0(R15)
+//   42   WDTCTL = WDTPW | WDTCNTCL | WDT_Reg_Val | WDTTMSEL; //配置
+        MOV.W   R12, R15
+        BIS.W   #0x5a18, R15
+        MOV.W   R15, &0x15c
+//   43 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock2
+        REQUIRE _A_WDTCTL_L
+//   44 /*******************************************************************************
+//   45 *  函数名称：WatchDog_Delay_Ms(uint32_t ms) 
+//   46 *  功能说明：设置看门狗延时一段时间，注意定时时间只是比较接近设置时间的一个时间，并不精准,返回及时间偏
+//   47 *  参数说明：uint32_t ms          ：功能时间
+//   48 *  函数返回：//误差时间（单位：ms）
+//   49 *  使用示例：WatchDog_Delay_Ms(500);   //设置在此处使用看门狗延时500ms
+//   50 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   51 void  WatchDog_Delay_Ms  (uint32_t ms)                                  //看门狗延时使用
+WatchDog_Delay_Ms:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function WatchDog_Delay_Ms
+//   52 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//   53   SFRX->IFG.WDT = RESET;
+        MOVA    &SFRX, R15
+        BIC.W   #0x1, 0x2(R15)
+//   54   uint16_t WDT_Reg_Val = WatchDog_Time_Cal(ms);
+        MOV.W   R10, R12
+        MOV.W   R11, R13
+          CFI FunCall WatchDog_Time_Cal
+        CALLA   #WatchDog_Time_Cal
+//   55   SFRX->IE.WDT = DISABLE;                      //关闭看门狗中断
+        MOVA    &SFRX, R15
+        BIC.W   #0x1, 0(R15)
+//   56   WDTCTL = WDTPW | WDTCNTCL | WDT_Reg_Val | WDTTMSEL; //配置
+        MOV.W   R12, R15
+        BIS.W   #0x5a18, R15
+        MOV.W   R15, &0x15c
+//   57   while(SFRX->IFG.WDT == RESET);
+??WatchDog_Delay_Ms_0:
+        MOVA    &SFRX, R15
+        BIT.W   #0x1, 0x2(R15)
+        JNC     ??WatchDog_Delay_Ms_0
+//   58 }
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock3
+        REQUIRE _A_WDTCTL_L
+//   59 /*************************************************************************
+//   60 *  函数名称：WatchDog_Feed(void)
+//   61 *  功能说明：喂狗
+//   62 *  参数说明：无
+//   63 *  函数返回：无
+//   64 *  使用示例：WatchDog_Feed();  //喂狗，清除看门狗计数值
+//   65 *************************************************************************/  
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   66 void  WatchDog_Feed(void)
+WatchDog_Feed:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function WatchDog_Feed
+          CFI NoCalls
+//   67 {
+//   68   WDTCTL =(WDTCTL&0X00FF) | (WDTCNTCL + WDTPW);                //计数值清零
+        MOV.W   &0x15c, R15
+        AND.W   #0xff, R15
+        BIS.W   #0x5a08, R15
+        MOV.W   R15, &0x15c
+//   69 }
+        RETA
+          CFI EndBlock cfiBlock4
+        REQUIRE _A_WDTCTL_L
+//   70 /*************************************************************************
+//   71 *  函数名称：WatchDog_ITConfig(STATUS ITState)
+//   72 *  功能说明：设置看门狗中断是否使能
+//   73 *  参数说明：STATUS ITState ：是否使能中断
+//   74 *  函数返回：无
+//   75 *  使用示例：WatchDog_ITConfig(ENABLE);  //使能看门狗中断
+//   76 *************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   77 void  WatchDog_ITConfig(STATUS ITState)
+WatchDog_ITConfig:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function WatchDog_ITConfig
+          CFI NoCalls
+//   78 {
+//   79   if(ITState != DISABLE)
+        CMP.B   #0x0, R12
+        JEQ     ??WatchDog_ITConfig_0
+//   80   {
+//   81     SFRX->IFG.WDT = RESET;
+        MOVA    &SFRX, R15
+        BIC.W   #0x1, 0x2(R15)
+//   82     SFRX->IE.WDT = ENABLE;  //开启看门狗中断
+        MOVA    &SFRX, R15
+        BIS.W   #0x1, 0(R15)
+        RETA
+//   83   }
+//   84   else
+//   85   {
+//   86     SFRX->IE.WDT = DISABLE;
+??WatchDog_ITConfig_0:
+        MOVA    &SFRX, R15
+        BIC.W   #0x1, 0(R15)
+//   87   }
+//   88 }
+        RETA
+          CFI EndBlock cfiBlock5
+//   89 /*************************************************************************
+//   90 *  函数名称：SoftWare_RESET(void)
+//   91 *  功能说明：软件触发一次复位
+//   92 *  参数说明：无
+//   93 *  函数返回：无
+//   94 *  使用示例：SoftWare_RESET();  //软件复位一次单片机
+//   95 *****************************************************{********************/  
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   96 void  SoftWare_RESET(void)
+SoftWare_RESET:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function SoftWare_RESET
+          CFI NoCalls
+//   97 {
+//   98   WDTCTL = 0x0000;
+        MOV.W   #0x0, &0x15c
+//   99 }
+        RETA
+          CFI EndBlock cfiBlock6
+        REQUIRE _A_WDTCTL_L
+//  100 //看门狗计算时间函数
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  101 uint16_t WatchDog_Time_Cal(uint32_t ms)
+WatchDog_Time_Cal:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function WatchDog_Time_Cal
+//  102 {
+        PUSHM.A #0x8, R11
+          CFI R4L Frame(CFA, -36)
+          CFI R4H Frame(CFA, -34)
+          CFI R5L Frame(CFA, -32)
+          CFI R5H Frame(CFA, -30)
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+36
+        PUSH.W  R13
+          CFI CFA SP+38
+        PUSH.W  R12
+          CFI CFA SP+40
+        SUB.W   #0x1a, SP
+          CFI CFA SP+66
+//  103   float smclk_OffectTime,aclk_OffectTime,vlo_OffectTime; //误差时间
+//  104   int32_t smclk_OffectTimeTemp = 0,aclk_OffectTimeTemp = 0 ,vlo_OffectTimeTemp = 0;
+        MOV.W   #0x0, 0x6(SP)
+        MOV.W   #0x0, 0x8(SP)
+        MOV.W   #0x0, R6
+        MOV.W   #0x0, R7
+        MOV.W   #0x0, R8
+        MOV.W   #0x0, R9
+//  105   uint16_t smclk_DividerValue = 7 ,aclk_DividerValue = 7, vlo_DividerValue = 7;
+        MOV.W   #0x7, 0x4(SP)
+        MOV.W   #0x7, 0x2(SP)
+        MOV.W   #0x7, 0(SP)
+//  106   uint32_t SelectClock;
+//  107   uint32_t WDT_CounterValue;
+//  108   /**********************计算时钟源及计时时间**********************************/
+//  109   //SMCLK
+//  110   SelectClock = g_sClock.SMCLK.nHZ/1000;
+        MOVX.W  &g_sClock + 12, R12
+        MOVX.W  &g_sClock + 14, R13
+        MOV.W   #0x3e8, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        MOV.W   R12, 0xa(SP)
+        MOV.W   R13, 0xc(SP)
+//  111   WDT_CounterValue = ms*SelectClock;
+        MOV.W   0x1a(SP), R12
+        MOV.W   0x1c(SP), R13
+        MOV.W   0xa(SP), R14
+        MOV.W   0xc(SP), R15
+          CFI FunCall ?Mul32
+        CALLA   #?Mul32
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  112   while((WDT_CounterValue > WDT_Counter[smclk_DividerValue]) && (smclk_DividerValue > 0))
+??WatchDog_Time_Cal_0:
+        MOV.W   0x4(SP), R15
+        RLAM.A  #0x2, R15
+        CMPX.W  R11, WDT_Counter + 2(R15)
+        JNC     ??WatchDog_Time_Cal_9
+        JNE     ??WatchDog_Time_Cal_10
+        CMPX.W  R10, WDT_Counter(R15)
+        JC      ??WatchDog_Time_Cal_10
+??WatchDog_Time_Cal_9:
+        CMP.W   #0x0, 0x4(SP)
+        JEQ     ??WatchDog_Time_Cal_10
+//  113   {
+//  114     smclk_DividerValue --;
+        ADD.W   #0xffff, 0x4(SP)
+        JMP     ??WatchDog_Time_Cal_0
+//  115   }
+//  116   if(smclk_DividerValue == 7 || smclk_DividerValue == 0)
+??WatchDog_Time_Cal_10:
+        CMP.W   #0x7, 0x4(SP)
+        JEQ     ??WatchDog_Time_Cal_11
+        CMP.W   #0x0, 0x4(SP)
+        JNE     ??WatchDog_Time_Cal_12
+//  117   {
+//  118     smclk_OffectTimeTemp = (WDT_Counter[smclk_DividerValue]-WDT_CounterValue);
+??WatchDog_Time_Cal_11:
+        MOV.W   0x4(SP), R15
+        RLAM.A  #0x2, R15
+        MOVX.W  WDT_Counter(R15), R14
+        MOVX.W  WDT_Counter + 2(R15), R15
+        SUB.W   R10, R14
+        SUBC.W  R11, R15
+        MOV.W   R14, 0x6(SP)
+        MOV.W   R15, 0x8(SP)
+        JMP     ??WatchDog_Time_Cal_13
+//  119   }
+//  120   else //在两个时间内选出误差时间最短的
+//  121   {
+//  122     if((WDT_Counter[smclk_DividerValue ]-WDT_CounterValue) > (WDT_CounterValue-WDT_Counter[smclk_DividerValue +1]))
+??WatchDog_Time_Cal_12:
+        MOV.W   0x4(SP), R15
+        ADD.W   #0x1, R15
+        RLAM.A  #0x2, R15
+        MOV.W   R10, R4
+        MOV.W   R11, R5
+        SUBX.W  WDT_Counter(R15), R4
+        SUBCX.W WDT_Counter + 2(R15), R5
+        MOV.W   0x4(SP), R15
+        RLAM.A  #0x2, R15
+        MOVX.W  WDT_Counter(R15), R14
+        MOVX.W  WDT_Counter + 2(R15), R15
+        SUB.W   R10, R14
+        SUBC.W  R11, R15
+        CMP.W   R15, R5
+        JNC     ??WatchDog_Time_Cal_14
+        JNE     ??WatchDog_Time_Cal_15
+        CMP.W   R14, R4
+        JC      ??WatchDog_Time_Cal_15
+//  123     {
+//  124       smclk_OffectTimeTemp = (WDT_CounterValue-WDT_Counter[++smclk_DividerValue ]);
+??WatchDog_Time_Cal_14:
+        ADD.W   #0x1, 0x4(SP)
+        MOV.W   0x4(SP), R15
+        RLAM.A  #0x2, R15
+        MOV.W   R10, R4
+        MOV.W   R11, R5
+        SUBX.W  WDT_Counter(R15), R4
+        SUBCX.W WDT_Counter + 2(R15), R5
+        MOV.W   R4, 0x6(SP)
+        MOV.W   R5, 0x8(SP)
+        JMP     ??WatchDog_Time_Cal_13
+//  125     }
+//  126     else
+//  127     {
+//  128       smclk_OffectTimeTemp = (WDT_Counter[smclk_DividerValue ]-WDT_CounterValue);
+??WatchDog_Time_Cal_15:
+        MOV.W   0x4(SP), R15
+        RLAM.A  #0x2, R15
+        MOVX.W  WDT_Counter(R15), R14
+        MOVX.W  WDT_Counter + 2(R15), R15
+        SUB.W   R10, R14
+        SUBC.W  R11, R15
+        MOV.W   R14, 0x6(SP)
+        MOV.W   R15, 0x8(SP)
+//  129     }
+//  130   }
+//  131   smclk_OffectTimeTemp = smclk_OffectTimeTemp>0 ? smclk_OffectTimeTemp : -smclk_OffectTimeTemp;
+??WatchDog_Time_Cal_13:
+        CMP.W   #0x0, 0x8(SP)
+        JL      ??WatchDog_Time_Cal_16
+        JNE     ??WatchDog_Time_Cal_17
+        CMP.W   #0x1, 0x6(SP)
+        JNC     ??WatchDog_Time_Cal_16
+??WatchDog_Time_Cal_17:
+        MOV.W   0x6(SP), 0x6(SP)
+        MOV.W   0x8(SP), 0x8(SP)
+        JMP     ??WatchDog_Time_Cal_18
+??WatchDog_Time_Cal_16:
+        MOV.W   0x6(SP), R14
+        MOV.W   0x8(SP), R15
+        XOR.W   #0xffff, R14
+        XOR.W   #0xffff, R15
+        ADD.W   #0x1, R14
+        ADDC.W  #0x0, R15
+        MOV.W   R14, 0x6(SP)
+        MOV.W   R15, 0x8(SP)
+//  132   smclk_OffectTime = (float)smclk_OffectTimeTemp/(float)g_sClock.SMCLK.nHZ;
+??WatchDog_Time_Cal_18:
+        MOVX.W  &g_sClock + 12, R12
+        MOVX.W  &g_sClock + 14, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOV.W   0x6(SP), R12
+        MOV.W   0x8(SP), R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R4, R14
+        MOV.W   R5, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, 0x12(SP)
+        MOV.W   R13, 0x14(SP)
+//  133   /*ACLK*/
+//  134   SelectClock = g_sClock.ACLK.nHZ;
+        MOVX.W  &g_sClock + 24, 0xa(SP)
+        MOVX.W  &g_sClock + 26, 0xc(SP)
+//  135   WDT_CounterValue = ms*SelectClock/1000;
+        MOV.W   0x1a(SP), R12
+        MOV.W   0x1c(SP), R13
+        MOV.W   0xa(SP), R14
+        MOV.W   0xc(SP), R15
+          CFI FunCall ?Mul32
+        CALLA   #?Mul32
+        MOV.W   #0x3e8, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  136   while((WDT_CounterValue > WDT_Counter[aclk_DividerValue]) && (aclk_DividerValue > 0))
+??WatchDog_Time_Cal_1:
+        MOV.W   0x2(SP), R15
+        RLAM.A  #0x2, R15
+        CMPX.W  R11, WDT_Counter + 2(R15)
+        JNC     ??WatchDog_Time_Cal_19
+        JNE     ??WatchDog_Time_Cal_20
+        CMPX.W  R10, WDT_Counter(R15)
+        JC      ??WatchDog_Time_Cal_20
+??WatchDog_Time_Cal_19:
+        CMP.W   #0x0, 0x2(SP)
+        JEQ     ??WatchDog_Time_Cal_20
+//  137   {
+//  138     aclk_DividerValue--;
+        ADD.W   #0xffff, 0x2(SP)
+        JMP     ??WatchDog_Time_Cal_1
+//  139   }
+//  140   if(aclk_DividerValue == 7 || aclk_DividerValue == 0)
+??WatchDog_Time_Cal_20:
+        CMP.W   #0x7, 0x2(SP)
+        JEQ     ??WatchDog_Time_Cal_21
+        CMP.W   #0x0, 0x2(SP)
+        JNE     ??WatchDog_Time_Cal_22
+//  141   {
+//  142     aclk_OffectTimeTemp = (WDT_Counter[aclk_DividerValue]-WDT_CounterValue);
+??WatchDog_Time_Cal_21:
+        MOV.W   0x2(SP), R15
+        RLAM.A  #0x2, R15
+        MOVX.W  WDT_Counter(R15), R14
+        MOVX.W  WDT_Counter + 2(R15), R15
+        SUB.W   R10, R14
+        SUBC.W  R11, R15
+        MOV.W   R14, R6
+        MOV.W   R15, R7
+        JMP     ??WatchDog_Time_Cal_23
+//  143   }
+//  144   else //在两个时间内选出误差时间最短的
+//  145   {
+//  146     if((WDT_Counter[aclk_DividerValue ]-WDT_CounterValue) > (WDT_CounterValue-WDT_Counter[aclk_DividerValue +1]))
+??WatchDog_Time_Cal_22:
+        MOV.W   0x2(SP), R15
+        ADD.W   #0x1, R15
+        RLAM.A  #0x2, R15
+        MOV.W   R10, R4
+        MOV.W   R11, R5
+        SUBX.W  WDT_Counter(R15), R4
+        SUBCX.W WDT_Counter + 2(R15), R5
+        MOV.W   0x2(SP), R15
+        RLAM.A  #0x2, R15
+        MOVX.W  WDT_Counter(R15), R14
+        MOVX.W  WDT_Counter + 2(R15), R15
+        SUB.W   R10, R14
+        SUBC.W  R11, R15
+        CMP.W   R15, R5
+        JNC     ??WatchDog_Time_Cal_24
+        JNE     ??WatchDog_Time_Cal_25
+        CMP.W   R14, R4
+        JC      ??WatchDog_Time_Cal_25
+//  147     {
+//  148       aclk_OffectTimeTemp = (WDT_CounterValue-WDT_Counter[++aclk_DividerValue]);
+??WatchDog_Time_Cal_24:
+        ADD.W   #0x1, 0x2(SP)
+        MOV.W   0x2(SP), R15
+        RLAM.A  #0x2, R15
+        MOV.W   R10, R4
+        MOV.W   R11, R5
+        SUBX.W  WDT_Counter(R15), R4
+        SUBCX.W WDT_Counter + 2(R15), R5
+        MOV.W   R4, R6
+        MOV.W   R5, R7
+        JMP     ??WatchDog_Time_Cal_23
+//  149     }
+//  150     else
+//  151     {
+//  152       aclk_OffectTimeTemp = (WDT_Counter[aclk_DividerValue]-WDT_CounterValue);
+??WatchDog_Time_Cal_25:
+        MOV.W   0x2(SP), R15
+        RLAM.A  #0x2, R15
+        MOVX.W  WDT_Counter(R15), R14
+        MOVX.W  WDT_Counter + 2(R15), R15
+        SUB.W   R10, R14
+        SUBC.W  R11, R15
+        MOV.W   R14, R6
+        MOV.W   R15, R7
+//  153     }  
+//  154   }
+//  155   aclk_OffectTimeTemp = aclk_OffectTimeTemp>0 ? aclk_OffectTimeTemp : -aclk_OffectTimeTemp;
+??WatchDog_Time_Cal_23:
+        CMP.W   #0x0, R7
+        JL      ??WatchDog_Time_Cal_7
+        JNE     ??WatchDog_Time_Cal_4
+        CMP.W   #0x1, R6
+        JC      ??WatchDog_Time_Cal_4
+??WatchDog_Time_Cal_7:
+        XOR.W   #0xffff, R6
+        XOR.W   #0xffff, R7
+        ADD.W   #0x1, R6
+        ADDC.W  #0x0, R7
+//  156   aclk_OffectTime = (float)aclk_OffectTimeTemp/(float)g_sClock.ACLK.nHZ;
+??WatchDog_Time_Cal_4:
+        MOVX.W  &g_sClock + 24, R12
+        MOVX.W  &g_sClock + 26, R13
+          CFI FunCall _Cast32uto32f
+        CALLA   #_Cast32uto32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOV.W   R6, R12
+        MOV.W   R7, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R4, R14
+        MOV.W   R5, R15
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, 0xe(SP)
+        MOV.W   R13, 0x10(SP)
+//  157   /**VLOCLK_10K*/
+//  158   SelectClock = VLOCLK_FREQUENCY;
+        MOV.W   #0x2710, 0xa(SP)
+        MOV.W   #0x0, 0xc(SP)
+//  159   WDT_CounterValue = ms*SelectClock/1000;
+        MOV.W   0x1a(SP), R12
+        MOV.W   0x1c(SP), R13
+        MOV.W   0xa(SP), R14
+        MOV.W   0xc(SP), R15
+          CFI FunCall ?Mul32
+        CALLA   #?Mul32
+        MOV.W   #0x3e8, R14
+        MOV.W   #0x0, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        MOV.W   R12, R10
+        MOV.W   R13, R11
+//  160   while((WDT_CounterValue > WDT_Counter[vlo_DividerValue]) && (vlo_DividerValue > 0))
+??WatchDog_Time_Cal_2:
+        MOV.W   @SP, R15
+        RLAM.A  #0x2, R15
+        CMPX.W  R11, WDT_Counter + 2(R15)
+        JNC     ??WatchDog_Time_Cal_26
+        JNE     ??WatchDog_Time_Cal_27
+        CMPX.W  R10, WDT_Counter(R15)
+        JC      ??WatchDog_Time_Cal_27
+??WatchDog_Time_Cal_26:
+        CMP.W   #0x0, 0(SP)
+        JEQ     ??WatchDog_Time_Cal_27
+//  161   {
+//  162     vlo_DividerValue--;
+        ADD.W   #0xffff, 0(SP)
+        JMP     ??WatchDog_Time_Cal_2
+//  163   }
+//  164   if(vlo_DividerValue == 7 || vlo_DividerValue == 0)
+??WatchDog_Time_Cal_27:
+        CMP.W   #0x7, 0(SP)
+        JEQ     ??WatchDog_Time_Cal_28
+        CMP.W   #0x0, 0(SP)
+        JNE     ??WatchDog_Time_Cal_29
+//  165   {
+//  166     vlo_OffectTimeTemp = (WDT_Counter[vlo_DividerValue]-WDT_CounterValue);
+??WatchDog_Time_Cal_28:
+        MOV.W   @SP, R15
+        RLAM.A  #0x2, R15
+        MOVX.W  WDT_Counter(R15), R14
+        MOVX.W  WDT_Counter + 2(R15), R15
+        SUB.W   R10, R14
+        SUBC.W  R11, R15
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+        JMP     ??WatchDog_Time_Cal_30
+//  167   }
+//  168   else //在两个时间内选出误差时间最短的
+//  169   {
+//  170     if((WDT_Counter[vlo_DividerValue]-WDT_CounterValue) > (WDT_CounterValue-WDT_Counter[vlo_DividerValue+1]))
+??WatchDog_Time_Cal_29:
+        MOV.W   @SP, R15
+        ADD.W   #0x1, R15
+        RLAM.A  #0x2, R15
+        MOV.W   R10, R4
+        MOV.W   R11, R5
+        SUBX.W  WDT_Counter(R15), R4
+        SUBCX.W WDT_Counter + 2(R15), R5
+        MOV.W   @SP, R15
+        RLAM.A  #0x2, R15
+        MOVX.W  WDT_Counter(R15), R14
+        MOVX.W  WDT_Counter + 2(R15), R15
+        SUB.W   R10, R14
+        SUBC.W  R11, R15
+        CMP.W   R15, R5
+        JNC     ??WatchDog_Time_Cal_31
+        JNE     ??WatchDog_Time_Cal_32
+        CMP.W   R14, R4
+        JC      ??WatchDog_Time_Cal_32
+//  171     {
+//  172       vlo_OffectTimeTemp = (WDT_CounterValue-WDT_Counter[++vlo_DividerValue]);
+??WatchDog_Time_Cal_31:
+        ADD.W   #0x1, 0(SP)
+        MOV.W   @SP, R15
+        RLAM.A  #0x2, R15
+        MOV.W   R10, R4
+        MOV.W   R11, R5
+        SUBX.W  WDT_Counter(R15), R4
+        SUBCX.W WDT_Counter + 2(R15), R5
+        MOV.W   R4, R8
+        MOV.W   R5, R9
+        JMP     ??WatchDog_Time_Cal_30
+//  173     }
+//  174     else
+//  175     {
+//  176       vlo_OffectTimeTemp = (WDT_Counter[vlo_DividerValue]-WDT_CounterValue);
+??WatchDog_Time_Cal_32:
+        MOV.W   @SP, R15
+        RLAM.A  #0x2, R15
+        MOVX.W  WDT_Counter(R15), R14
+        MOVX.W  WDT_Counter + 2(R15), R15
+        SUB.W   R10, R14
+        SUBC.W  R11, R15
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+//  177     }
+//  178   }
+//  179   vlo_OffectTimeTemp = vlo_OffectTimeTemp>0 ? vlo_OffectTimeTemp : -vlo_OffectTimeTemp;
+??WatchDog_Time_Cal_30:
+        CMP.W   #0x0, R9
+        JL      ??WatchDog_Time_Cal_8
+        JNE     ??WatchDog_Time_Cal_6
+        CMP.W   #0x1, R8
+        JC      ??WatchDog_Time_Cal_6
+??WatchDog_Time_Cal_8:
+        XOR.W   #0xffff, R8
+        XOR.W   #0xffff, R9
+        ADD.W   #0x1, R8
+        ADDC.W  #0x0, R9
+//  180   vlo_OffectTime = (float)vlo_OffectTimeTemp/(float)VLOCLK_FREQUENCY; 
+??WatchDog_Time_Cal_6:
+        MOV.W   R8, R12
+        MOV.W   R9, R13
+          CFI FunCall _Cast32sto32f
+        CALLA   #_Cast32sto32f
+        MOV.W   R12, R4
+        MOV.W   R13, R5
+        MOV.W   #0x4000, R14
+        MOV.W   #0x461c, R15
+        MOV.W   R4, R12
+        MOV.W   R5, R13
+          CFI FunCall _Div32f
+        CALLA   #_Div32f
+        MOV.W   R12, 0x16(SP)
+        MOV.W   R13, 0x18(SP)
+//  181   /*********比较各个时钟源的定时精度，选择最高精度的时钟源及定时时间**********/
+//  182   if((smclk_OffectTime <= aclk_OffectTime) && (smclk_OffectTime <= vlo_OffectTime))
+        MOV.W   0x12(SP), R14
+        MOV.W   0x14(SP), R15
+        MOV.W   0xe(SP), R12
+        MOV.W   0x10(SP), R13
+          CFI FunCall _CmpGe32f
+        CALLA   #_CmpGe32f
+        CMP.W   #0x0, R12
+        JEQ     ??WatchDog_Time_Cal_33
+        MOV.W   0x12(SP), R14
+        MOV.W   0x14(SP), R15
+        MOV.W   0x16(SP), R12
+        MOV.W   0x18(SP), R13
+          CFI FunCall _CmpGe32f
+        CALLA   #_CmpGe32f
+        CMP.W   #0x0, R12
+        JEQ     ??WatchDog_Time_Cal_33
+//  183   {
+//  184     return (WDTSSEL__SMCLK | smclk_DividerValue);
+        MOV.W   0x4(SP), R12
+        JMP     ??WatchDog_Time_Cal_34
+//  185   }
+//  186   else if((aclk_OffectTime <= smclk_OffectTime) && (aclk_OffectTime <= vlo_OffectTime))
+??WatchDog_Time_Cal_33:
+        MOV.W   0xe(SP), R14
+        MOV.W   0x10(SP), R15
+        MOV.W   0x12(SP), R12
+        MOV.W   0x14(SP), R13
+          CFI FunCall _CmpGe32f
+        CALLA   #_CmpGe32f
+        CMP.W   #0x0, R12
+        JEQ     ??WatchDog_Time_Cal_35
+        MOV.W   0xe(SP), R14
+        MOV.W   0x10(SP), R15
+        MOV.W   0x16(SP), R12
+        MOV.W   0x18(SP), R13
+          CFI FunCall _CmpGe32f
+        CALLA   #_CmpGe32f
+        CMP.W   #0x0, R12
+        JEQ     ??WatchDog_Time_Cal_35
+//  187   {
+//  188     return (WDTSSEL__ACLK | aclk_DividerValue);
+        MOV.W   0x2(SP), R12
+        BIS.W   #0x20, R12
+        JMP     ??WatchDog_Time_Cal_34
+//  189   }
+//  190   else
+//  191   {
+//  192     return (WDTSSEL__VLO | vlo_DividerValue);
+??WatchDog_Time_Cal_35:
+        MOV.W   @SP, R12
+        BIS.W   #0x40, R12
+??WatchDog_Time_Cal_34:
+        ADD.W   #0x1e, SP
+          CFI CFA SP+36
+        POPM.A  #0x8, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R4H SameValue
+          CFI R5H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R4L SameValue
+          CFI R5L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock7
+//  193   }
+//  194 }
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// 
+// 1 310 bytes in segment CODE
+//     2 bytes in segment DATA16_AN
+//    36 bytes in segment DATA20_C
+// 
+// 1 310 bytes of CODE  memory
+//    36 bytes of CONST memory
+//     0 bytes of DATA  memory (+ 2 bytes shared)
+//
+//Errors: none
+//Warnings: none

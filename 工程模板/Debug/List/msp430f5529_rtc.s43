@@ -1,0 +1,613 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V6.30.1.934/W32 for MSP430          12/Oct/2020  03:29:56
+// Copyright 1996-2015 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_rtc.c
+//    Command line  =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_rtc.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\List\ -o
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\Obj\ --no_cse
+//        --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config "D:\Program Files
+//        (x86)\IAR Systems\Embedded Workbench 7.2\430\lib\dlib\dl430xllff.h"
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\inc\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_config\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_User\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\delay\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\18b20\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\KEY\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LED\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\12864\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\oled\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\mpu6050\inc\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\mpu6050\src\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nokia5110\inc\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nokia5110\src\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LQ_1.8_TFT\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LCD_API\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\2.2TFT\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nrf24l01\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\inc\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\src\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\User\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\User\USER\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\UCOSII\CONFIG\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\App\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\CONFIHG\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\PORT\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\UCOSII\CORE\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\FatFs\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\FatFs\option\ -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --code_model=large
+//    List file     =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\List\msp430f5529_rtc.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME msp430f5529_rtc
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "1"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC RTC
+        PUBLIC RTC_ClearITPendingBit
+        PUBLIC RTC_GetITStatus
+        PUBLIC RTC_GetTime
+        PUBLIC RTC_ITConfig
+        PUBLIC RTC_Init
+        PUBLIC RTC_SetAlarm
+        PUBLIC RTC_SetTime
+        PUBWEAK _A_RTCADOWDAY_L
+        PUBWEAK _A_RTCAMINHR_L
+        PUBWEAK _A_RTCCTL01_L
+        PUBWEAK _A_RTCPS0CTL_L
+        PUBWEAK _A_RTCPS1CTL_L
+        PUBWEAK _A_RTCTIM0_L
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN g_sClock
+        EXTERN assert_failed
+
+// G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_rtc.c
+//    1 #include "msp430f5529_rtc.h"
+
+        ASEGN DATA16_AN:DATA:NOROOT,04a0H
+// union <unnamed> __data16 _A_RTCCTL01_L
+_A_RTCCTL01_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,04a8H
+// union <unnamed> __data16 _A_RTCPS0CTL_L
+_A_RTCPS0CTL_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,04aaH
+// union <unnamed> __data16 _A_RTCPS1CTL_L
+_A_RTCPS1CTL_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,04b0H
+// union <unnamed> __data16 _A_RTCTIM0_L
+_A_RTCTIM0_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,04b8H
+// union <unnamed> __data16 _A_RTCAMINHR_L
+_A_RTCAMINHR_L:
+        DS8 2
+
+        ASEGN DATA16_AN:DATA:NOROOT,04baH
+// union <unnamed> __data16 _A_RTCADOWDAY_L
+_A_RTCADOWDAY_L:
+        DS8 2
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "G:\\\\\\261\\310\\310\\374\\\\2020\\265\\347`:
+        DC8 47H, 3AH, 5CH, 0B1H, 0C8H, 0C8H, 0FCH, 5CH
+        DC8 32H, 30H, 32H, 30H, 0B5H, 0E7H, 0C8H, 0FCH
+        DC8 5CH, 0B4H, 0FAH, 0C2H, 0EBH, 5CH, 4DH, 53H
+        DC8 50H, 34H, 33H, 30H, 5CH, 0B2H, 0E2H, 0CAH
+        DC8 0D4H, 0B9H, 0A6H, 0C4H, 0DCH, 5CH, 0B9H, 0A4H
+        DC8 0B3H, 0CCH, 0C4H, 0A3H, 0B0H, 0E5H, 5CH, 44H
+        DC8 72H, 69H, 76H, 65H, 72H, 73H, 5CH, 73H
+        DC8 72H, 63H, 5CH, 6DH, 73H, 70H, 34H, 33H
+        DC8 30H, 66H, 35H, 35H, 32H, 39H, 5FH, 72H
+        DC8 74H, 63H, 2EH, 63H, 0
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "RTC_Init">`:
+        DC8 "RTC_Init"
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+`?<Constant "\\312\\261\\326\\323\\305\\344\\326\\303\\2`:
+        DC8 "\312\261\326\323\305\344\326\303\262\273\272\317\300\355\243\254\307\353\275\253ACLK\306\265\302\312\305\344\326\303\316\25232768HZ\243\241"
+//    2 #include "msp430f5529_clock.h"
+//    3 
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(1)
+//    4 const RTC_MemMapPtr  RTC = RTC_BASE_PTR; 
+RTC:
+        DC32 4A0H
+//    5 /*******************************************************************************
+//    6 *  函数名称：RTC_Init(Calendar nowDate)
+//    7 *  功能说明：RTC 初始化并设置时间
+//    8 *  参数说明：Calendar nowDate : 设置当前时间
+//    9 *  函数返回：无
+//   10 *  使用示例：Calendar  nowDate;RTC_Init(nowDate);//初始化RTC并设置RTC时间
+//   11 *  注意：日历模式下要求ACLK为32768HZ
+//   12 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   13 void RTC_Init(Calendar nowDate)
+RTC_Init:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function RTC_Init
+//   14 {
+//   15   ASSERT(g_sClock.ACLK.nHZ == 32768,"RTC_Init","时钟配置不合理，请将ACLK频率配置为32768HZ！");                //日历模式下要求ACLK为32768HZ
+        CMPX.W  #0x8000, &g_sClock + 24
+        JNE     ??RTC_Init_1
+        CMPX.W  #0x0, &g_sClock + 26
+        JEQ     ??RTC_Init_2
+??RTC_Init_1:
+        MOVA    #`?<Constant "\\312\\261\\326\\323\\305\\344\\326\\303\\2`, R15
+        MOVA    #`?<Constant "RTC_Init">`, R14
+        MOV.W   #0xf, R13
+        MOVA    #`?<Constant "G:\\\\\\261\\310\\310\\374\\\\2020\\265\\347`, R12
+          CFI FunCall assert_failed
+        CALLA   #assert_failed
+//   16   /*uint32_t clock_div_result = g_sClock.ACLK.nHZ;          
+//   17   uint16_t clock_div_value = 0;//二分频次数
+//   18   while(clock_div_result>1)  //不断分频，直到分频后的值为1或小于1（要求为1）
+//   19   {
+//   20     clock_div_result = clock_div_result>>1; //二分频一次
+//   21     clock_div_value++;                      //分频系数加一
+//   22   };
+//   23   ASSERT((clock_div_result==1)&&(clock_div_value>=2)&&(clock_div_value<=16));        //要求时钟二分频最多16次，且最少2次，且分频后的频率值为1HZ
+//   24   */
+//   25   RTCCTL01 = RTCHOLD + RTCMODE + RTCSSEL__RT1PS + RTC_TimeEvent;           //使能日历模式
+??RTC_Init_2:
+        MOV.W   #0x6800, &0x4a0
+//   26   
+//   27   RTCPS0CTL =   RT0PSHOLD ;             //使用ACLK作为时钟
+        MOV.W   #0x100, &0x4a8
+//   28   RTCPS1CTL  =  RT1PSHOLD + RT1SSEL_2; //使用 RTCPS0输出作为时钟源     
+        MOV.W   #0x8100, &0x4aa
+//   29   
+//   30   //RTC->RT1_PSDIV = (clock_div_value <= 9) ? (clock_div_value-2u) : 7u;
+//   31   //RTC->RT0_PSDIV = (clock_div_value >  9) ? (clock_div_value-9u) : 0u;
+//   32   
+//   33   RTC->HOLD = RESET;                 //打开RTC模块 
+        MOVA    &RTC, R15
+        BIC.W   #0x4000, 0(R15)
+//   34   RTC->RT0_PSHOLD = RESET;           //打开RTCPS0CTL
+        MOVA    &RTC, R15
+        BIC.W   #0x100, 0x8(R15)
+//   35   RTC->RT1_PSHOLD = RESET;           //打开RTCPS1CTL
+        MOVA    &RTC, R15
+        BIC.W   #0x100, 0xa(R15)
+//   36   
+//   37   RTC_SetTime(nowDate);    
+        MOV.W   #0x8, R15
+          CFI Invalid
+??RTC_Init_0:
+        PUSH.W  0xc(SP)
+        SUB.W   #0x2, R15
+        JNE     ??RTC_Init_0
+          CFI CFA SP+12
+          CFI Valid
+          CFI FunCall RTC_SetTime
+        CALLA   #RTC_SetTime
+//   38 }
+        ADD.W   #0x8, SP
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+        REQUIRE _A_RTCCTL01_L
+        REQUIRE _A_RTCPS0CTL_L
+        REQUIRE _A_RTCPS1CTL_L
+//   39 /*******************************************************************************
+//   40 *  函数名称：RTC_SetTime(Calendar nowDate)
+//   41 *  功能说明：设置当前时间
+//   42 *  参数说明：Calendar nowDate : 当前时间
+//   43 *  函数返回：无
+//   44 *  使用示例：RTC_SetTime(nowDate);  //设置RTC时间
+//   45 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   46 void RTC_SetTime(Calendar nowDate)
+RTC_SetTime:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function RTC_SetTime
+          CFI NoCalls
+//   47 {
+//   48   (*((Calendar *)(&RTCSEC))) = nowDate;  
+        MOV.W   SP, R15
+        ADD.W   #0x4, R15
+        MOV.W   @R15+, &0x4b0
+        MOV.W   @R15+, &0x4b2
+        MOV.W   @R15+, &0x4b4
+        MOV.W   @R15+, &0x4b6
+//   49 }
+        RETA
+          CFI EndBlock cfiBlock1
+        REQUIRE _A_RTCTIM0_L
+//   50 /*******************************************************************************
+//   51 *  函数名称：RTC_GetTime(void)
+//   52 *  功能说明：获取当前时间
+//   53 *  参数说明：无
+//   54 *  函数返回：Calendar nowDate : 当前时间
+//   55 *  使用示例：Calendar nowDate = RTC_GetTime();  //获取当前时间
+//   56 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   57 Calendar RTC_GetTime(void)
+RTC_GetTime:
+??RTC_GetTime_0:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function RTC_GetTime
+          CFI NoCalls
+//   58 {
+//   59   while(RTC->RDY == RESET);                  //等待时钟准备好读
+        MOVA    &RTC, R15
+        MOV.W   @R15, R14
+        SWPB    R14
+        AND.W   #0xff, R14
+        RRA.W   R14
+        RRA.W   R14
+        RRA.W   R14
+        RRA.W   R14
+        AND.W   #0x1, R14
+        CMP.B   #0x0, R14
+        JEQ     ??RTC_GetTime_0
+        MOV.W   &0x4b0, 0(R12)
+        MOV.W   &0x4b2, 0x2(R12)
+        MOV.W   &0x4b4, 0x4(R12)
+        MOV.W   &0x4b6, 0x6(R12)
+        RETA
+          CFI EndBlock cfiBlock2
+        REQUIRE _A_RTCTIM0_L
+//   60   return (*((Calendar *)(&RTCSEC)));         //因为该寄存器结构与Calendar结构体相同，直接将寄存器值返回
+//   61 }
+//   62 /*******************************************************************************
+//   63 *  函数名称：RTC_SetAlarm    (Calendar alarm_Time,Alarm_Type alarm_type)
+//   64 *  功能说明：设置闹钟时间及类型
+//   65 *  参数说明：Calendar alarm_Time     :闹钟时间
+//   66              Alarm_Type alarm_type   :闹钟类型
+//   67 *  函数返回：无
+//   68 *  使用示例：RTC_SetAlarm (alarm_Time,Every_Days); //闹钟时间设置，每天触发一次闹钟事件
+//   69 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   70 void RTC_SetAlarm    (Calendar alarm_Time,Alarm_Type alarm_type)
+RTC_SetAlarm:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function RTC_SetAlarm
+          CFI NoCalls
+//   71 {
+//   72   //写入闹钟时间
+//   73   RTCAMIN  = alarm_Time.Minutes    ;
+        MOV.B   0x5(SP), &0x4b8
+//   74   RTCAHOUR = alarm_Time.Hours      ;
+        MOV.B   0x6(SP), &0x4b9
+//   75   RTCADAY  = alarm_Time.DayOfMonth ; 
+        MOV.B   0x8(SP), &0x4bb
+//   76   
+//   77   BIT_VALUE_IN_BYTE(RTCAMIN,7) = BIT_SET;
+        BIS.B   #0x80, &0x4b8
+//   78   BIT_VALUE_IN_BYTE(RTCAHOUR,7) = (alarm_type == Every_Days  ||
+//   79                               alarm_type == Every_Weeks ||
+//   80                               alarm_type == Every_Months 
+//   81                               ) ? BIT_SET : RESET;
+        CMP.B   #0x1, R12
+        JEQ     ??RTC_SetAlarm_0
+        CMP.B   #0x2, R12
+        JEQ     ??RTC_SetAlarm_0
+        CMP.B   #0x3, R12
+        JNE     ??RTC_SetAlarm_1
+??RTC_SetAlarm_0:
+        MOV.B   #0x1, R14
+        JMP     ??RTC_SetAlarm_2
+??RTC_SetAlarm_1:
+        MOV.B   #0x0, R14
+??RTC_SetAlarm_2:
+        BIT.B   #0x1, R14
+        JC      ??RTC_SetAlarm_3
+        BIC.B   #0x80, &0x4b9
+        JMP     ??RTC_SetAlarm_4
+??RTC_SetAlarm_3:
+        BIS.B   #0x80, &0x4b9
+//   82   BIT_VALUE_IN_BYTE(RTCADOW,7) = alarm_type == Every_Weeks  ? BIT_SET : RESET;
+??RTC_SetAlarm_4:
+        CMP.B   #0x2, R12
+        JNE     ??RTC_SetAlarm_5
+        MOV.B   #0x1, R14
+        JMP     ??RTC_SetAlarm_6
+??RTC_SetAlarm_5:
+        MOV.B   #0x0, R14
+??RTC_SetAlarm_6:
+        BIT.B   #0x1, R14
+        JC      ??RTC_SetAlarm_7
+        BIC.B   #0x80, &0x4ba
+        JMP     ??RTC_SetAlarm_8
+??RTC_SetAlarm_7:
+        BIS.B   #0x80, &0x4ba
+//   83   BIT_VALUE_IN_BYTE(RTCADAY,7) = alarm_type == Every_Months ? BIT_SET : RESET;
+??RTC_SetAlarm_8:
+        CMP.B   #0x3, R12
+        JNE     ??RTC_SetAlarm_9
+        MOV.B   #0x1, R14
+        JMP     ??RTC_SetAlarm_10
+??RTC_SetAlarm_9:
+        MOV.B   #0x0, R14
+??RTC_SetAlarm_10:
+        BIT.B   #0x1, R14
+        JC      ??RTC_SetAlarm_11
+        BIC.B   #0x80, &0x4bb
+        RETA
+??RTC_SetAlarm_11:
+        BIS.B   #0x80, &0x4bb
+//   84 }
+        RETA
+          CFI EndBlock cfiBlock3
+        REQUIRE _A_RTCAMINHR_L
+        REQUIRE _A_RTCADOWDAY_L
+//   85 /*******************************************************************************
+//   86 *  函数名称：RTC_ITConfig   (RTC_IRQn irqn, STATUS ITState)
+//   87 *  功能说明: 设置RTC某一个中断是否使能
+//   88 *  参数说明：RTC_IRQn irqn   : 中断事件选择
+//   89              STATUS ITState  : 是否使能中断
+//   90 *  函数返回：无
+//   91 *  使用示例：RTC_ITConfig   (RTC_Alarm_IRQn, ENABLE);  //使能闹钟中断
+//   92 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   93 void RTC_ITConfig   (RTC_IRQn irqn, STATUS ITState)
+RTC_ITConfig:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function RTC_ITConfig
+          CFI NoCalls
+//   94 {
+//   95   if(ITState != DISABLE)
+        CMP.B   #0x0, R13
+        JEQ     ??RTC_ITConfig_0
+//   96   {
+//   97     RTC->IE |= irqn;
+        MOVA    &RTC, R15
+        MOV.W   @R15, R15
+        PUSH.W  R14
+          CFI CFA SP+6
+        MOV.B   R15, 0(SP)
+        POP.W   R14
+          CFI CFA SP+4
+        RPT     #0x4
+        RRUX.B  R14
+        MOV.B   R14, R14
+        MOV.B   R12, R12
+        BIS.W   R12, R14
+        RLAM.W  #0x4, R14
+        AND.W   #0x70, R14
+        AND.W   #0xff8f, R15
+        BIS.W   R14, R15
+        MOVA    &RTC, R14
+        MOV.W   R15, 0(R14)
+        RETA
+//   98   }
+//   99   else
+//  100   {
+//  101     RTC->IE &=~ irqn;
+??RTC_ITConfig_0:
+        MOVA    &RTC, R15
+        MOV.W   @R15, R15
+        PUSH.W  R14
+          CFI CFA SP+6
+        MOV.B   R15, 0(SP)
+        POP.W   R14
+          CFI CFA SP+4
+        RPT     #0x4
+        RRUX.B  R14
+        MOV.B   R14, R14
+        MOV.B   R12, R12
+        BIC.W   R12, R14
+        RLAM.W  #0x4, R14
+        AND.W   #0x70, R14
+        AND.W   #0xff8f, R15
+        BIS.W   R14, R15
+        MOVA    &RTC, R14
+        MOV.W   R15, 0(R14)
+//  102   }
+//  103 }
+        RETA
+          CFI EndBlock cfiBlock4
+//  104 /*******************************************************************************
+//  105 *  函数名称：RTC_GetITStatus(RTC_IRQn irqn)
+//  106 *  功能说明：获取RTC某一位中断标志
+//  107 *  参数说明：RTC_IRQn irqn : 中断事件选择
+//  108 *  函数返回：STATUS : TRUE 中断事件发生，FALSE 中断事件未发生
+//  109 *  使用示例：if(TRUE == RTC_GetITStatus(RTC_Alarm_IRQn)){...}  //判断闹钟时间是否发生
+//  110 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  111 STATUS RTC_GetITStatus(RTC_IRQn irqn)
+RTC_GetITStatus:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function RTC_GetITStatus
+          CFI NoCalls
+//  112 {
+//  113   return ((RTC->IFG & irqn) ? TRUE : FALSE);
+        MOVA    &RTC, R15
+        MOV.W   @R15, R14
+        AND.W   #0x7, R14
+        BIT.B   R12, R14
+        JEQ     ??RTC_GetITStatus_0
+        MOV.B   #0x1, R12
+        RETA
+??RTC_GetITStatus_0:
+        MOV.B   #0x0, R12
+        RETA
+          CFI EndBlock cfiBlock5
+//  114 }
+//  115 /*******************************************************************************
+//  116 *  函数名称：RTC_ClearITPendingBit(RTC_IRQn irqn)
+//  117 *  功能说明：清除RTC某一位中断标志
+//  118 *  参数说明：RTC_IRQn irqn : 中断事件选择
+//  119 *  函数返回：无
+//  120 *  使用示例：RTC_ClearITPendingBit(RTC_Alarm_IRQn); //清除RTC闹钟中断标志位
+//  121 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  122 void RTC_ClearITPendingBit(RTC_IRQn irqn)
+RTC_ClearITPendingBit:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function RTC_ClearITPendingBit
+          CFI NoCalls
+//  123 {
+//  124   RTC->IFG &=~ irqn;
+        MOVA    &RTC, R15
+        MOV.W   @R15, R15
+        MOV.B   R12, R12
+        MOV.W   R15, R14
+        BIC.W   R12, R14
+        AND.W   #0x7, R14
+        AND.W   #0xfff8, R15
+        BIS.W   R14, R15
+        MOVA    &RTC, R14
+        MOV.W   R15, 0(R14)
+//  125 }
+        RETA
+          CFI EndBlock cfiBlock6
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// 
+// 450 bytes in segment CODE
+//  12 bytes in segment DATA16_AN
+// 134 bytes in segment DATA20_C
+// 
+// 450 bytes of CODE  memory
+// 134 bytes of CONST memory
+//   0 bytes of DATA  memory (+ 12 bytes shared)
+//
+//Errors: none
+//Warnings: none

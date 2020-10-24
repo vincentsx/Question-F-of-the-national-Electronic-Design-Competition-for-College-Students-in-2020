@@ -1,0 +1,1108 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V6.30.1.934/W32 for MSP430          12/Oct/2020  03:29:56
+// Copyright 1996-2015 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for Texas Instruments MSP430
+//
+//    __rt_version  =  3
+//    __double_size =  32
+//    __reg_r4      =  free
+//    __reg_r5      =  free
+//    __pic         =  no
+//    __core        =  430X
+//    __data_model  =  large
+//    __code_model  =  large
+//    Source file   =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_i2c.c
+//    Command line  =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_i2c.c
+//        -D DEBUG -D RAM_VECTOR -lA
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\List\ -o
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\Obj\ --no_cse
+//        --no_unroll --no_inline --no_code_motion --no_tbaa --debug
+//        -D__MSP430F5529__ -e --double=32 --dlib_config "D:\Program Files
+//        (x86)\IAR Systems\Embedded Workbench 7.2\430\lib\dlib\dl430xllff.h"
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\inc\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_config\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_User\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\srcUSB\USB_API\USB_CDC_API\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_API\USB_HID_API\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\USB\USB_API\USB_MSC_API\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\delay\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\18b20\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\KEY\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LED\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\12864\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\oled\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\mpu6050\inc\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\mpu6050\src\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nokia5110\inc\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nokia5110\src\
+//        -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LQ_1.8_TFT\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\LCD_API\
+//        -I G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\2.2TFT\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\HardWare\nrf24l01\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\inc\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\System\src\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\User\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\User\USER\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\UCOSII\CONFIG\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\App\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\CONFIHG\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\uCOSII\PORT\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\UCOSII\CORE\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\FatFs\ -I
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Lib\FatFs\option\ -I
+//        G:\比赛\2020电赛\MSP430F5529库函数2.6\MSP430F5529库函数2.6\C版\工程模板\User\USER\
+//        --core=430X --data_model=large -On --multiplier=32
+//        --hw_workaround=CPU40 --code_model=large
+//    List file     =  
+//        G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Debug\List\msp430f5529_i2c.s43
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME msp430f5529_i2c
+
+        RTMODEL "__SystemLibrary", "DLib"
+        RTMODEL "__code_model", "large"
+        RTMODEL "__core", "430X"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "1"
+        RTMODEL "__double_size", "32"
+        RTMODEL "__pic", "no"
+        RTMODEL "__reg_r4", "free"
+        RTMODEL "__reg_r5", "free"
+        RTMODEL "__rt_version", "3"
+
+        RSEG CSTACK:DATA:SORT:NOROOT(0)
+
+        EXTERN ?DivMod32u
+        EXTERN ?longjmp_r4
+        EXTERN ?longjmp_r5
+        EXTERN ?setjmp_r4
+        EXTERN ?setjmp_r5
+
+        PUBWEAK ?setjmp_save_r4
+        PUBWEAK ?setjmp_save_r5
+        PUBLIC I2C_ClearITPendingBit
+        PUBLIC I2C_GetITStatus
+        PUBLIC I2C_ITConfig
+        PUBLIC I2C_MasterInit
+        PUBLIC I2C_PIN
+        PUBLIC I2C_ReadByte
+        PUBLIC I2C_ReadReg
+        PUBLIC I2C_SendByte
+        PUBLIC I2C_SetSlaveID
+        PUBLIC I2C_WriteReg
+        PUBLIC MemoryRead
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA SP DATA
+          CFI Resource PC:20, SP:20, SR:16, R4L:16, R4H:4, R4:20, R5L:16, R5H:4
+          CFI Resource R5:20, R6L:16, R6H:4, R6:20, R7L:16, R7H:4, R7:20, R8L:16
+          CFI Resource R8H:4, R8:20, R9L:16, R9H:4, R9:20, R10L:16, R10H:4
+          CFI Resource R10:20, R11L:16, R11H:4, R11:20, R12L:16, R12H:4, R12:20
+          CFI Resource R13L:16, R13H:4, R13:20, R14L:16, R14H:4, R14:20, R15L:16
+          CFI Resource R15H:4, R15:20
+          CFI ResourceParts R4 R4H, R4L
+          CFI ResourceParts R5 R5H, R5L
+          CFI ResourceParts R6 R6H, R6L
+          CFI ResourceParts R7 R7H, R7L
+          CFI ResourceParts R8 R8H, R8L
+          CFI ResourceParts R9 R9H, R9L
+          CFI ResourceParts R10 R10H, R10L
+          CFI ResourceParts R11 R11H, R11L
+          CFI ResourceParts R12 R12H, R12L
+          CFI ResourceParts R13 R13H, R13L
+          CFI ResourceParts R14 R14H, R14L
+          CFI ResourceParts R15 R15H, R15L
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 2
+          CFI DataAlign 2
+          CFI ReturnAddress PC CODE
+          CFI CFA SP+4
+          CFI PC Frame(CFA, -4)
+          CFI SR Undefined
+          CFI R4L SameValue
+          CFI R4H SameValue
+          CFI R4 Concat
+          CFI R5L SameValue
+          CFI R5H SameValue
+          CFI R5 Concat
+          CFI R6L SameValue
+          CFI R6H SameValue
+          CFI R6 Concat
+          CFI R7L SameValue
+          CFI R7H SameValue
+          CFI R7 Concat
+          CFI R8L SameValue
+          CFI R8H SameValue
+          CFI R8 Concat
+          CFI R9L SameValue
+          CFI R9H SameValue
+          CFI R9 Concat
+          CFI R10L SameValue
+          CFI R10H SameValue
+          CFI R10 Concat
+          CFI R11L SameValue
+          CFI R11H SameValue
+          CFI R11 Concat
+          CFI R12L Undefined
+          CFI R12H Undefined
+          CFI R12 Undefined
+          CFI R13L Undefined
+          CFI R13H Undefined
+          CFI R13 Undefined
+          CFI R14L Undefined
+          CFI R14H Undefined
+          CFI R14 Undefined
+          CFI R15L Undefined
+          CFI R15H Undefined
+          CFI R15 Undefined
+          CFI EndCommon cfiCommon0
+        
+        EXTERN USCIX
+        EXTERN g_sClock
+        EXTERN GPIO_MultiBits_Init
+        EXTERN GPIO_WriteBit
+
+// G:\比赛\2020电赛\代码\MSP430\测试功能\工程模板\Drivers\src\msp430f5529_i2c.c
+//    1 #include "msp430f5529_i2c.h"
+//    2 #include "msp430f5529_clock.h" 
+//    3 #include "msp430f5529_system.h"
+//    4 #include "msp430f5529_gpio.h"
+//    5 
+//    6 const struct{
+//    7   GPIO_PIN SCL;
+//    8   GPIO_PIN SDA;
+
+        RSEG DATA20_C:CONST:SORT:NOROOT(0)
+//    9 }I2C_PIN[]=
+I2C_PIN:
+        DC8 2, 1, 2, 0, 3, 2, 3, 1
+//   10 { //        SCL         SDA
+//   11   /*I2C0*/{.SCL={P3,1},.SDA={P3,0}},           
+//   12   /*I2C1*/{.SCL={P4,2},.SDA={P4,1}}          
+//   13 };
+//   14 static inline void  I2C_Start     (I2Cn i2cn);          //发送一个起始信号
+//   15 static inline void  I2C_Stop      (I2Cn i2cn);          //发送一个停止信号
+//   16 static inline void  I2C_WaitBusy  (I2Cn i2cn);          //等待空闲
+//   17 static inline void  I2C_EnterSend (I2Cn i2cn);          //进入发送模式
+//   18 static inline void  I2C_EnterRead (I2Cn i2cn);          //进入接收模式
+//   19 /*******************************************************************************
+//   20 *  函数名称：I2C_MasterInit(I2Cn i2cn,uint16_t SlaveID,uint32_t BaudRate) 
+//   21 *  功能说明：初始化一个模块为I2C主机模块，并设置从机地址及传输波特率
+//   22 *  参数说明：I2Cn i2cn      :模块号
+//   23              uint8_t SlaveID  :从机地址
+//   24              uint32_t BaudRate:传输波特率
+//   25 *  函数返回：无
+//   26 *  使用示例：I2C_MasterInit   (I2C0, 0x68,100000);  //初始化I2C0模块为主机，从机地址为0x68,设置传输波特率为100000
+//   27 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   28 void  I2C_MasterInit(I2Cn i2cn,uint16_t SlaveID,uint32_t BaudRate)                                       
+I2C_MasterInit:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function I2C_MasterInit
+//   29 {
+        PUSHM.A #0x6, R11
+          CFI R6L Frame(CFA, -28)
+          CFI R6H Frame(CFA, -26)
+          CFI R7L Frame(CFA, -24)
+          CFI R7H Frame(CFA, -22)
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+28
+        SUB.W   #0x2, SP
+          CFI CFA SP+30
+        MOV.B   R12, R10
+        MOV.W   R13, R11
+        MOV.W   R14, R8
+        MOV.W   R15, R9
+//   30   WordType BR;
+//   31   BR.Word=g_sClock.SMCLK.nHZ/BaudRate;        //求取波特率所需的分频系数
+        MOVX.W  &g_sClock + 12, R12
+        MOVX.W  &g_sClock + 14, R13
+        MOV.W   R8, R14
+        MOV.W   R9, R15
+          CFI FunCall ?DivMod32u
+        CALLA   #?DivMod32u
+        MOV.W   R12, 0(SP)
+//   32   GPIO_Init(I2C_PIN[i2cn-I2C0].SCL.Port,I2C_PIN[i2cn-I2C0].SCL.Pin,GPO);
+        MOV.W   #0x2, R14
+        MOV.W   #0x1, R13
+        MOV.B   R10, R15
+        ADD.W   #0xfffe, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        MOVX.B  I2C_PIN + 1(R15), R15
+        SUB.B   #0x1, R15
+        JN      ??I2C_MasterInit_1
+        RPT     R15
+        RLAX.W  R13
+??I2C_MasterInit_1:
+        ADD.B   #0x1, R15
+        MOV.B   R10, R15
+        ADD.W   #0xfffe, R15
+        RLAM.A  #0x2, R15
+        MOVX.B  I2C_PIN(R15), R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//   33   //输出9个时钟以恢复I2Cn总线状态  
+//   34   for(uint8_t i=0;i<9;i++)
+        MOV.B   #0x0, R6
+??I2C_MasterInit_0:
+        CMP.B   #0x9, R6
+        JC      ??I2C_MasterInit_2
+//   35   {
+//   36     GPIO_WriteBit  (I2C_PIN[i2cn-I2C0].SCL.Port,I2C_PIN[i2cn-I2C0].SCL.Pin,  BIT_SET);
+        MOV.B   #0x1, R14
+        MOV.B   R10, R15
+        ADD.W   #0xfffe, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        MOVX.B  I2C_PIN + 1(R15), R13
+        MOV.B   R10, R15
+        ADD.W   #0xfffe, R15
+        RLAM.A  #0x2, R15
+        MOVX.B  I2C_PIN(R15), R12
+          CFI FunCall GPIO_WriteBit
+        CALLA   #GPIO_WriteBit
+//   37     DELAY_US(5);
+        ////////////// Start of 125 cycles delay.
+        MOV.W   #0x28, R15
+??I2C_MasterInit_7:
+        ADD.W   #0xffff, R15
+        JC      ??I2C_MasterInit_7
+        ////////////// End of delay code.
+//   38     GPIO_WriteBit  (I2C_PIN[i2cn-I2C0].SCL.Port,I2C_PIN[i2cn-I2C0].SCL.Pin,RESET);
+        MOV.B   #0x0, R14
+        MOV.B   R10, R15
+        ADD.W   #0xfffe, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        MOVX.B  I2C_PIN + 1(R15), R13
+        MOV.B   R10, R15
+        ADD.W   #0xfffe, R15
+        RLAM.A  #0x2, R15
+        MOVX.B  I2C_PIN(R15), R12
+          CFI FunCall GPIO_WriteBit
+        CALLA   #GPIO_WriteBit
+//   39     DELAY_US(5);
+        ////////////// Start of 125 cycles delay.
+        MOV.W   #0x28, R15
+??I2C_MasterInit_8:
+        ADD.W   #0xffff, R15
+        JC      ??I2C_MasterInit_8
+        ////////////// End of delay code.
+//   40   }
+        ADD.B   #0x1, R6
+        JMP     ??I2C_MasterInit_0
+//   41   //初始化引脚
+//   42   GPIO_Init(I2C_PIN[i2cn-I2C0].SCL.Port,I2C_PIN[i2cn-I2C0].SCL.Pin,SEL);
+??I2C_MasterInit_2:
+        MOV.W   #0x100, R14
+        MOV.W   #0x1, R13
+        MOV.B   R10, R15
+        ADD.W   #0xfffe, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        MOVX.B  I2C_PIN + 1(R15), R15
+        SUB.B   #0x1, R15
+        JN      ??I2C_MasterInit_3
+        RPT     R15
+        RLAX.W  R13
+??I2C_MasterInit_3:
+        ADD.B   #0x1, R15
+        MOV.B   R10, R15
+        ADD.W   #0xfffe, R15
+        RLAM.A  #0x2, R15
+        MOVX.B  I2C_PIN(R15), R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//   43   GPIO_Init(I2C_PIN[i2cn-I2C0].SDA.Port,I2C_PIN[i2cn-I2C0].SDA.Pin,SEL);
+        MOV.W   #0x100, R14
+        MOV.W   #0x1, R13
+        MOV.B   R10, R15
+        ADD.W   #0xfffe, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        MOVX.B  I2C_PIN + 3(R15), R15
+        SUB.B   #0x1, R15
+        JN      ??I2C_MasterInit_4
+        RPT     R15
+        RLAX.W  R13
+??I2C_MasterInit_4:
+        ADD.B   #0x1, R15
+        MOV.B   R10, R15
+        ADD.W   #0xfffe, R15
+        RLAM.A  #0x4, R15
+        RRAM.A  #0x4, R15
+        RLAM.A  #0x2, R15
+        MOVX.B  I2C_PIN + 2(R15), R12
+          CFI FunCall GPIO_MultiBits_Init
+        CALLA   #GPIO_MultiBits_Init
+//   44   //初始化寄存器
+//   45   USCIX[i2cn]->CTL1 = UCSWRST;                       // 软件复位使能，保持复位状态
+        MOV.B   R10, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        MOV.B   #0x1, 0(R15)
+//   46   USCIX[i2cn]->CTL0 = UCMST + UCMODE_3 + UCSYNC;     // I2C主机，同步模式
+        MOV.B   R10, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        MOV.B   #0xf, 0x1(R15)
+//   47   if(SlaveID > 0x7F)
+        CMP.W   #0x80, R11
+        JNC     ??I2C_MasterInit_5
+//   48   {
+//   49     USCIX[i2cn]->SLA10 = BIT_SET;
+        MOV.B   R10, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIS.B   #0x40, 0x1(R15)
+        JMP     ??I2C_MasterInit_6
+//   50   }
+//   51   else
+//   52   {
+//   53     USCIX[i2cn]->SLA10 = RESET;
+??I2C_MasterInit_5:
+        MOV.B   R10, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIC.B   #0x40, 0x1(R15)
+//   54   }
+//   55   USCIX[i2cn]->I2CSA = SlaveID;
+??I2C_MasterInit_6:
+        MOV.B   R10, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        MOV.W   R11, 0x12(R15)
+//   56   USCIX[i2cn]->CTL1 |= UCSSEL__SMCLK;                 //使用SMCLK作为时钟源
+        MOV.B   R10, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIS.B   #0x80, 0(R15)
+//   57   USCIX[i2cn]->BR0 = BR.Byte[0];
+        MOV.B   R10, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        MOV.B   @SP, 0x6(R15)
+//   58   USCIX[i2cn]->BR1 = BR.Byte[1];                        
+        MOV.B   R10, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        MOV.B   0x1(SP), 0x7(R15)
+//   59   USCIX[i2cn]->CTL1 &=~ UCSWRST;                      //清除软件复位，正常操作
+        MOV.B   R10, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIC.B   #0x1, 0(R15)
+//   60   
+//   61   USCIX[i2cn]->IE = 0u;                                         //关闭所有中断
+        MOV.B   R10, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        MOV.B   #0x0, 0x1c(R15)
+//   62   USCIX[i2cn]->RXIFG = RESET;                                   //清除接收数据标志
+        MOV.B   R10, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIC.B   #0x1, 0x1d(R15)
+//   63   USCIX[i2cn]->TXIFG = BIT_SET;                                     //置位发送缓冲区为空标志 
+        MOV.B   R10, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIS.B   #0x2, 0x1d(R15)
+//   64 }
+        ADD.W   #0x2, SP
+          CFI CFA SP+28
+        POPM.A  #0x6, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R6H SameValue
+          CFI R7H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R6L SameValue
+          CFI R7L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock0
+//   65 /*******************************************************************************
+//   66 *  函数名称：I2C_SetSlaveID(I2Cn i2cn,uint16_t SlaveID)
+//   67 *  功能说明：设置从机地址
+//   68 *  参数说明： I2Cn i2cn      :模块号
+//   69               uint8_t SlaveID  :从机地址
+//   70 *  函数返回：无
+//   71 *  使用示例：I2C_SetSlaveID(I2C1,0x68);   //设置I2C1模块的从机地址为0x68
+//   72 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   73 void I2C_SetSlaveID(I2Cn i2cn,uint16_t SlaveID)
+I2C_SetSlaveID:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function I2C_SetSlaveID
+          CFI NoCalls
+//   74 {
+//   75   if(SlaveID > 0x7F)
+        CMP.W   #0x80, R13
+        JNC     ??I2C_SetSlaveID_0
+//   76   {
+//   77     USCIX[i2cn]->SLA10 = BIT_SET;
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIS.B   #0x40, 0x1(R15)
+        JMP     ??I2C_SetSlaveID_1
+//   78   }
+//   79   else
+//   80   {
+//   81     USCIX[i2cn]->SLA10 = RESET;
+??I2C_SetSlaveID_0:
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIC.B   #0x40, 0x1(R15)
+//   82   }
+//   83   USCIX[i2cn]->I2CSA = SlaveID;
+??I2C_SetSlaveID_1:
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        MOV.W   R13, 0x12(R15)
+//   84 }
+        RETA
+          CFI EndBlock cfiBlock1
+//   85 /*******************************************************************************
+//   86 *  函数名称：I2C_Start(I2Cn i2cn)
+//   87 *  功能说明：发送一个起始信号
+//   88 *  参数说明：I2Cn i2cn      :模块号
+//   89 *  函数返回：无
+//   90 *  使用示例：I2C_Start (I2C1);  //I2C1模块发送一个起始信号
+//   91 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//   92 inline void I2C_Start(I2Cn i2cn)
+I2C_Start:
+??I2C_Start_0:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function I2C_Start
+          CFI NoCalls
+//   93 {
+//   94   while((USCIX[i2cn]->UC_BUSY==BIT_SET) || (USCIX[i2cn]->TXSTP==BIT_SET));//确保总线空闲
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIT.B   #0x1, 0xa(R15)
+        JC      ??I2C_Start_0
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        MOV.B   @R15, R14
+        RPT     #0x2
+        RRUX.B  R14
+        BIT.B   #0x1, R14
+        JNE     ??I2C_Start_0
+//   95   USCIX[i2cn]->TXSTT = BIT_SET;
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIS.B   #0x2, 0(R15)
+//   96 }
+        RETA
+          CFI EndBlock cfiBlock2
+//   97 /*******************************************************************************
+//   98 *  函数名称：I2C_Stop(I2Cn i2cn)
+//   99 *  功能说明：发送一个停止信号
+//  100 *  参数说明：I2Cn i2cn      :模块号
+//  101 *  函数返回：无
+//  102 *  使用示例：I2C_Stop (I2C1);  //I2C1模块发送一个停止信号
+//  103 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  104 inline void I2C_Stop(I2Cn i2cn)
+I2C_Stop:
+??I2C_Stop_0:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function I2C_Stop
+          CFI NoCalls
+//  105 {
+//  106   while(USCIX[i2cn]->UC_BUSY == BIT_SET);                 //等待空闲
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIT.B   #0x1, 0xa(R15)
+        JC      ??I2C_Stop_0
+//  107   USCIX[i2cn]->TXSTP =BIT_SET;                            //发送停止位
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIS.B   #0x4, 0(R15)
+//  108   while(USCIX[i2cn]->TXSTP == BIT_SET);                   //等待停止位发送完成
+??I2C_Stop_1:
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        MOV.B   @R15, R14
+        RPT     #0x2
+        RRUX.B  R14
+        BIT.B   #0x1, R14
+        JNE     ??I2C_Stop_1
+//  109 }
+        RETA
+          CFI EndBlock cfiBlock3
+//  110 /*******************************************************************************
+//  111 *  函数名称：I2C_EnterSend (I2Cn i2cn)
+//  112 *  功能说明：I2C进入发送模式
+//  113 *  参数说明：I2Cn i2cn      :模块号
+//  114 *  函数返回：无
+//  115 *  使用示例：I2C_EnterSend (I2C1);  //I2C1模块进入写模式
+//  116 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  117 inline void I2C_EnterSend (I2Cn i2cn)
+I2C_EnterSend:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function I2C_EnterSend
+          CFI NoCalls
+//  118 {
+//  119   USCIX[i2cn]->TR = BIT_SET;                              //进入发送模式
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIS.B   #0x10, 0(R15)
+//  120 }
+        RETA
+          CFI EndBlock cfiBlock4
+//  121 /*******************************************************************************
+//  122 *  函数名称：I2C_EnterRead (I2Cn i2cn)
+//  123 *  功能说明：I2C进入接收模式
+//  124 *  参数说明：I2Cn i2cn      :模块号
+//  125 *  函数返回：无
+//  126 *  使用示例：I2C_EnterRead (I2C1);  //I2C1模块进入读模式
+//  127 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  128 inline void I2C_EnterRead (I2Cn i2cn)
+I2C_EnterRead:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function I2C_EnterRead
+          CFI NoCalls
+//  129 {
+//  130   USCIX[i2cn]->TR = RESET;                             //进入接收模式
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIC.B   #0x10, 0(R15)
+//  131 }
+        RETA
+          CFI EndBlock cfiBlock5
+//  132 /*******************************************************************************
+//  133 *  函数名称：I2C_SendByte (I2Cn i2cn,uint8_t data)
+//  134 *  功能说明：I2C发送一字节数据
+//  135 *  参数说明：I2Cn i2cn      :模块号
+//  136              uint8_t data     :要发送的数据
+//  137 *  函数返回：无
+//  138 *  使用示例：I2C_SendByte (I2C1,0x01);  //I2C1模块发送一字节数据0x01
+//  139 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  140 inline void I2C_SendByte (I2Cn i2cn,uint8_t data)
+I2C_SendByte:
+??I2C_SendByte_0:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function I2C_SendByte
+          CFI NoCalls
+//  141 {
+//  142   while(USCIX[i2cn]->TXIFG == RESET);                   //等待
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        MOV.B   0x1d(R15), R14
+        RRUX.B  R14
+        BIT.B   #0x1, R14
+        JEQ     ??I2C_SendByte_0
+//  143   USCIX[i2cn]->TXBUF = data;                            //发送要写入的数据
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        MOV.B   R13, 0xe(R15)
+//  144 }
+        RETA
+          CFI EndBlock cfiBlock6
+//  145 /*******************************************************************************
+//  146 *  函数名称：I2C_ReadByte  (I2Cn i2cn)
+//  147 *  功能说明：IIC读取一个字节数据
+//  148 *  参数说明：I2Cn i2cn      :模块号
+//  149 *  函数返回：读取到的数据
+//  150 *  使用示例：uint8 data = I2C_ReadByte  (I2C1);   //读取数据
+//  151 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  152 inline uint8_t I2C_ReadByte  (I2Cn i2cn)
+I2C_ReadByte:
+??I2C_ReadByte_0:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function I2C_ReadByte
+          CFI NoCalls
+//  153 {
+//  154   while(USCIX[i2cn]->RXIFG == RESET);                 //等待接收到数据
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIT.B   #0x1, 0x1d(R15)
+        JNC     ??I2C_ReadByte_0
+//  155   return USCIX[i2cn]->RXBUF;
+        MOV.B   R12, R12
+        RLAM.A  #0x2, R12
+        MOVX.A  USCIX(R12), R15
+        MOV.B   0xc(R15), R12
+        RETA
+          CFI EndBlock cfiBlock7
+//  156 }
+//  157 /*******************************************************************************
+//  158 *  函数名称：I2C_WaitBusy(I2Cn i2cn)
+//  159 *  功能说明：I2C等待空闲
+//  160 *  参数说明：I2Cn i2cn      :模块号
+//  161 *  函数返回：无
+//  162 *  使用示例：I2C_WaitBusy(I2C1);  //等待I2C1模块不忙
+//  163 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  164 inline void I2C_WaitBusy(I2Cn i2cn)
+I2C_WaitBusy:
+??I2C_WaitBusy_0:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function I2C_WaitBusy
+          CFI NoCalls
+//  165 {
+//  166   while(USCIX[i2cn]->UC_BUSY == BIT_SET);                    //等待发送或接收完成
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIT.B   #0x1, 0xa(R15)
+        JC      ??I2C_WaitBusy_0
+//  167 }
+        RETA
+          CFI EndBlock cfiBlock8
+//  168 /*******************************************************************************
+//  169 *  函数名称： I2C_WriteReg(I2Cn i2cn, uint8_t address, char data)
+//  170 *  功能说明： 往某一个地址写入一字节数据
+//  171 *  参数说明： I2Cn i2cn      :模块号
+//  172               uint8_t address :寄存器地址
+//  173               uint8_t data    :对该地址要写入的数据内容
+//  174 *  函数返回：无
+//  175 *  使用示例：I2C_WriteReg(I2C1, 0x20, 0x12);   //对地址为0x20处写入内容0x12
+//  176 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  177 void  I2C_WriteReg(I2Cn i2cn, uint8_t address, uint8_t data)     
+I2C_WriteReg:
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function I2C_WriteReg
+//  178 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.B   R12, R11
+        MOV.B   R13, R8
+        MOV.B   R14, R10
+//  179   I2C_EnterSend(i2cn);
+        MOV.B   R11, R12
+          CFI FunCall I2C_EnterSend
+        CALLA   #I2C_EnterSend
+//  180   I2C_Start    (i2cn);                        //发送一个起始信号
+        MOV.B   R11, R12
+          CFI FunCall I2C_Start
+        CALLA   #I2C_Start
+//  181   I2C_SendByte (i2cn,address);                //发送要写入的地址
+        MOV.B   R8, R13
+        MOV.B   R11, R12
+          CFI FunCall I2C_SendByte
+        CALLA   #I2C_SendByte
+//  182   I2C_SendByte (i2cn,data);                   //发送要写入的数据
+        MOV.B   R10, R13
+        MOV.B   R11, R12
+          CFI FunCall I2C_SendByte
+        CALLA   #I2C_SendByte
+//  183   I2C_Stop     (i2cn);                        //发送停止位
+        MOV.B   R11, R12
+          CFI FunCall I2C_Stop
+        CALLA   #I2C_Stop
+//  184   I2C_WaitBusy (i2cn);
+        MOV.B   R11, R12
+          CFI FunCall I2C_WaitBusy
+        CALLA   #I2C_WaitBusy
+//  185 }
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock9
+//  186 /*******************************************************************************
+//  187 *  函数名称： I2C_ReadReg(I2Cn i2cn, uint8_t address) 
+//  188 *  功能说明： 对外部芯片读取某一地址的内容
+//  189 *  参数说明： I2Cn i2cn      :模块号
+//  190               uint8_t address :寄存器地址
+//  191 *  函数返回： 读取到的内容
+//  192 *  使用示例： uint8_t data = I2C_ReadReg(I2C1, 0x20);  //读取寄存器地址为0x20处的内容
+//  193 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  194 uint8_t    I2C_ReadReg(I2Cn i2cn, uint8_t address)             
+I2C_ReadReg:
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function I2C_ReadReg
+//  195 {
+        PUSHM.A #0x2, R11
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+12
+        MOV.B   R12, R10
+        MOV.B   R13, R11
+//  196   I2C_EnterSend (i2cn);                       //进入发送模式
+        MOV.B   R10, R12
+          CFI FunCall I2C_EnterSend
+        CALLA   #I2C_EnterSend
+//  197   I2C_Start     (i2cn);                       //发送一个起始信号
+        MOV.B   R10, R12
+          CFI FunCall I2C_Start
+        CALLA   #I2C_Start
+//  198   I2C_SendByte  (i2cn,address);               //发送一字节数据
+        MOV.B   R11, R13
+        MOV.B   R10, R12
+          CFI FunCall I2C_SendByte
+        CALLA   #I2C_SendByte
+//  199   I2C_WaitBusy  (i2cn);                       //等待传输完毕
+        MOV.B   R10, R12
+          CFI FunCall I2C_WaitBusy
+        CALLA   #I2C_WaitBusy
+//  200   I2C_EnterRead (i2cn);                       //进入接收模式
+        MOV.B   R10, R12
+          CFI FunCall I2C_EnterRead
+        CALLA   #I2C_EnterRead
+//  201   I2C_Start     (i2cn);                       //发送一个起始信号
+        MOV.B   R10, R12
+          CFI FunCall I2C_Start
+        CALLA   #I2C_Start
+//  202   I2C_WaitBusy  (i2cn);                       //等待空闲
+        MOV.B   R10, R12
+          CFI FunCall I2C_WaitBusy
+        CALLA   #I2C_WaitBusy
+//  203   I2C_Stop      (i2cn);                       //发送一个停止信号,读的话要先发送停止位
+        MOV.B   R10, R12
+          CFI FunCall I2C_Stop
+        CALLA   #I2C_Stop
+//  204   return I2C_ReadByte(i2cn);                  //读取数据
+        MOV.B   R10, R12
+          CFI FunCall I2C_ReadByte
+        CALLA   #I2C_ReadByte
+        POPM.A  #0x2, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock10
+//  205 }
+//  206 /*******************************************************************************
+//  207 *  函数名称： I2C_ITConfig (I2Cn i2cn,I2C_IRQn irqn,STATUS ITState)
+//  208 *  功能说明： 设置使能或禁止I2Cn的某一个中断
+//  209 *  参数说明： I2Cn i2cn      :模块号
+//  210               I2C_IRQn irqn :中断类型
+//  211 *  函数返回：无
+//  212 *  使用示例：I2C_ITConfig (I2C1,I2C_RX_IRQn,ENABLE);  //使能I2C1的接收中断
+//  213 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  214 void  I2C_ITConfig (I2Cn i2cn,I2C_IRQn irqn,STATUS ITState)
+I2C_ITConfig:
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function I2C_ITConfig
+          CFI NoCalls
+//  215 {
+        PUSHM.A #0x1, R10
+          CFI R10L Frame(CFA, -8)
+          CFI R10H Frame(CFA, -6)
+          CFI CFA SP+8
+//  216   if(ITState != DISABLE)
+        CMP.B   #0x0, R14
+        JEQ     ??I2C_ITConfig_0
+//  217   {
+//  218     USCIX[i2cn]->IE |= irqn;
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIS.B   R13, 0x1c(R15)
+        JMP     ??I2C_ITConfig_1
+//  219   }
+//  220   else
+//  221   {
+//  222     USCIX[i2cn]->IE &=~irqn;
+??I2C_ITConfig_0:
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIC.B   R13, 0x1c(R15)
+//  223   }
+//  224 }
+??I2C_ITConfig_1:
+        POPM.A  #0x1, R10
+          CFI R10H SameValue
+          CFI R10L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock11
+//  225 /*******************************************************************************
+//  226 *  函数名称： I2C_GetITStatus(I2Cn i2cn,I2C_IRQn irqn)
+//  227 *  功能说明： 获取I2C的某一个中断标志
+//  228 *  参数说明： I2Cn i2cn      :模块号
+//  229               I2C_IRQn irqn :中断类型
+//  230 *  函数返回： STATUS : TRUE 中断事件发生，FALSE 中断事件未发生
+//  231 *  使用示例： if(TRUE == I2C_GetITStatus(I2C0,I2C_RX_IRQn)){...} //判断I2C0模块是否接收完成事件中断发生
+//  232 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  233 STATUS I2C_GetITStatus(I2Cn i2cn,I2C_IRQn irqn)
+I2C_GetITStatus:
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function I2C_GetITStatus
+          CFI NoCalls
+//  234 {
+//  235   return ((USCIX[i2cn]->IFG & irqn) ? TRUE :FALSE);
+        MOV.B   R12, R12
+        RLAM.A  #0x2, R12
+        MOVX.A  USCIX(R12), R15
+        MOV.B   0x1d(R15), R14
+        BIT.B   R13, R14
+        JEQ     ??I2C_GetITStatus_0
+        MOV.B   #0x1, R12
+        RETA
+??I2C_GetITStatus_0:
+        MOV.B   #0x0, R12
+        RETA
+          CFI EndBlock cfiBlock12
+//  236 }
+//  237 /*******************************************************************************
+//  238 *  函数名称： I2C_ClearITPendingBit(I2Cn i2cn,I2C_IRQn irqn)
+//  239 *  功能说明： 清除I2Cn的某一个中断标志
+//  240 *  参数说明： I2Cn i2cn      :模块号
+//  241               I2C_IRQn irqn :中断类型
+//  242 *  函数返回： 无
+//  243 *  使用示例： I2C_ClearITPendingBit(I2C0,I2C_RX_IRQn);   //清除I2C1模块接收中断标志位
+//  244 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  245 void  I2C_ClearITPendingBit(I2Cn i2cn,I2C_IRQn irqn)
+I2C_ClearITPendingBit:
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function I2C_ClearITPendingBit
+          CFI NoCalls
+//  246 {
+//  247   USCIX[i2cn]->IFG &=~ irqn;
+        MOV.B   R12, R15
+        RLAM.A  #0x2, R15
+        MOVX.A  USCIX(R15), R15
+        BIC.B   R13, 0x1d(R15)
+//  248 }
+        RETA
+          CFI EndBlock cfiBlock13
+//  249 /*******************************************************************************
+//  250 *  函数名称： MemoryRead(I2Cn i2cn)
+//  251 *  功能说明： 读取MLX90614中的温度数据
+//  252 *  参数说明： I2Cn i2cn      :模块号
+//  253 *  函数返回： DataH*256 + DataL
+//  254 *  使用示例： 无
+//  255 ********************************************************************************/
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+//  256 uint32_t MemoryRead(I2Cn i2cn)    
+MemoryRead:
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function MemoryRead
+//  257 {
+        PUSHM.A #0x4, R11
+          CFI R8L Frame(CFA, -20)
+          CFI R8H Frame(CFA, -18)
+          CFI R9L Frame(CFA, -16)
+          CFI R9H Frame(CFA, -14)
+          CFI R10L Frame(CFA, -12)
+          CFI R10H Frame(CFA, -10)
+          CFI R11L Frame(CFA, -8)
+          CFI R11H Frame(CFA, -6)
+          CFI CFA SP+20
+        MOV.B   R12, R11
+//  258   uint8_t DataL,DataH,Pecreg;
+//  259   I2C_EnterSend (i2cn);
+        MOV.B   R11, R12
+          CFI FunCall I2C_EnterSend
+        CALLA   #I2C_EnterSend
+//  260   I2C_Start     (i2cn);                        //发送一个起始信号
+        MOV.B   R11, R12
+          CFI FunCall I2C_Start
+        CALLA   #I2C_Start
+//  261   I2C_SendByte  (i2cn,0x07);                   //发送要写入的命令
+        MOV.B   #0x7, R13
+        MOV.B   R11, R12
+          CFI FunCall I2C_SendByte
+        CALLA   #I2C_SendByte
+//  262   
+//  263   I2C_WaitBusy  (i2cn);                        //等待传输完毕
+        MOV.B   R11, R12
+          CFI FunCall I2C_WaitBusy
+        CALLA   #I2C_WaitBusy
+//  264   I2C_Start     (i2cn);                        //发送一个起始信号
+        MOV.B   R11, R12
+          CFI FunCall I2C_Start
+        CALLA   #I2C_Start
+//  265   I2C_SendByte  (i2cn,0x01); 
+        MOV.B   #0x1, R13
+        MOV.B   R11, R12
+          CFI FunCall I2C_SendByte
+        CALLA   #I2C_SendByte
+//  266 
+//  267   I2C_WaitBusy  (i2cn);                        //等待传输完毕
+        MOV.B   R11, R12
+          CFI FunCall I2C_WaitBusy
+        CALLA   #I2C_WaitBusy
+//  268   I2C_EnterRead (i2cn);                        //进入接收模式
+        MOV.B   R11, R12
+          CFI FunCall I2C_EnterRead
+        CALLA   #I2C_EnterRead
+//  269   
+//  270   I2C_Start     (i2cn);                        //发送一个起始信号
+        MOV.B   R11, R12
+          CFI FunCall I2C_Start
+        CALLA   #I2C_Start
+//  271   I2C_WaitBusy  (i2cn);                        //等待空闲 
+        MOV.B   R11, R12
+          CFI FunCall I2C_WaitBusy
+        CALLA   #I2C_WaitBusy
+//  272   
+//  273   DataL = I2C_ReadByte(i2cn);
+        MOV.B   R11, R12
+          CFI FunCall I2C_ReadByte
+        CALLA   #I2C_ReadByte
+        MOV.B   R12, R9
+//  274   I2C_WaitBusy  (i2cn);                        //等待传输完毕
+        MOV.B   R11, R12
+          CFI FunCall I2C_WaitBusy
+        CALLA   #I2C_WaitBusy
+//  275 
+//  276   DataH = I2C_ReadByte(i2cn);
+        MOV.B   R11, R12
+          CFI FunCall I2C_ReadByte
+        CALLA   #I2C_ReadByte
+        MOV.B   R12, R10
+//  277   I2C_WaitBusy  (i2cn);                        //等待传输完毕
+        MOV.B   R11, R12
+          CFI FunCall I2C_WaitBusy
+        CALLA   #I2C_WaitBusy
+//  278   I2C_Stop      (i2cn);                        //发送一个停止信号,读的话要先发送停止位
+        MOV.B   R11, R12
+          CFI FunCall I2C_Stop
+        CALLA   #I2C_Stop
+//  279 
+//  280   Pecreg = I2C_ReadByte(i2cn);
+        MOV.B   R11, R12
+          CFI FunCall I2C_ReadByte
+        CALLA   #I2C_ReadByte
+        MOV.B   R12, R8
+//  281   I2C_WaitBusy  (i2cn);                        //等待传输完毕
+        MOV.B   R11, R12
+          CFI FunCall I2C_WaitBusy
+        CALLA   #I2C_WaitBusy
+//  282 
+//  283   return (DataH*256 + DataL);
+        MOV.B   R10, R12
+        AND.W   #0xff, R12
+        SWPB    R12
+        MOV.B   R9, R9
+        ADD.W   R9, R12
+        MOV.W   R12, R13
+        XOR.W   #0xffff, R13
+        RLA.W   R13
+        SUBC.W  R13, R13
+        POPM.A  #0x4, R11
+          CFI R10H SameValue
+          CFI R11H SameValue
+          CFI R8H SameValue
+          CFI R9H SameValue
+          CFI R10L SameValue
+          CFI R11L SameValue
+          CFI R8L SameValue
+          CFI R9L SameValue
+          CFI CFA SP+4
+        RETA
+          CFI EndBlock cfiBlock14
+//  284 }
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r4:
+        REQUIRE ?setjmp_r4
+        REQUIRE ?longjmp_r4
+
+        RSEG CODE:CODE:REORDER:NOROOT(1)
+?setjmp_save_r5:
+        REQUIRE ?setjmp_r5
+        REQUIRE ?longjmp_r5
+
+        END
+// 
+// 1 116 bytes in segment CODE
+//     8 bytes in segment DATA20_C
+// 
+// 1 116 bytes of CODE  memory
+//     8 bytes of CONST memory
+//
+//Errors: none
+//Warnings: 1
