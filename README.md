@@ -6,9 +6,11 @@
 
 * 开发环境 IAR7.2 for msp430f5529
 
-* 运行平台 msp430f5529   
+* 运行平台 msp430f5529  
 
-![]([https://github.com/rtrrsr/Question-F-of-the-national-Electronic-Design-Competition-for-College-Students-in-2020/blob/master/1.jpg))  
+![](https://github.com/rtrrsr/Question-F-of-the-national-Electronic-Design-Competition-for-College-Students-in-2020/blob/master/1.jpg)
+
+
 
 ## 引脚可根据需求设置
 * LMT70数据的采集主要在 LMT70.c 与 LMT70.h 中 
