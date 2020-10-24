@@ -10,8 +10,8 @@
 ### LMT70：直接使用的ADC 引脚  P6.1  
 
 ### MLX90614&emsp;&emsp;I2C0:&ensp;SDA&emsp;SCL
-###&emsp;&emsp;&emsp;&emsp;&ensp;P3.0&emsp;P3.1
-###&emsp;&emsp;&emsp;&emsp;&ensp;P4.1&emsp;P4.2  
+### &emsp;&emsp;&emsp;&emsp;&ensp;P3.0&emsp;P3.1
+### &emsp;&emsp;&emsp;&emsp;&ensp;P4.1&emsp;P4.2  
 
 ### OLED(本程序使用LCD)   D0    D1    RES    DC
 ###                      P4.3  P4.0  P3.7   P8.2  
