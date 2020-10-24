@@ -5,22 +5,10 @@
 [演示视频](https://www.bilibili.com/video/BV1Wf4y1B76i)
 
 * 开发环境 IAR7.2 for msp430f5529
-* 运行平台 msp430f5529  
 
-### LMT70：直接使用的ADC 引脚    P6.1  
+* 运行平台 msp430f5529   
 
-### MLX90614 	I2C0:		SDA		 SCL
-### 										   P3.0             P3.1
-### 										   P4.1             P4.2  
-
-### OLED(本程序使用LCD)        D0    	    D1    	   RES    	 DC
-###                      												   											   P4.3          P4.0        P3.7          P8.2  
-
-### 						    UCA1         TX   		  RX
-###                      					     											   P4.4          P4.5  
-
-### LCD       								 SCL      	 SDI        	CS    	    RST      	 DC
-###                                                   					                           P3.2     	 P2.2     	 P2.7         P2.4 	      P2.0  
+![]([https://github.com/rtrrsr/Question-F-of-the-national-Electronic-Design-Competition-for-College-Students-in-2020/blob/master/1.jpg))  
 
 ## 引脚可根据需求设置
 * LMT70数据的采集主要在 LMT70.c 与 LMT70.h 中 
