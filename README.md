@@ -15,4 +15,6 @@
 ## 引脚可根据需求设置
 * LMT70数据的采集主要在 LMT70.c 与 LMT70.h 中 
 * MLX90614数据的采集主要在 msp430f5529_i2c.c 末尾处
-* 滤波算法主要在 Filter.c 与 Filter.h 中
+* 滤波算法主要在 Filter.c 与 Filter.h 中 
+
+## 测试
